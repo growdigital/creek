@@ -1,4 +1,4 @@
-creek
-=====
+creeky
+======
 
-Creek Creative WordPress website
+Creek Creative WordPress website theme.
