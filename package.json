@@ -1,0 +1,26 @@
+{
+  "name": "creeky",
+  "version": "0.0.0",
+  "description": "creeky wordpress theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/growdigital/creeky.git"
+  },
+  "author": "Jake Rayson",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/growdigital/creeky/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-imagemin": "~0.3.0"
+  }
+}
