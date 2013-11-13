@@ -1,0 +1,7 @@
+// Shame. Put shameful CSS in here. Refactor later.
+
+.wrap {
+  margin: 0 auto;
+  @include rem('padding-top',20px);
+  width: 90%;
+}
