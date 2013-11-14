@@ -14,11 +14,15 @@
 
 <div class="wrap">
 
-<nav id="main-nav">
-            
-            <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>
-            
-        </nav>
+<nav class="nav">
+  <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>
+</nav>
+
+<footer>
+  <nav class="nav">
+    <?php wp_nav_menu( array( 'theme_location' => 'menu_secondary' ) ); ?>
+  </nav>
+</footer>
 
 </div><!-- /.wrap -->
 
