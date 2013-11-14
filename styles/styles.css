@@ -371,6 +371,166 @@ img, embed, object, video {
   content: "";
   display: table; }
 
+.ico {
+  background: url(/images/icons/sprite.svg) no-repeat;
+  display: inline-block;
+  height: 22px;
+  height: 1.375rem;
+  line-height: 0;
+  vertical-align: bottom;
+  width: 22px;
+  width: 1.375rem; }
+
+.ico--26 {
+  height: 26px;
+  height: 1.625rem;
+  width: 26px;
+  width: 1.625rem; }
+
+.ico--36 {
+  height: 36px;
+  height: 2.25rem;
+  width: 36px;
+  width: 2.25rem; }
+
+.ico--baseline {
+  vertical-align: baseline; }
+
+.ico--article {
+  background-position: 0   0; }
+
+.ico--event {
+  background-position: -22px 0; }
+
+.ico--comment {
+  background-position: -44px 0; }
+
+.ico--review {
+  background-position: -66px 0; }
+
+.ico--business {
+  background-position: -88px 0; }
+
+.ico--voucher {
+  background-position: -110px 0; }
+
+.ico--paper {
+  background-position: -132px 0; }
+
+.ico--gplus {
+  background-position: -154px 0; }
+
+.ico--twitter {
+  background-position: -176px 0; }
+
+.ico--facebook {
+  background-position: -198px 0; }
+
+.ico--arrow-left {
+  background-position: 0   -22px; }
+
+.ico--arrow-right {
+  background-position: -22px -22px; }
+
+.ico--arrows-double {
+  background-position: -44px -22px; }
+
+.ico--star-full {
+  background-position: -66px -22px; }
+
+.ico--star-empty {
+  background-position: -88px -22px; }
+
+.ico--star-half {
+  background-position: -110px -22px; }
+
+.ico--phone {
+  background-position: -132px -22px; }
+
+.ico--report {
+  background-position: -154px -22px; }
+
+.ico--search {
+  background-position: 0   -44px; }
+
+.ico--create-wo {
+  background-position: -22px -44px; }
+
+.ico--signin {
+  background-position: -44px -44px; }
+
+.ico--close {
+  background-position: -66px -44px; }
+
+.ico--speech {
+  background-position: -88px -44px; }
+
+.ico--replyto {
+  background-position: -110px -44px; }
+
+.ico--like {
+  background-position: 0   -66px; }
+
+.ico--share {
+  background-position: -36px -66px; }
+
+.ico--comment-bubble {
+  background-position: -72px -66px; }
+
+.ico--review-bus {
+  background-position: -108px -66px; }
+
+.ico--like-bus {
+  background-position: -144px -66px; }
+
+.ico--share-bus {
+  background-position: -180px -66px; }
+
+.ico--view-bus {
+  background-position: -216px -66px; }
+
+.ico--print-bus {
+  background-position: -252px -66px; }
+
+.ico--unlock-bus {
+  background-position: -288px -66px; }
+
+.ico--menu {
+  background-position: 0   -102px; }
+
+.ico--create {
+  background-position: -26px -102px; }
+
+.ico--photo {
+  background-position: -52px -102px; }
+
+.ico--calendar {
+  background-position: -78px -102px; }
+
+.media {
+  margin-right: 10px;
+  margin-right: 0.625rem; }
+
+.media, .media__body {
+  overflow: hidden; }
+
+.ie6 .media, .ie6 .media__body {
+  overflow: visible;
+  zoom: 1; }
+
+.media__img {
+  float: left;
+  margin-right: 10px;
+  margin-right: 0.625rem; }
+
+.media__img img {
+  display: block; }
+
+.media__img--extend {
+  float: right;
+  margin-left: 10px;
+  margin-left: 0.625rem; }
+
 .l-listless {
   list-style-type: none;
   margin: 0;

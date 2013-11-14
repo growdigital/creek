@@ -9,4 +9,5 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/deed.en_US
 Tags: responsive, gallery, mobile
 */
 
+/* Import CSS from processed & globbed SCSS */
 @import 'styles/styles.css';  
