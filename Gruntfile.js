@@ -7,7 +7,7 @@
 // Install all the packages required to build this:
 // (Packages will be installed in ./node_modules - don't accidentally commit this)
 // % cd wp-content/themes/theme_name
-// % npm install
+// % npm install 
 //
 // == Building ==
 //
