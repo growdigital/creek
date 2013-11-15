@@ -564,7 +564,73 @@ a:hover {
   margin: 0 auto;
   padding-top: 20px;
   padding-top: 1.25rem;
-  width: 90%; }
+  width: 90%;
+  padding: 0;
+  width: 100%; }
 
 html {
   margin-top: 0 !important; }
+
+h1 {
+  color: #ccc;
+  margin: 0.2rem 0;
+  text-align: center; }
+
+.wire_block {
+  background-color: whitesmoke;
+  border: 1px solid gainsboro;
+  color: silver;
+  font: small sans-serif;
+  text-align: center; }
+
+.wire_menu {
+  padding: 8px;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.wire_nav {
+  padding: 16px;
+  padding: 1rem; }
+
+.wire_section {
+  min-height: 80px;
+  min-height: 5rem;
+  margin: 16px;
+  margin: 1rem;
+  padding: 16px;
+  padding: 1rem; }
+
+.wire_heading {
+  font-size: 13px;
+  font-size: 0.8125rem; }
+
+.wire_section--title {
+  min-height: 80px;
+  min-height: 5rem; }
+
+.wire_section--block1 {
+  min-height: 120px;
+  min-height: 7.5rem; }
+
+.wire_section--block2 {
+  min-height: 120px;
+  min-height: 7.5rem; }
+
+.wire_section--nav {
+  min-height: 80px;
+  min-height: 5rem; }
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.menu > * {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 0.5em; }
+
+.sub-menu {
+  display: none; }

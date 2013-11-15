@@ -5,9 +5,12 @@
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
+  <meta content="width=device-width,minimum-scale=1.0" name="viewport" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
   <title>Creek Creative Art &amp; Design Studios</title>
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
+  <?php wp_head(); ?> 
 </head>
 
 <body>

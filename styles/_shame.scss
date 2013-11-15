@@ -4,9 +4,79 @@
   margin: 0 auto;
   @include rem('padding-top',20px);
   width: 90%;
+  padding: 0;
+  width: 100%;
 }
 
 // Overriding some horrible admin bar CSS. Track it down, remove it.
 html { 
   margin-top: 0 !important;
 }
+
+// Wireframes
+////////////// 
+
+// Content Reference wireframes
+
+h1 {
+  color: #ccc;
+  margin: 0.2rem 0;
+  text-align: center;
+
+}
+
+.wire_block {
+  background-color: whitesmoke;
+  border: 1px solid gainsboro;
+  color: silver;
+  font: small sans-serif; 
+  text-align: center;
+}
+.wire_menu {
+  @include rem('padding',8px);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.wire_nav {
+  @include rem('padding',16px);
+}
+.wire_section {
+  @include rem('min-height',80px);
+  @include rem('margin',16px);
+  @include rem('padding',16px);
+}
+
+.wire_heading {
+  @include rem('font-size',13px);
+}
+
+// Sections
+.wire_section--title {
+  @include rem('min-height',80px);
+}
+.wire_section--block1 {
+  @include rem('min-height',120px);
+}
+.wire_section--block2 {
+  @include rem('min-height',120px);
+}
+.wire_section--nav {
+  @include rem('min-height',80px);
+}
+
+// Temp menu for wireframes
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu > * {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 0.5em;
+}
+.sub-menu {
+  display: none;
+}
+
