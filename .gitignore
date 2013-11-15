@@ -1,6 +1,6 @@
 # Don't version the node_modules, make sure to install with `npm install` #
-node_modules
-node_modules/*
+# node_modules
+# node_modules/*
 
 ._*
 .*.swp
