@@ -8,5 +8,5 @@
         'menu_secondary' => __( 'Secondary Menu' )
       )
     );
-  }    
+  }
 ?>

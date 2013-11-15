@@ -14,15 +14,17 @@
 
 <div class="wrap">
 
-<nav class="nav">
-  <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>
-</nav>
+<?php get_header('includes/header.php'); ?>
 
-<footer>
-  <nav class="nav">
-    <?php wp_nav_menu( array( 'theme_location' => 'menu_secondary' ) ); ?>
-  </nav>
-</footer>
+<?php while (have_posts()) : the_post(); ?>
+  <article <?php post_class(); ?>>
+    <h1><?php the_title(); ?></h1>
+    <?php the_content(); ?>
+  </article>
+<?php endwhile; ?>
+
+
+<?php get_footer(); ?>
 
 </div><!-- /.wrap -->
 

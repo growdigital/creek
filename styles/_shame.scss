@@ -5,3 +5,8 @@
   @include rem('padding-top',20px);
   width: 90%;
 }
+
+// Overriding some horrible admin bar CSS. Track it down, remove it.
+html { 
+  margin-top: 0 !important;
+}
