@@ -622,6 +622,24 @@ h1 {
   min-height: 80px;
   min-height: 5rem; }
 
+.wire_section--exhibition {
+  height: 200px; }
+
+.wire_section--courses {
+  height: 140px; }
+
+.wire_section--cafe {
+  height: 80px; }
+
+.wire_section--studios {
+  height: 120px; }
+
+.wire_section--shop {
+  height: 80px; }
+
+.wire_section--hire {
+  height: 80px; }
+
 .menu {
   list-style-type: none;
   margin: 0;
@@ -633,4 +651,7 @@ h1 {
   margin: 0 0.5em; }
 
 .sub-menu {
+  display: none; }
+
+.article__head {
   display: none; }

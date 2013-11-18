@@ -65,6 +65,15 @@ h1 {
   @include rem('min-height',80px);
 }
 
+// home page sections
+
+.wire_section--exhibition { height: 200px; }
+.wire_section--courses    { height: 140px; }
+.wire_section--cafe       { height: 80px; }
+.wire_section--studios    { height: 120px; }
+.wire_section--shop       { height: 80px; }
+.wire_section--hire       { height: 80px; }
+
 // Temp menu for wireframes
 .menu {
   list-style-type: none;
@@ -80,3 +89,6 @@ h1 {
   display: none;
 }
 
+.article__head {
+  display: none; // just for wireframes 
+}
