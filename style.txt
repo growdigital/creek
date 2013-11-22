@@ -10,6 +10,7 @@ Colors
 ------
 
 * #00a9e3 blue
+* #95b9c6 blue light
 
 Fonts
 -----
