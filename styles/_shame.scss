@@ -46,6 +46,18 @@ h1 {
   @include rem('margin',16px);
   @include rem('padding',16px);
 }
+.wire_section img {
+  display: inline-block;
+  margin: 0 1rem 1rem 0;
+}
+.wire_section img:last-child {
+  margin-right: 0;
+}
+.wire_section h1 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 0;
+}
 
 .wire_heading {
   @include rem('font-size',13px);
@@ -69,10 +81,10 @@ h1 {
 
 .wire_section--exhibition { min-height: 200px; }
 .wire_section--courses    { min-height: 140px; }
-.wire_section--cafe       { min-height: 80px; }
+.wire_section--cafe       { min-height: 80px;  }
 .wire_section--studios    { min-height: 120px; }
-.wire_section--shop       { min-height: 80px; }
-.wire_section--hire       { min-height: 80px; }
+.wire_section--shop       { min-height: 80px;  }
+.wire_section--hire       { min-height: 80px;  }
 
 // Temp menu for wireframes
 .menu {

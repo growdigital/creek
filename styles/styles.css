@@ -602,6 +602,18 @@ h1 {
   padding: 16px;
   padding: 1rem; }
 
+.wire_section img {
+  display: inline-block;
+  margin: 0 1rem 1rem 0; }
+
+.wire_section img:last-child {
+  margin-right: 0; }
+
+.wire_section h1 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 0; }
+
 .wire_heading {
   font-size: 13px;
   font-size: 0.8125rem; }
@@ -623,22 +635,22 @@ h1 {
   min-height: 5rem; }
 
 .wire_section--exhibition {
-  height: 200px; }
+  min-height: 200px; }
 
 .wire_section--courses {
-  height: 140px; }
+  min-height: 140px; }
 
 .wire_section--cafe {
-  height: 80px; }
+  min-height: 80px; }
 
 .wire_section--studios {
-  height: 120px; }
+  min-height: 120px; }
 
 .wire_section--shop {
-  height: 80px; }
+  min-height: 80px; }
 
 .wire_section--hire {
-  height: 80px; }
+  min-height: 80px; }
 
 .menu {
   list-style-type: none;

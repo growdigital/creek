@@ -1,0 +1,44 @@
+YourOrg style.txt
+=================
+
+* Colors
+* Fonts
+* Logo
+* Coding style
+
+Colors
+------
+
+* #00a9e3 blue
+
+Fonts
+-----
+* Headings: [OpenSans](http://www.fontsquirrel.com/fonts/open-sans)
+* Body: [Sorts Mill Goudy](http://www.fontsquirrel.com/fonts/Sorts-Mill-Goudy)
+* Icon: [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+
+Logo
+----
+Inkscape example canonical logo:
+<http://upload.wikimedia.org/wikipedia/commons/0/0d/Inkscape_Logo.svg>
+
+Coding style
+------------
+* Indent: spaces: 2
+
+* CSS
+    * Multiline properties
+    * Properties grouped alphabetically
+    * Opening bracket on same line as rule set
+
+    * Colour
+        * Hexadecimal
+        * Long form declarations eg #ff0000
+        * Lower case
+
+<!--
+    http://Styletxt.org  
+    When all you want are the basic style facts...
+    An unoriginal idea from @growdigital
+    Based loosely on the fine work at http://humanstxt.org
+-->
