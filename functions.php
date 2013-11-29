@@ -9,4 +9,8 @@
       )
     );
   }
+
+  // Add post thumbnails
+  add_theme_support('post-thumbnails', array('post'));
+
 ?>

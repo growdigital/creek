@@ -587,8 +587,10 @@ h1 {
   padding: 8px;
   padding: 0.5rem;
   position: absolute;
-  right: 0;
-  top: 0; }
+  right: 1em;
+  top: 1em;
+  padding: 0.5em;
+  border: 1px solid #ccc; }
 
 .wire_nav {
   padding: 16px;
