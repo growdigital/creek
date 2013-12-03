@@ -21,8 +21,7 @@ html {
 h1 {
   color: #ccc;
   margin: 0.2rem 0;
-  text-align: center;
-
+  // text-align: center;
 }
 
 .wire_block {
@@ -45,12 +44,14 @@ h1 {
 }
 .wire_section {
   @include rem('min-height',80px);
-  @include rem('margin',16px);
-  @include rem('padding',16px);
+  @include rem('margin',16px 0);
+  @include rem('padding',16px 3px);
+  @extend .cf;
 }
 .wire_section img {
   display: inline-block;
-  margin: 0 1rem 1rem 0;
+  float: left;
+  @include rem('margin',0 8px 8px 0);
 }
 .wire_section img:last-child {
   margin-right: 0;
@@ -71,6 +72,7 @@ h1 {
 .wire_section article {
   display: inline-block;
   text-align: left;
+  width: 100%;
 }
 
 .wire_heading {

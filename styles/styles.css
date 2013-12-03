@@ -366,7 +366,7 @@ img, embed, object, video {
 .ie6 img {
   width: 100%; }
 
-.cf:after {
+.cf:after, .wire_section:after {
   clear: both;
   content: "";
   display: table; }
@@ -573,8 +573,7 @@ html {
 
 h1 {
   color: #ccc;
-  margin: 0.2rem 0;
-  text-align: center; }
+  margin: 0.2rem 0; }
 
 .wire_block {
   background-color: whitesmoke;
@@ -599,14 +598,16 @@ h1 {
 .wire_section {
   min-height: 80px;
   min-height: 5rem;
-  margin: 16px;
-  margin: 1rem;
-  padding: 16px;
-  padding: 1rem; }
+  margin: 16px 0;
+  margin:  1rem 0;
+  padding: 16px 3px;
+  padding:  1rem 0.1875rem; }
 
 .wire_section img {
   display: inline-block;
-  margin: 0 1rem 1rem 0; }
+  float: left;
+  margin: 0 8px 8px 0;
+  margin:  0 0.5rem 0.5rem 0; }
 
 .wire_section img:last-child {
   margin-right: 0; }
@@ -626,7 +627,8 @@ h1 {
 
 .wire_section article {
   display: inline-block;
-  text-align: left; }
+  text-align: left;
+  width: 100%; }
 
 .wire_heading {
   font-size: 13px;
