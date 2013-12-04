@@ -14,5 +14,8 @@
   <div class="wire_menu">
     <a href="#menu">Menu</a>
   </div>
+  <div class="wire_menu wire_menu--location">
+    <a href="#location">Location</a>
+  </div>
 
 </header>

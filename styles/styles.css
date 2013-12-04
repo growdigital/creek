@@ -591,6 +591,10 @@ h1 {
   padding: 0.5em;
   border: 1px solid #ccc; }
 
+.wire_menu--location {
+  left: 1em;
+  right: auto; }
+
 .wire_nav {
   padding: 16px;
   padding: 1rem; }
