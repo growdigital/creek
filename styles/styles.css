@@ -344,10 +344,10 @@ table {
   box-sizing: border-box; }
 
 body {
-  font-family: Georiga, serif; }
+  font-family: "Open Sans", sans-serif; }
 
 h1, h2 {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.2; }
 
 p {
