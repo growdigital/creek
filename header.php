@@ -21,7 +21,7 @@
 
 <header class="header wire_block wire_nav" role="banner">
   <div class="branding">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" width="50" height="50" />
+    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" width="50" height="50" /></a>
     <h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
     <h2><?php bloginfo('description'); ?></h2>
   </div>
