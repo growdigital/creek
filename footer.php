@@ -16,7 +16,7 @@
     </ul>
     <h2>Parking</h2>
     <ul>
-      <li><a href="https://maps.google.co.uk/maps?saddr=Belvedere+Road,+Faversham&daddr=Creek+Creative+Studios,+Abbey+Street,+Faversham&hl=en&sll=51.314346,0.893025&sspn=0.009979,0.022724&geocode=FcwRDwMdw6INACnhWUff4dLeRzHM-i52e7H3lw%3BFbwLDwMdiJ8NACF-cqj0Z-UKXCnFW2wGHtPeRzF-cqj0Z-UKXA&oq=Belve&dirflg=w&mra=ls&t=m&z=18">Belvedere Road</a>: free on-road parking, parallel to Abbey Street</li>
+      <li><a href="https://maps.google.co.uk/maps?saddr=Belvedere+Road,+Faversham&daddr=Creek+Creative+Studios,+Abbey+Street,+Faversham&hl=en&sll=51.314346,0.893025&sspn=0.009979,0.022724&geocode=FcwRDwMdw6INACnhWUff4dLeRzHM-i52e7H3lw%3BFbwLDwMdiJ8NACF-cqj0Z-UKXCnFW2wGHtPeRzF-cqj0Z-UKXA&oq=Belve&dirflg=w&mra=ls&t=m&z=18">Belvedere Road</a>: parallel to Abbey Street, free on-road parking</li>
       <li><a href="https://maps.google.co.uk/maps?saddr=Abbey+Street,+Faversham&daddr=Creek+Creative+Studios,+Abbey+Street,+Faversham&hl=en&ll=51.318403,0.894093&spn=0.002494,0.005681&sll=51.318407,0.892888&sspn=0.002494,0.005681&geocode=FcgRDwMdwqgNACnxsRzB4dLeRzFMdQjJqWgbhg%3BFbwLDwMdiJ8NACF-cqj0Z-UKXCnFW2wGHtPeRzF-cqj0Z-UKXA&dirflg=w&mra=ls&t=m&z=18">Abbey Street</a>: Free <b>one hour</b> parking</li>
       <li><a href="https://maps.google.co.uk/maps?saddr=Crescent+Rd%2FB2040&daddr=Creek+Creative+Studios,+Abbey+Street,+Faversham&hl=en&sll=51.316311,0.893567&sspn=0.002495,0.005681&geocode=FYsHDwMdEZ4NAA%3BFbwLDwMdiJ8NACF-cqj0Z-UKXCnFW2wGHtPeRzF-cqj0Z-UKXA&t=h&dirflg=w&mra=dme&mrsp=0&sz=18&z=18">Tesco</a>: 2 hours free parking</li>
       <li><a href="https://maps.google.co.uk/maps?saddr=Partridge+Ln&daddr=Creek+Creative+Studios,+Abbey+Street,+Faversham&hl=en&ll=51.316974,0.891888&spn=0.002494,0.005681&sll=51.316946,0.891494&sspn=0.001247,0.00284&geocode=FaMIDwMdEJcNAA%3BFbwLDwMdiJ8NACF-cqj0Z-UKXCnFW2wGHtPeRzF-cqj0Z-UKXA&oq=Partridg&t=m&dirflg=w&mra=dme&mrsp=0&sz=19&z=18">Partridge Lane</a>: town car park</a></li>
@@ -24,12 +24,17 @@
     </ul>
   </section>
 
-  <div class="footer__contact">
-    <p>Supported by:</p>
+  <section class="footer__contact">
   Creek Creative &copy; 2013 | <a href="mailto:info@creek-creative.org">info@creek-creative.org</a> | <a href="tel:+441795535515">01795 535 515</a> | Registered Community Interest Company No. 6702090<br/>
-  <a href="https://twitter.com/creek_creative">Twitter</a> | <a href="https://www.facebook.com/Studio.Provider">Facebook</a> | <a href="https://plus.google.com/109752071484700783468/about">Google+</a><br/>
-    <div class="supporters">
-      <a href="http://www.artscouncil.org.uk/funding/">Arts Council England</a> | <a href="http://www.swale.gov.uk/">Swale Borough Council</a> | <a href="">Kent County Council</a> | <a href="http://nfasp.org.uk/">The National Federation of Artist Studio Providers</a> | <a href="http://www.acme.org.uk/">Acme Studios</a> | <a href="http://www.faversham.org/business/fep.aspx">Faversham Enterprise Partnership</a>
-    </div>
+  <a href="https://twitter.com/creek_creative">Twitter</a> | <a href="https://www.facebook.com/Studio.Provider">Facebook</a> | <a href="https://plus.google.com/109752071484700783468/about">Google+</a>
+</section><!-- /.footer__contact -->
+
+  <div class="supporters">
+    <p>Supported by:</p>
+    <a href="http://www.artscouncil.org.uk/funding/">Arts Council England</a> | <a href="http://www.swale.gov.uk/">Swale Borough Council</a> | <a href="">Kent County Council</a> | <a href="http://nfasp.org.uk/">The National Federation of Artist Studio Providers</a> | <a href="http://www.acme.org.uk/">Acme Studios</a> | <a href="http://www.faversham.org/business/fep.aspx">Faversham Enterprise Partnership</a>
   </div>
 </footer>
+
+</div><!-- /.wrap -->
+</body>
+</html>
