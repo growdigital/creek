@@ -7,6 +7,34 @@
   </article>
 <?php endwhile; ?>
 
+<hr/>
+
+<?php
+  // Exhibitions
+  $exhibitions = eo_get_events(array(
+    'numberposts'=>all,
+    'event_start_before'=>'today',
+    'showpastevents'=>true, //Will be deprecated, but set it to true to play it safe.
+  ));
+
+  if($exhibitions):
+    echo '<ul>';
+    foreach ($exhibitions as $event):
+      //Check if all day, set format accordingly
+      $format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format').' '.get_option('time_format') );
+      printf(
+        '<li><a href="%s">%s</a> on %s</li>',
+        get_permalink($event->ID),
+        get_the_title($event->ID),
+        eo_get_the_start($format, $event->ID,null,$event->occurrence_id)
+      );
+    endforeach;
+    echo '</ul>';
+  endif;
+ ?>
+<hr/>
+
+
 <section><!-- home exhibitions -->
   <h1>Exhibitions + link</h1>
   <ol>
@@ -67,21 +95,21 @@
 
 <? // $post_type = get_post_type_object('event'); var_dump($post_type);?>
 
-
 <section>
 <?php if(get_field('section')): ?>
  
   <ul>
  
   <?php while(has_sub_field('section')): ?>
- 
     <article class="<?php the_sub_field('section_promoted'); ?>"> <!-- TODO: if true, then class = is-promoted -->
       <h1><?php the_sub_field('section_title'); ?></h1> 
-      <img src="<?php $image = get_sub_field('section_image'); $size = $image['sizes']; echo $size['thumbnail'] . '"' . ' alt="' . $image['alt'];  ?>"/>
+      <img src="<?php 
+        $image = get_sub_field('section_image'); 
+        $size = $image['sizes']; 
+        echo $size['medium'] . '"' . ' alt="' . $image['alt'];  ?>"/>
       <? // var_dump($image); ?>
     <?php the_sub_field('section_copy'); ?>
     </article>
- 
   <?php endwhile; ?>
  
   </ul>
