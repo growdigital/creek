@@ -344,10 +344,10 @@ table {
   box-sizing: border-box; }
 
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: serif; }
 
 h1, h2 {
-  font-family: "Open Sans", sans-serif;
+  font-family: serif;
   line-height: 1.2; }
 
 p {
