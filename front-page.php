@@ -1,11 +1,11 @@
 <?php get_header('includes/header.php'); ?>
 
-<?php // while (have_posts()) : the_post(); ?>
+<?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <h1 class="article__head"><?php the_title(); ?></h1>
     <?php the_content(); ?>
   </article>
-<?php // endwhile; ?>
+<?php endwhile; ?>
 
 
 <section class="exhibitions">
@@ -14,40 +14,45 @@
 
 <div class="exhibitions-current">
 
-<h2>Current </h2>
+<h2>Current</h2>
 
+<h3 style="color:red;">Current</h3>
 
-
-<?php // Using ACF repeater normal array
-// $rows = get_field('carousel');
-// if($rows)
-//   { 
-//     echo '<ol class="carousel-indicators">';
-//     foreach($rows as $i => $row) {
-//       echo '<li class="';
-//       if ($i == 0) echo 'active'; 
-//       echo '" data-target="#carousel" data-slide-to="' . $i++ .'"></li>';
-//     }
-//     echo '</ol><!-- / carousel-indicators -->';
-//     echo '<div class="carousel-inner">';
-// 
-//     foreach($rows as $i => $row) {
-//       echo '<div class="item';
-//       if ($i == 0) echo ' active'; 
-//       echo '"><img src="'. $row['carousel_image']['url'] .'" alt="' . $row['carousel_image_desc'] . '" /></div>';
-//     }
-//     echo '</div><!-- / .carousel-inner -->';
-//   }
-// ?>
-
-<?php
-
-// If you use get_posts() or WP_Query instead then you should ensure the following:
-// 
-// post_type - is set to 'event'
-// suppress_filters - is set to false
-
+<?php 
+  $args = array(
+    'numberposts'      => all,
+    'post_type'        => 'event',
+    'post_status'      => 'publish',
+    'suppress_filters' => false 
+  );
+  $events = get_posts($args);
 ?>
+
+<?php foreach ($events as $post) : setup_postdata($post); ?>
+<article>
+  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'thumbnail'); ?>
+  <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+  <?php 
+    $artists = get_field('artist');
+    if($artists) {
+      echo '<p>';
+      foreach($artists as $artist) {
+        $artistName[] = $artist['artist_name'];
+      }
+      echo implode(', ', $artistName);
+      unset($artistName);
+      echo '</p>';
+    }
+  ?>
+  <p><a class="is-unvisited" href="<?php bloginfo('url'); ?>/calendar/" title="Link to calendar page"><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></a></p>
+</article> 
+<?php 
+  endforeach; 
+  wp_reset_postdata();
+?>
+
+<hr>
 
 <h3 style="color:red;">all post_type event</h3>
 <?php 

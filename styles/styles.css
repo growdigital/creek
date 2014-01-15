@@ -344,10 +344,10 @@ table {
   box-sizing: border-box; }
 
 body {
-  font-family: serif; }
+  font-family: sans-serif; }
 
 h1, h2 {
-  font-family: serif;
+  font-family: sans-serif;
   line-height: 1.2; }
 
 p {
@@ -559,6 +559,9 @@ a:hover {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+.is-unvisited:visited {
+  color: blue; }
 
 .wrap {
   margin: 0 auto;

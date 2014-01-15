@@ -26,4 +26,9 @@ a:hover {
   width: 1px;
 }
 
-// %is-linkless
+// .is-linkless
+
+// Links unvisited
+.is-unvisited:visited {
+  color: blue;
+}
