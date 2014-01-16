@@ -18,7 +18,7 @@
 
 <?php 
   $args = array(
-    'numberposts'        =>  2,
+    'numberposts'        => 'all',
     'post_type'          => 'event',
     'event-category'     => 'exhibition',
     'post_status'        => 'publish',
