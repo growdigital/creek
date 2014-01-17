@@ -14,4 +14,11 @@
   // Add post thumbnails
   add_theme_support('post-thumbnails', array('post'));
 
+  // Use WordPress default jQuery
+  add_action( 'wp_enqueue_script', 'load_jquery' );
+  function load_jquery() {
+      wp_enqueue_script( 'jquery' );
+  }
+
+
 ?>

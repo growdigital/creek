@@ -45,7 +45,50 @@
       echo '</p>';
     }
   ?>
-  <p><a class="is-unvisited" href="<?php bloginfo('url'); ?>/calendar/" title="Link to calendar page"><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></a></p>
+  <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+</article> 
+<?php 
+  endforeach; 
+  wp_reset_postdata();
+?>
+
+</div><!-- /.exhibitions-current -->
+
+
+
+<div class="exhibitions-future">
+
+<h2>Next</h2>
+
+<?php 
+  $args = array(
+    'numberposts'        => 'all',
+    'post_type'          => 'event',
+    'event-category'     => 'exhibition',
+    'post_status'        => 'publish',
+    'event_start_after' =>  'today',
+    'suppress_filters'   =>  false 
+  );
+  $events = get_posts($args);
+?>
+<?php foreach ($events as $post) : setup_postdata($post); ?>
+<article>
+  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'thumbnail'); ?>
+  <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+  <?php 
+    $artists = get_field('artist');
+    if($artists) {
+      echo '<p>';
+      foreach($artists as $artist) {
+        $artistName[] = $artist['artist_name'];
+      }
+      echo implode(', ', $artistName);
+      unset($artistName);
+      echo '</p>';
+    }
+  ?>
+  <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
 </article> 
 <?php 
   endforeach; 
@@ -53,10 +96,6 @@
 ?>
 
 
-
-<div class="exhibitions-future">
-
-<h2>Next</h2>
 
 </div><!-- /.exhibitions-future -->
 
