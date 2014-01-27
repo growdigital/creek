@@ -15,10 +15,14 @@
   add_theme_support('post-thumbnails', array('post'));
 
   // Use WordPress default jQuery
-  add_action( 'wp_enqueue_script', 'load_jquery' );
-  function load_jquery() {
-      wp_enqueue_script( 'jquery' );
-  }
+  // add_action( 'wp_enqueue_script', 'load_jquery' );
+  // function load_jquery() {
+  //     wp_enqueue_script( 'jquery' );
+  // }
 
+  // Add custom image sizes
+  // For A4 posters at different resolutions
+  // Originally from Simple Image Sizes plugin
+  add_image_size( 'a4_thumbnail', '74', '105', false );
 
 ?>

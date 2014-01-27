@@ -1,12 +1,6 @@
 <?php get_header('includes/header.php'); ?>
 
-<?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
-    <h1 class="article__head"><?php the_title(); ?></h1>
-    <?php the_content(); ?>
-  </article>
-<?php endwhile; ?>
-
+<main role="main">
 
 <section class="exhibitions">
 
@@ -14,7 +8,7 @@
 
 <div class="exhibitions-current">
 
-<h2>Current</h2>
+<h2>Current exhibitions</h2>
 
 <?php 
   $args = array(
@@ -30,7 +24,7 @@
 ?>
 <?php foreach ($events as $post) : setup_postdata($post); ?>
 <article>
-  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'thumbnail'); ?>
+  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
   <?php 
@@ -45,6 +39,9 @@
       echo '</p>';
     }
   ?>
+  
+  <?php $excerpt =  get_field('excerpt'); ?>
+  <p><?php echo $excerpt; ?>
   <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
 </article> 
 <?php 
@@ -56,9 +53,9 @@
 
 
 
-<div class="exhibitions-future">
+<div class="exhibitions-next">
 
-<h2>Next</h2>
+<h2>Next exhibitions</h2>
 
 <?php 
   $args = array(
@@ -73,7 +70,7 @@
 ?>
 <?php foreach ($events as $post) : setup_postdata($post); ?>
 <article>
-  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'thumbnail'); ?>
+  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
   <?php 
@@ -95,49 +92,98 @@
   wp_reset_postdata();
 ?>
 
-
-
-</div><!-- /.exhibitions-future -->
-
-
+</div><!-- /.exhibitions-next -->
 
 </section><!-- /.exhibitions -->
 
 
+<section class="courses">
 
-<section><!-- home exhibitions -->
-  <h1>Exhibitions + link</h1>
-  <ol>
-    <li><b>Current</b>
-      <ul>
-        <li>Display event(s) of type exhibition where date is current
-          <ul>
-            <li>Title + link</li>
-            <li>A4 Thumbnail + link</li>
-            <li>Artist(s) inline</li>
-            <li>Date range</li>
-          </ul>
-        </li>
-        <li>If no exhibition, display nothing?</li>
-      </ul>
-    </li>
+<div class="courses_coming_up">
+  <h2>Courses coming up</h2>
 
-    <li><b>Next</b>
-      <ul>
-        <li>Display next event(s) of type exhibition where date is in the future
-          <ul>
-            <li>Title + link</li>
-            <li>A4 Thumbnail + link</li>
-            <li>Artist(s) inline</li>
-            <li>Date range</li>
-          </ul>
-        </li>
-        <li>If no exhbition, display nothing?</li>
-      </ul>
-    </li>
-    <li>If no exhibitions, placeholder text?</li>
-  </ol>
-</section>
+<?php 
+  $args = array(
+    'numberposts'        => 'all',
+    'post_type'          => 'event',
+    'event-category'     => 'course',
+    'post_status'        => 'publish',
+    'event_start_after' =>  'today',
+    'suppress_filters'   =>  false 
+  );
+  $events = get_posts($args);
+?>
+<?php foreach ($events as $post) : setup_postdata($post); ?>
+<article>
+  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
+  <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+  <?php 
+    $artists = get_field('artist');
+    if($artists) {
+      echo '<p>';
+      foreach($artists as $artist) {
+        $artistName[] = $artist['artist_name'];
+      }
+      echo implode(', ', $artistName);
+      unset($artistName);
+      echo '</p>';
+    }
+  ?>
+  <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+</article> 
+<?php 
+  endforeach; 
+  wp_reset_postdata();
+?>
+
+</div><!-- /.courses_coming_up -->
+
+<div class="courses_currently_running">
+  <h2>Courses currently running</h2>
+
+<?php 
+  $args = array(
+    'numberposts'        => 'all',
+    'post_type'          => 'event',
+    'event-category'     => 'course',
+    'post_status'        => 'publish',
+    'event_start_before' => 'today',
+    'event_end_after'    => 'today',
+    'suppress_filters'   =>  false 
+  );
+  $events = get_posts($args);
+  echo '<ul>'; 
+?>
+<?php foreach ($events as $post) : setup_postdata($post); ?>
+<li>
+  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'thumbnail'); ?>
+  <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+  <?php 
+    $artists = get_field('artist');
+    if($artists) {
+      echo '<p>';
+      foreach($artists as $artist) {
+        $artistName[] = $artist['artist_name'];
+      }
+      echo implode(', ', $artistName);
+      unset($artistName);
+      echo '</p>';
+    }
+  ?>
+  <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+</li> 
+<?php 
+  endforeach; 
+  wp_reset_postdata();
+  echo '</ul>';
+?>
+
+
+</div><!-- /.courses_currently_running -->
+
+</section><!-- /.courses -->
 
 <section><!-- home courses -->
   <h1>Courses + link</h1>
@@ -165,7 +211,7 @@
 
 <? // $post_type = get_post_type_object('event'); var_dump($post_type);?>
 
-<section>
+<section class="sections">
 <?php if(get_field('section')): ?>
  
   <ul>
@@ -185,7 +231,9 @@
   </ul>
  
 <?php endif; ?>
-</section>
+</section><!-- /.sections -->
+
+</main>
 
 <?php get_footer(); ?>
 
