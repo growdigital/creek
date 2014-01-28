@@ -6,8 +6,8 @@
 
 <h1>Exhibitions</h1>
 
+<!-- CURRENT EXHIBITIONS -->
 <div class="exhibitions-current">
-
 <h2>Current exhibitions</h2>
 
 <?php 
@@ -27,6 +27,7 @@
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+  <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
   <?php 
     $artists = get_field('artist');
     if($artists) {
@@ -39,9 +40,6 @@
       echo '</p>';
     }
   ?>
-  
-  <?php $excerpt =  get_field('excerpt'); ?>
-  <p><?php echo $excerpt; ?>
   <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
 </article> 
 <?php 
@@ -52,9 +50,8 @@
 </div><!-- /.exhibitions-current -->
 
 
-
+<!-- NEXT EXHIBITIONS -->
 <div class="exhibitions-next">
-
 <h2>Next exhibitions</h2>
 
 <?php 
@@ -63,7 +60,7 @@
     'post_type'          => 'event',
     'event-category'     => 'exhibition',
     'post_status'        => 'publish',
-    'event_start_after' =>  'today',
+    'event_start_after'  => 'today',
     'suppress_filters'   =>  false 
   );
   $events = get_posts($args);
@@ -73,6 +70,7 @@
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+  <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
   <?php 
     $artists = get_field('artist');
     if($artists) {
@@ -93,14 +91,13 @@
 ?>
 
 </div><!-- /.exhibitions-next -->
-
 </section><!-- /.exhibitions -->
-
 
 <section class="courses">
 
+<!-- NEXT COURSES -->
 <div class="courses_coming_up">
-  <h2>Courses coming up</h2>
+<h2>Courses coming up</h2>
 
 <?php 
   $args = array(
@@ -118,18 +115,8 @@
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-  <?php 
-    $artists = get_field('artist');
-    if($artists) {
-      echo '<p>';
-      foreach($artists as $artist) {
-        $artistName[] = $artist['artist_name'];
-      }
-      echo implode(', ', $artistName);
-      unset($artistName);
-      echo '</p>';
-    }
-  ?>
+  <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
+
   <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
 </article> 
 <?php 
@@ -140,7 +127,7 @@
 </div><!-- /.courses_coming_up -->
 
 <div class="courses_currently_running">
-  <h2>Courses currently running</h2>
+<h2>Courses currently running</h2>
 
 <?php 
   $args = array(
@@ -157,9 +144,8 @@
 ?>
 <?php foreach ($events as $post) : setup_postdata($post); ?>
 <li>
-  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
-  <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
   <?php 
     $artists = get_field('artist');
     if($artists) {
@@ -180,34 +166,12 @@
   echo '</ul>';
 ?>
 
+<!-- if no courses, then placeholder? or nothing? -->
 
 </div><!-- /.courses_currently_running -->
 
 </section><!-- /.courses -->
 
-<section><!-- home courses -->
-  <h1>Courses + link</h1>
-  <ol>
-    <li><b>Upcoming courses</b>
-      <ul>
-        <li>Display event(s) of type course where date is future
-          <ul>
-            <li>Title + link</li>
-            <li>A4 Thumbnail + link</li>
-            <li>Short form dates</li>
-          </ul>
-        </li>
-        <li>If no future courses, then nothing</li>
-      </ul>
-    </li>
-    <li><b>Current courses</b>
-      <ul>
-        <li>Title + link</li>
-      </ul>
-    </li>
-    <li>If no courses then placeholder text</li>
-  </ol>
-</section>
 
 <? // $post_type = get_post_type_object('event'); var_dump($post_type);?>
 
