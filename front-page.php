@@ -101,23 +101,39 @@
 
 <?php 
   $args = array(
-    'numberposts'        => 'all',
+    // 'numberposts'        => 'all',
     'post_type'          => 'event',
     'event-category'     => 'course',
+    'group_events_by'    => 'series',
     'post_status'        => 'publish',
-    'event_start_after' =>  'today',
+    'event_start_after'  => 'today',
+
+    // 'event_start_before' => 'today',
+    // 'event_end_before'   => 'today',
+    // 'event_end_after'    => 'today',
+
     'suppress_filters'   =>  false 
   );
-  $events = get_posts($args);
+  $courses = get_posts($args);
 ?>
-<?php foreach ($events as $post) : setup_postdata($post); ?>
+<?php foreach ($courses as $post) : setup_postdata($post); ?>
 <article>
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
   <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
 
-  <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+<?php // echo eo_get_schedule_start( 'jS M YY', 7 ); ?>
+<?php // echo eo_get_schedule_last( 'jS M YY', 7 ); ?>
+
+<?php if( eo_reoccurs() ){
+            echo eo_get_schedule_start('D jS M Y') . ' to ' . eo_get_schedule_end('D jS M Y');
+      }else{
+            echo eo_get_the_start('D jS M Y');
+      }
+ ?>
+
+
 </article> 
 <?php 
   endforeach; 
@@ -126,6 +142,7 @@
 
 </div><!-- /.courses_coming_up -->
 
+<!-- CURRENT COURSES -->
 <div class="courses_currently_running">
 <h2>Courses currently running</h2>
 
@@ -135,30 +152,17 @@
     'post_type'          => 'event',
     'event-category'     => 'course',
     'post_status'        => 'publish',
+    'group_events_by'    => 'series',
     'event_start_before' => 'today',
     'event_end_after'    => 'today',
     'suppress_filters'   =>  false 
   );
-  $events = get_posts($args);
+  $courses = get_posts($args);
   echo '<ul>'; 
 ?>
-<?php foreach ($events as $post) : setup_postdata($post); ?>
+<?php foreach ($courses as $post) : setup_postdata($post); ?>
 <li>
-  <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-  <?php 
-    $artists = get_field('artist');
-    if($artists) {
-      echo '<p>';
-      foreach($artists as $artist) {
-        $artistName[] = $artist['artist_name'];
-      }
-      echo implode(', ', $artistName);
-      unset($artistName);
-      echo '</p>';
-    }
-  ?>
-  <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
 </li> 
 <?php 
   endforeach; 
