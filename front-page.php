@@ -101,17 +101,13 @@
 
 <?php 
   $args = array(
-    // 'numberposts'        => 'all',
+    'numberposts'        => 'all',
     'post_type'          => 'event',
     'event-category'     => 'course',
     'group_events_by'    => 'series',
     'post_status'        => 'publish',
     'event_start_after'  => 'today',
-
-    // 'event_start_before' => 'today',
-    // 'event_end_before'   => 'today',
-    // 'event_end_after'    => 'today',
-
+    'order'              => 'ASC',
     'suppress_filters'   =>  false 
   );
   $courses = get_posts($args);
