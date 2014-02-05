@@ -20,9 +20,9 @@
     'event_end_after'    => 'today',
     'suppress_filters'   =>  false 
   );
-  $events = get_posts($args);
+  $events_current = get_posts($args);
 ?>
-<?php foreach ($events as $post) : setup_postdata($post); ?>
+<?php foreach ($events_current as $post) : setup_postdata($post); ?>
 <article>
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
@@ -63,9 +63,9 @@
     'event_start_after'  => 'today',
     'suppress_filters'   =>  false 
   );
-  $events = get_posts($args);
+  $events_next = get_posts($args);
 ?>
-<?php foreach ($events as $post) : setup_postdata($post); ?>
+<?php foreach ($events_next as $post) : setup_postdata($post); ?>
 <article>
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
@@ -95,7 +95,7 @@
 
 <section class="courses">
 
-<!-- NEXT COURSES -->
+<!-- *** NEXT COURSES *** -->
 <div class="courses_coming_up">
 <h2>Courses coming up</h2>
 
@@ -110,9 +110,9 @@
     'order'              => 'ASC',
     'suppress_filters'   =>  false 
   );
-  $courses = get_posts($args);
+  $courses_next = get_posts($args);
 ?>
-<?php foreach ($courses as $post) : setup_postdata($post); ?>
+<?php foreach ($courses_next as $post) : setup_postdata($post); ?>
 <article>
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
@@ -128,7 +128,6 @@
             echo eo_get_the_start('D jS M Y');
       }
  ?>
-
 
 </article> 
 <?php 
@@ -153,10 +152,10 @@
     'event_end_after'    => 'today',
     'suppress_filters'   =>  false 
   );
-  $courses = get_posts($args);
+  $courses_current = get_posts($args);
   echo '<ul>'; 
 ?>
-<?php foreach ($courses as $post) : setup_postdata($post); ?>
+<?php foreach ($courses_current as $post) : setup_postdata($post); ?>
 <li>
   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 </li> 
