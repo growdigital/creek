@@ -26,7 +26,7 @@
     <h2><?php bloginfo('description'); ?></h2>
   </div>
   <div class="contact">
-    1 Abbey Street, Faversham, <a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en">ME13 7BE</a><br/>
+    1 Abbey Street, Faversham, Kent <a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en">ME13 7BE</a><br/>
      ‎<a href="tel:+441795535515">01795 535 515</a>
   </div>
   <div class="open">
