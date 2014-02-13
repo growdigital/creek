@@ -1,3 +1,6 @@
+.header__brand {
+  background-color: $blue;
+} 
 .ico {
   background: url(/images/icons/sprite.svg) no-repeat;
   display: inline-block;
@@ -83,4 +86,4 @@
 .media__img--extend {
   float: right; 
   @include rem ('margin-left',10px);
-} 
+}

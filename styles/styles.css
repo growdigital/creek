@@ -344,6 +344,7 @@ table {
   box-sizing: border-box; }
 
 body {
+  background-color: white;
   font-family: sans-serif; }
 
 h1, h2 {
@@ -366,10 +367,13 @@ img, embed, object, video {
 .ie6 img {
   width: 100%; }
 
-.cf:after, .wire_section:after {
+.cf:after {
   clear: both;
   content: "";
   display: table; }
+
+.header__brand {
+  background-color: #22224c; }
 
 .ico {
   background: url(/images/icons/sprite.svg) no-repeat;
@@ -563,130 +567,8 @@ a:hover {
 .is-unvisited:visited {
   color: blue; }
 
-.wrap {
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-top: 1.25rem;
-  width: 90%;
-  padding: 0;
-  width: 100%; }
-
 html {
   margin-top: 0 !important; }
-
-h1 {
-  color: #ccc;
-  margin: 0.2rem 0; }
-
-.wire_block {
-  background-color: whitesmoke;
-  border: 1px solid gainsboro;
-  color: silver;
-  font: small sans-serif;
-  text-align: center; }
-
-.wire_menu {
-  padding: 8px;
-  padding: 0.5rem;
-  position: absolute;
-  right: 1em;
-  top: 1em;
-  padding: 0.5em;
-  border: 1px solid #ccc; }
-
-.wire_menu--location {
-  left: 6em;
-  right: auto; }
-
-.wire_nav {
-  padding: 16px;
-  padding: 1rem; }
-
-.wire_section {
-  min-height: 80px;
-  min-height: 5rem;
-  margin: 16px 0;
-  margin:  1rem 0;
-  padding: 16px 3px;
-  padding:  1rem 0.1875rem; }
-
-.wire_section img {
-  display: inline-block;
-  float: left;
-  margin: 0 8px 8px 0;
-  margin:  0 0.5rem 0.5rem 0; }
-
-.wire_section img:last-child {
-  margin-right: 0; }
-
-.wire_section h1, h2, h3 {
-  font-weight: normal;
-  margin: 0 0 0.1rem; }
-
-.wire_section h1 {
-  font-size: 1.2rem; }
-
-.wire_section h2 {
-  font-size: 1.1rem; }
-
-.wire_section h3 {
-  font-size: 1rem; }
-
-.wire_section article {
-  display: inline-block;
-  text-align: left;
-  width: 100%; }
-
-.wire_heading {
-  font-size: 13px;
-  font-size: 0.8125rem; }
-
-.wire_section--title {
-  min-height: 80px;
-  min-height: 5rem; }
-
-.wire_section--block1 {
-  min-height: 120px;
-  min-height: 7.5rem; }
-
-.wire_section--block2 {
-  min-height: 120px;
-  min-height: 7.5rem; }
-
-.wire_section--nav {
-  min-height: 80px;
-  min-height: 5rem; }
-
-.wire_section--exhibition {
-  min-height: 200px; }
-
-.wire_section--courses {
-  min-height: 140px; }
-
-.wire_section--cafe {
-  min-height: 80px; }
-
-.wire_section--studios {
-  min-height: 120px; }
-
-.wire_section--shop {
-  min-height: 80px; }
-
-.wire_section--hire {
-  min-height: 80px; }
-
-.menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-.menu > * {
-  list-style-type: none;
-  display: inline-block;
-  margin: 0 0.5em; }
-
-.sub-menu {
-  display: none; }
 
 .post-45 .article__head {
   display: none; }

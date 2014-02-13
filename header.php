@@ -11,31 +11,32 @@
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
   <title>Creek Creative Art &amp; Design Studios</title>
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
-  <? // TODO: trim down the entire Open Sans font family!: ?>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
   <?php wp_head(); ?> 
 </head>
 <body>
 <div class="wrap">
 
-<header class="header wire_block wire_nav" role="banner">
-  <div class="branding">
-    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" width="50" height="50" /></a>
-    <h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-    <h2><?php bloginfo('description'); ?></h2>
+<header class="header" role="banner">
+  <div class="header__brand">
+    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" /></a>
+    <div>
+      <a href="#menu">Menu</a>
+    </div>
   </div>
   <div class="contact">
     1 Abbey Street, Faversham, Kent <a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en">ME13 7BE</a><br/>
      ‎<a href="tel:+441795535515">01795 535 515</a>
   </div>
-  <div class="open">
-    Open: Tue–Sun, 10am–4pm
+  <nav class="nav" id="menu" role="navigation">
+    <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>
+    <div class="open">
+      Open: Tue–Sun, 10am–4pm
   </div>
-  <div class="wire_menu">
-    <a href="#menu">Menu</a>
-  </div>
-  <div class="wire_menu wire_menu--location">
+  </nav>
+
+
+  <div>
     <a href="#location">Location</a>
   </div>
 </header>
