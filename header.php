@@ -10,7 +10,7 @@
   <meta content="width=device-width,minimum-scale=1.0" name="viewport" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
   <title>Creek Creative Art &amp; Design Studios</title>
-  <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
   <?php wp_head(); ?> 
 </head>
@@ -19,14 +19,20 @@
 
 <header class="header" role="banner">
   <div class="header__brand">
-    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" /></a>
-    <div>
+    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+      <img class="header__logo" src="<?php echo get_template_directory_uri(); ?>/images/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
+    </a>
+    <div class="header__menu">
       <a href="#menu">Menu</a>
     </div>
   </div>
-  <div class="contact">
-    1 Abbey Street, Faversham, Kent <a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en">ME13 7BE</a><br/>
-     ‎<a href="tel:+441795535515">01795 535 515</a>
+  <div class="header__contact">
+    <div class="header__address">
+      <a href="#location">1 Abbey Street, Faversham, Kent ME13 7BE</a>
+    </div>
+    <div class="header__tel">
+       ‎<a href="tel:+441795535515">01795 535 515</a>
+    </div>
   </div>
   <nav class="nav" id="menu" role="navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>

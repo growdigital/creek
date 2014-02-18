@@ -367,13 +367,10 @@ img, embed, object, video {
 .ie6 img {
   width: 100%; }
 
-.cf:after {
+.cf:after, .header__brand:after {
   clear: both;
   content: "";
   display: table; }
-
-.header__brand {
-  background-color: #22224c; }
 
 .ico {
   background: url(/images/icons/sprite.svg) no-repeat;
@@ -510,6 +507,23 @@ img, embed, object, video {
 
 .ico--calendar {
   background-position: -78px -102px; }
+
+.header__brand {
+  background-color: #22224c;
+  padding: 11px 9px;
+  padding:  0.6875rem 0.5625rem; }
+
+.header__logo {
+  float: left;
+  width: 79%; }
+
+.header__menu {
+  float: right; }
+
+.header__contact {
+  background-color: #d1d8bf;
+  padding: 11px 9px;
+  padding:  0.6875rem 0.5625rem; }
 
 .media {
   margin-right: 10px;

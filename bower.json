@@ -1,0 +1,24 @@
+{
+  "name": "creeky",
+  "version": "0.1.0",
+  "description": "Creek Creative WordPress theme",
+  "homepage": "https://github.com/growdigital/creeky",
+  "authors": [
+    "Jake Rayson <contact@growdigital.org>"
+  ],
+  "description": "creeky WordPress theme",
+  "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~3.1.8",
+    "modernizr": "~2.7.1",
+    "normalize.css": "~3.0.0"
+  }
+}

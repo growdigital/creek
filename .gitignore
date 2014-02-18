@@ -1,5 +1,11 @@
-# Don't version the node_modules, make sure to install with `npm install` #
+# Don't version the node_modules
+#make sure to install with `npm install`
 node_modules
+
+# Ditto don't version the bower_components.
+# install components with `bower install`
+# Altho there is some debate about this: http://addyosmani.com/blog/checking-in-front-end-dependencies/
+bower_components
 
 ._*
 .*.swp

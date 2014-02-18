@@ -1,4 +1,4 @@
-<footer class="footer_main wire_block wire_nav">
+<footer class="footer_main">
 
 
   <nav class="nav">
@@ -8,6 +8,7 @@
   <section class="location" id="location">
     <h1>Location</h1>
     <h2>Railway station</h2>
+    <p><a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en">Creek Creative on Google Maps</a></p>
     <ul>
       <li>Faversham (FAV) <a href="http://traintimes.org.uk/dep/FAV">train departures</a></li>
       <li>Station Road, Faversham <a href="https://maps.google.co.uk/maps?saddr=Faversham+%4051.311710,0.891060&daddr=Creek+Creative+Studios,+Abbey+Street,+Faversham&hl=en&ll=51.314346,0.893025&spn=0.009979,0.022724&sll=51.316284,0.890831&sspn=0.002495,0.005681&geocode=FV70DgMdtJgNAA%3BFbwLDwMdiJ8NACF-cqj0Z-UKXCnFW2wGHtPeRzF-cqj0Z-UKXA&dirflg=w&mra=ls&t=m&z=16">ME13 8EB</a></li>
