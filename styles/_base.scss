@@ -17,14 +17,50 @@
 // Atmosphere
 //////////////
 
+// Fonts
+/////////
+// TODO: may not use all of them, tidy up, rename later
+.MuseoSans-700 {
+  font-family: MuseoSans-700;
+  font-weight: normal;
+  font-style: normal;
+}
+.MuseoSans-300 {
+  font-family: MuseoSans-300;
+  font-weight: normal;
+  font-style: normal;
+}
+.MuseoSans-500 {
+  font-family: MuseoSans-500;
+  font-weight: normal;
+  font-style: normal;
+}
+.MuseoSans-700Italic {
+  font-family: MuseoSans-700Italic;
+  font-weight: normal;
+  font-style: normal;
+}
+.MuseoSans-300Italic {
+  font-family: MuseoSans-300Italic;
+  font-weight: normal;
+  font-style: normal;
+}
+.MuseoSans-500Italic {
+  font-family: MuseoSans-500Italic;
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Typography
 //////////////
 body {
   background-color: white;
-  font-family: $body;
+  // font-family: $body;
+  @extend .MuseoSans-500;
 }
-h1, h2 {
-  font-family: $head;
+h1, h2, h3 {
+  // font-family: $head;
+  @extend .MuseoSans-300;
   line-height: 1.2;
 }
 
@@ -33,6 +69,14 @@ p  { @include rem ('margin',0 0 5px); }
 dl, dt, dd {
   margin: 0;
   padding: 0;
+}
+
+em {
+  @extend .MuseoSans-500Italic;
+}
+
+strong {
+  @extend .MuseoSans-700;
 }
 
 // Responsive media
