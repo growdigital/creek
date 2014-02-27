@@ -11,20 +11,23 @@
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <title>Creek Creative Art &amp; Design Studios</title>
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+  <script src="<?php echo get_template_directory_uri(); ?>/bower_components/jquery/dist/jquery.min.js"></script>
   <?php wp_head(); ?>
+
+  <script src="<?php echo get_template_directory_uri(); ?>/_blocks/menu/menu.js"></script>
+  </script>
+
+
 </head>
 <body>
-<div class="wrap">
+<div class="wrap" id="wrap">
 
 <header class="header" role="banner">
   <div class="header__brand">
     <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
       <img class="header__logo" src="<?php echo get_template_directory_uri(); ?>/images/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
     </a>
-    <div class="header__menu">
-      <a href="#menu">Menu</a>
-    </div>
   </div>
   <div class="header__contact">
     <div class="header__address">
@@ -34,6 +37,8 @@
        ‎<a href="tel:+441795535515">01795 535 515</a>
     </div>
   </div>
+        <a href="#menu" class="menu-link">Menu</a>
+
   <nav class="nav" id="menu" role="navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>
     <div class="open">
