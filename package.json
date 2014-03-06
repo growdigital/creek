@@ -2,9 +2,6 @@
   "name": "creeky",
   "version": "0.1.0",
   "description": "Creek Creative WordPress theme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/growdigital/creeky.git"
@@ -15,9 +12,19 @@
     "url": "https://github.com/growdigital/creeky/issues"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-sass": "~0.5.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "gulp-rename": "^1.2.0",
+    "tiny-lr": "0.0.5",
+    "gulp-ruby-sass": "^0.4.0",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-notify": "^1.0.0-beta",
+    "gulp-livereload": "^1.2.0",
+    "gulp-clean": "^0.2.4",
+    "gulp-uglify": "^0.2.1",
+    "gulp-jshint": "^1.5.0",
+    "gulp-concat": "^2.1.7",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-cache": "^0.1.3",
+    "gulp-imagemin": "^0.1.5",
+    "gulp-svgmin": "^0.4.4"
   }
 }
