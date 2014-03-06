@@ -15,8 +15,7 @@
   <script src="<?php echo get_template_directory_uri(); ?>/bower_components/jquery/dist/jquery.min.js"></script>
   <?php wp_head(); ?>
 
-  <script src="<?php echo get_template_directory_uri(); ?>/_blocks/menu/menu.js"></script>
-  </script>
+  <script src="<?php echo get_template_directory_uri(); ?>/_blocks/organisms/menu/menu.js"></script>
 
 
 </head>
@@ -28,6 +27,9 @@
     <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
       <img class="header__logo" src="<?php echo get_template_directory_uri(); ?>/images/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
     </a>
+    <div>
+      <a href="#location">Location</a>
+    </div>
   </div>
   <div class="header__contact">
     <div class="header__address">
@@ -47,7 +49,5 @@
   </nav>
 
 
-  <div>
-    <a href="#location">Location</a>
-  </div>
+
 </header>

@@ -2,20 +2,20 @@
   @include rem ('margin-right',10px);
 }
 .media, .media__body {
-  overflow:hidden; 
+  overflow:hidden;
 }
 .ie6 .media, .ie6 .media__body {
   overflow:visible;
   zoom: 1;
 }
 .media__img {
-  float: left; 
+  float: left;
   @include rem ('margin-right',10px);
 }
 .media__img img {
   display: block;
 }
 .media__img--extend {
-  float: right; 
+  float: right;
   @include rem ('margin-left',10px);
 }

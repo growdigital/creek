@@ -1,7 +1,7 @@
 // Mixins - other than Bourbon
 //////////
 
-// Rem 
+// Rem
 ///////
 
 // Baseline, measured in pixels
@@ -9,7 +9,7 @@
 // If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px),
 // then the variable below would be 10px.
 $baseline-px: 16px;
- 
+
 @mixin rem($property, $px-values) {
   // Convert the baseline into rems
   $baseline-rem: $baseline-px / 1rem;
@@ -17,7 +17,8 @@ $baseline-px: 16px;
   #{$property}: $px-values;
   // If there is only one (numeric) value, return the property/value line for it.
   @if type-of($px-values) == "number" {
-    #{$property}: $px-values / $baseline-rem; }
+    #{$property}: $px-values / $baseline-rem;
+  }
   @else {
     // Create an empty list that we can dump values into
     $rem-values: unquote("");
@@ -28,7 +29,9 @@ $baseline-px: 16px;
       @else {
         $rem-values: append($rem-values, $value / $baseline-rem); } }
     // Return the property and its list of converted values
-    #{$property}: $rem-values; } }
+    #{$property}: $rem-values;
+  }
+}
 // Usage:
 // .element {
 //   @include rem('padding',10px 0 2px 5px);

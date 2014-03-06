@@ -4,10 +4,10 @@ Author: Jake Rayson
 Author URI: http://growdigital.org/
 Description: A responsive mobile theme for Creek Creative Art & Design Studios, Faversham, Kent ME13 7BE
 Version: 0.1
-License: Creative Commons Attribution-ShareAlike 3.0 Unported License.  
+License: Creative Commons Attribution-ShareAlike 3.0 Unported License.
 License URI: http://creativecommons.org/licenses/by-sa/3.0/deed.en_US
 Tags: responsive, gallery, mobile
 */
 
 /* Import CSS from processed & globbed SCSS */
-@import 'styles/styles.css';  
+@import 'dist/assets/styles/styles.css';
