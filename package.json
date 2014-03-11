@@ -29,6 +29,7 @@
     "gulp-svg2png": "^0.2.2",
     "gulp": "^3.5.5",
     "gulp-myth": "^0.1.1",
-    "gulp-pixrem": "^0.1.0"
+    "gulp-pixrem": "^0.1.0",
+    "gulp-mustache": "^0.2.0"
   }
 }

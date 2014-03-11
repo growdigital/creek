@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
-    imagemin = require('gulp-svgmin'),
+    svgmin = require('gulp-svgmin'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
@@ -16,7 +16,7 @@ var gulp = require('gulp'),
     server = lr(),
 
     paths = {
-      css: [
+      styles: [
         'source/assets/styles/alpha.css',
         'source/assets/styles/variables.css',
         'source/bower_components/normalize/normalize.css',
@@ -26,11 +26,16 @@ var gulp = require('gulp'),
         'source/patternlab/**/**/**/*.css',
         'source/assets/styles/shame.css'
       ],
-      svg: [
-        'source/assets/images/svg/*.svg'
+      scripts: [
+        'source/bower_components/jquery/dist/jquery.js',
+        'source/bower_components/modernizr/modernizr.js',
+        'source/assets/scripts/*.js',
+      ],
+      vector: [
+        'source/assets/images/svg/**/*.svg'
       ],
       bitmap: [
-        'source/assets/images/bitmap/*'
+        'source/assets/images/bitmap/**/*.jpg'
       ]
     };
 
@@ -44,31 +49,48 @@ var gulp = require('gulp'),
 //     .pipe(notify({ message: 'Styles task complete' }));
 // });
 
-gulp.task('css', function() {
-  var stream = gulp.src(paths.css)
+gulp.task('styles', function() {
+  var stream = gulp.src(paths.styles)
     .pipe(myth())
     .pipe(pixrem())
     .pipe(concat("styles.css"))
     // TODO: minify only minifiying pattern lab directories -- why?
     // .pipe(minifycss())
+    .pipe(livereload(server))
     .pipe(gulp.dest('dist/assets/css/'))
+    .pipe(notify({ message: 'Styles task complete.' }));
 });
 
 
-// gulp.task('css', function() {
-//     var stream = gulp.src(paths.css)
-//         .pipe(myth())
-//         .on('error', function(e){ handleError('Run Myth processing',e);})
-//         .pipe(concat("styles.css"))
-//         .on('error', function(e){ handleError('Concat CSS files',e);})
-//         .pipe(pixrem())
-//         .on('error', function(e){ handleError('Pixel fallback for rems',e);})
-//         .pipe(minifyCSS())
-//         .on('error', function(e){ handleError('Minify CSS files',e);})
-//         .pipe(gulp.dest('static'))
-//         .on('error', function(e){ handleError('Save CSS file',e);});
-// });
+gulp.task('scripts', function() {
+  return gulp.src(paths.scripts)
+    // TODO: Fix JSHint!
+    // .pipe(jshint('.jshintrc'))
+    // .pipe(jshint.reporter('default'))
+    .pipe(concat('main.js'))
+    // TODO: Not renaming minified JS file for now
+    // .pipe(gulp.dest('dist/assets/js'))
+    // .pipe(rename({suffix: '.min'}))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/assets/js'))
+    .pipe(livereload(server))
+    .pipe(notify({ message: 'Scripts task complete' }));
+});
 
-// gulp.task('default', ['css']);
+// TODO: fix orchestrator error: > TypeError: Object #<Object> has no method 'forEach'
+gulp.task('images', function() {
+  return gulp.src('source/assets/images/bitmap/**/*')
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(gulp.dest('dist/assets/img'))
+    .pipe(livereload(server))
+    .pipe(notify({ message: 'Images task complete' }));
+});
+
+gulp.task('vector', function() {
+  return gulp.src(paths.vector)
+    .pipe(svgmin())
+    // TODO: add parameters to gulp.dest so that forgets original directory!
+    .pipe(gulp.dest('dist/assets/img/'));
+});
 
 

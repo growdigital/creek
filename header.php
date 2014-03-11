@@ -10,9 +10,9 @@
   <meta content="width=device-width,minimum-scale=1.0" name="viewport">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <title>Creek Creative Art &amp; Design Studios</title>
-  <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/dist/assets/img/favicon.png">
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-  <script src="<?php echo get_template_directory_uri(); ?>/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/main.js"></script>
   <?php wp_head(); ?>
 
   <script src="<?php echo get_template_directory_uri(); ?>/_blocks/organisms/menu/menu.js"></script>
@@ -25,7 +25,7 @@
 <header class="Header" role="banner">
   <div class="Header-brand u-cf">
     <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-      <img class="Header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
+      <img class="Header-logo" src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
     </a>
     <div>
       <a href="#location">Location</a>

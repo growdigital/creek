@@ -663,6 +663,43 @@ label {
   font-style: normal;
 }
 /* ==========================================================================
+   Icon
+   ========================================================================== */
+
+/**
+ * SVG icons with PNG fallback
+ */
+
+.Icon {
+  background: url(/dist/assets/img/icons/sprite.svg) no-repeat;
+  display: inline-block;
+  line-height: 0;
+  vertical-align: bottom;
+}
+
+.Icon--22 {
+  height: 26px;
+  width: 26px;
+}
+
+.Icon--baseline {
+  vertical-align: baseline;
+}
+
+/* 22px */
+
+.Icon--22--article {
+  background-position: 0   0;
+}
+
+.Icon--22--event {
+  background-position: -22px 0;
+}
+
+.Icon--22--comment {
+  background-position: -44px 0;
+}
+/* ==========================================================================
    Headings
    ========================================================================== */
 
@@ -735,43 +772,6 @@ p {
   font-size: 1rem;
   margin: 0 0 8px;
   margin: 0 0 0.5rem;
-}
-/* ==========================================================================
-   Icon
-   ========================================================================== */
-
-/**
- * SVG icons with PNG fallback
- */
-
-.Icon {
-  background: url(/dist/assets/img/icons/sprite.svg) no-repeat;
-  display: inline-block;
-  line-height: 0;
-  vertical-align: bottom;
-}
-
-.Icon--22 {
-  height: 26px;
-  width: 26px;
-}
-
-.Icon--baseline {
-  vertical-align: baseline;
-}
-
-/* 22px */
-
-.Icon--22--article {
-  background-position: 0   0;
-}
-
-.Icon--22--event {
-  background-position: -22px 0;
-}
-
-.Icon--22--comment {
-  background-position: -44px 0;
 }
 .Header-brand {
   background-color: #22224c;
