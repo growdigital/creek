@@ -22,8 +22,8 @@
 <body>
 <div class="wrap" id="wrap">
 
-<header class="Header u-cf" role="banner">
-  <div class="Header-brand">
+<header class="Header" role="banner">
+  <div class="Header-brand u-cf">
     <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
       <img class="Header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
     </a>
