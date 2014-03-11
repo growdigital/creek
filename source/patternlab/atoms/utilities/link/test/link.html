@@ -1,0 +1,41 @@
+{% extends "styleguide_base.html" %}
+{% block content %}
+
+<h1 class="sg-Heading">SUIT CSS: <a href="https://github.com/suitcss/utils-link">link utilities</a> tests</h1>
+
+<p>
+<a href="#">Control link</a>
+</p>
+
+<h2 class="sg-Heading"><code>u-linkBlock</code></h2>
+<p>renders a block-level link with no text decoration for any state</p>
+<div>
+<a class="u-linkBlock" href="#">Link text</a>
+</div>
+
+<h2 class="sg-Heading"><code>u-linkClean</code></h2>
+<p>renders a link with no text decoration for any state</p>
+<div>
+<a class="u-linkClean" href="#">Link text</a>
+</div>
+
+<h2 class="sg-Heading"><code>u-linkComplex</code> / <code>u-linkComplexTarget</code></h2>
+<p>renders a link with only the 'target' receiving text decoration on hover/focus/active</p>
+<div>
+<a class="u-linkComplex" href="#">
+  Link complex
+  <span class="u-linkComplexTarget">target</span>
+</a>
+</div>
+
+<h2 class="sg-Heading"><code>u-linkPseudo</code></h2>
+<p>renders a `button` like a link</p>
+<div>
+<button class="u-linkPseudo" type="button">Link text</button>
+</div>
+<p>doesn't prevent the button styles from being modified</p>
+<div id="linkPseudo-mods">
+<button class="u-linkPseudo" type="button">Link text</button>
+</div>
+
+{% endblock %}

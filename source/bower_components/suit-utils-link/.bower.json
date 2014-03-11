@@ -1,0 +1,28 @@
+{
+  "name": "suit-utils-link",
+  "version": "0.2.0",
+  "author": "Nicolas Gallagher",
+  "main": "link.css",
+  "devDependencies": {
+    "suit-test": "*"
+  },
+  "ignore": [
+    ".*",
+    "Makefile",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ],
+  "homepage": "https://github.com/suitcss/utils-link",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.0",
+    "commit": "5e9c823d3648f89acf5f0d436e097cf4cd509fa9"
+  },
+  "_source": "git://github.com/suitcss/utils-link.git",
+  "_target": "~0.2.0",
+  "_originalSource": "suit-utils-link",
+  "_direct": true
+}

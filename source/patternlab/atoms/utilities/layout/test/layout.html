@@ -1,0 +1,51 @@
+{% extends "styleguide_base.html" %}
+{% block content %}
+
+<h1 class="sg-Heading">Test: SUIT utilities - <a href="https://github.com/suitcss/utils-layout">layout</a></h1>
+<h2 class="sg-Heading">Clearfix</h2>
+<div class="u-cf dev-Box">
+    <p><b><code>u-cf</code></b></p>
+    <div class="dev-Float dev-Highlight"></div>
+    <div class="dev-Float dev-Highlight"></div>
+</div>
+
+<h2 class="sg-Heading">New block formatting context</h2>
+<div class="dev-Box" style="width:300px;">
+    <div class="dev-Float dev-Highlight"></div>
+    <div class="u-nbfc">
+        <p><b><code>u-nbfc</code></b>. The text should not wrap under the float.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tincidunt nulla. Suspendisse semper, nisl vitae ultricies vulputate, metus tortor tincidunt neque, sed feugiat lacus ipsum eu neque. Mauris pharetra facilisis turpis, ac lacinia justo fermentum vel. Maecenas sed semper nisi. Integer sed erat nec sem mattis dignissim.</p>
+    </div>
+</div>
+
+<div class="dev-Box" style="width:300px;">
+    <div class="dev-Float dev-Highlight"></div>
+    <div class="u-nbfcAlt">
+        <p><b><code>u-nbfcAlt</code></b>. The text should not wrap under the float.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tincidunt nulla. Suspendisse semper, nisl vitae ultricies vulputate, metus tortor tincidunt neque, sed feugiat lacus ipsum eu neque. Mauris pharetra facilisis turpis, ac lacinia justo fermentum vel. Maecenas sed semper nisi. Integer sed erat nec sem mattis dignissim.</p>
+    </div>
+</div>
+
+<h2 class="sg-Heading">Floats</h2>
+<div class="dev-Box">
+    <div class="u-pullLeft dev-Highlight"><b><code>u-pullLeft</code></b><br>Float</div> x
+</div>
+<div class="dev-Box" style="text-align:right">
+    <div class="u-pullRight dev-Highlight"><b><code>u-pullRight</code></b><br>Float</div> x
+</div>
+<div class="dev-Box">
+    <div class="u-objLeft dev-Highlight"><b><code>u-objLeft</code></b><br>Float with margin</div> x
+</div>
+<div class="dev-Box" style="text-align:right">
+    <div class="u-objRight dev-Highlight"><b><code>u-objRight</code></b><br>Float with margin</div> x
+</div>
+
+<h2 class="sg-Heading">Alignment</h2>
+<div style="line-height:30px">
+    <p><b><code>u-alignTop</code></b> <span class="dev-LittleBox u-alignTop"></span></p>
+    <p><b><code>u-alignMiddle</code></b> <span class="dev-LittleBox u-alignMiddle"></span></p>
+    <p><b><code>u-alignBaseline</code></b> <span class="dev-LittleBox u-alignBaseline"></span></p>
+    <p><b><code>u-alignBottom</code></b> <span class="dev-LittleBox u-alignBottom"></span></p>
+</div>
+
+{% endblock %}

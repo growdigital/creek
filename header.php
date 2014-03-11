@@ -22,20 +22,20 @@
 <body>
 <div class="wrap" id="wrap">
 
-<header class="header" role="banner">
-  <div class="header__brand">
+<header class="Header u-cf" role="banner">
+  <div class="Header-brand">
     <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-      <img class="header__logo" src="<?php echo get_template_directory_uri(); ?>/images/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
+      <img class="Header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
     </a>
     <div>
       <a href="#location">Location</a>
     </div>
   </div>
-  <div class="header__contact">
-    <div class="header__address">
+  <div class="Header-contact">
+    <div class="Header-address">
       <a href="#location">1 Abbey Street, Faversham, Kent ME13 7BE</a>
     </div>
-    <div class="header__tel">
+    <div class="Header-tel">
        ‎<a href="tel:+441795535515">01795 535 515</a>
     </div>
   </div>

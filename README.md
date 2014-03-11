@@ -3,29 +3,65 @@ creeky
 
 Creek Creative WordPress website theme.
 
-This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.  
+This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
 To view a copy of this license, visit <http://creativecommons.org/licenses/by-sa/3.0/deed.en_US>
 
-Instructions for using GruntJS
-------------------------------
+1. Pattern Lab
+* Suit CSS
+* Gulp
+* Myth
+* Handlebars
+* EditorConfig
+
+## Gulp
 
 ### Installation
 
-* Install the grunt command-line tool (-g puts it in /usr/local/bin):  
-`% sudo npm install -g grunt-cli`
-* Install all the packages required to build this:  
-(Packages will be installed in ./node_modules - don't accidentally commit this)  
-`% cd wp-content/themes/theme_name`  
-`% npm install`
-
 ### Building
 
-    % grunt
+    % gulp
 
-Watch for changes:
+If you create new patterns in patternlab, you may need to restart gulp
 
-    % grunt watch
+##
 
-If you create new `.scss` blocks in `_blocks` directory, restart `% grunt watch`
+## Suit CSS
 
-**NB:** make sure to be using the latest version of [node](http://nodejs.org/). I had a `Bus error: 10` error, solved by [upgrading node](http://stackoverflow.com/questions/20521685/grunt-task-exits-with-bus-error-10).
+https://github.com/suitcss/suit
+
+### Suit CSS syntax
+
+#### Utilities
+
+* Low-level structural, positional, and visual traits.
+* Must use camelCase name.
+* Syntax `u-<utilityName>`
+
+#### Components
+
+* UI patterns
+* Syntax: `[<namespace>-]<ComponentName>[-descendantName|--modifierName]`
+* `ComponentName` in PascalCase
+* `ComponentName--modifierName` in camelCase, separated by 2 hyphens.
+* `ComponentName-descendantName` in camelCase, separated by 1 hyphen.
+* `ComponentName.is-stateOfComponent` state-based modifications of components. JS can add/remove these classes. Are scoped to component.
+
+#### Other
+
+* `v[n]-utilityName` or `v[n]-ComponentName` scope styles to a Media Query breakpoint.
+* `js-someName` - `id` & `js-*` reserved for JavaScript. Application specific data stored in `data-*` attributes.
+
+
+### Suit CSS comments
+
+```
+/* ==========================================================================
+   Component Name - title
+   ========================================================================== */
+
+/**
+ * Heading in comments
+ */
+
+ /* Single line comment */
+```

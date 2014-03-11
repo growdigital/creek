@@ -1,0 +1,27 @@
+{% extends "styleguide_base.html" %}
+{% block content %}
+
+<h1 class="sg-Heading">Test: SUIT utilities - <a href="https://github.com/suitcss/utils-state">state</a></h1>
+
+<h3 class="sg-Heading">Hidden: <code>u-isHidden</code></h3>
+<div class="u-isHidden">This should be hidden</div>
+
+<h3 class="sg-Heading">Visually hidden: u-isHiddenVisually<code></code></h3>
+<div class="u-isHiddenVisually">This should be visually hidden</div>
+
+<h3 class="sg-Heading">Visible: <code>u-isVisible</code></h3>
+<div class="u-isVisible dev-invisible">This should have its visibility overriden and be visible</div>
+
+<h3 class="sg-Heading">Invisible: <code>u-isInvisible</code></h3>
+<div class="u-isInvisible dev-visible">This should have its visibility overriden and be invisible</div>
+
+<h3 class="sg-Heading">Actionable: <code>u-isActionable</code></h3>
+<div class="u-isActionable">Should have <code>pointer</code> cursor</div>
+
+<h3 class="sg-Heading">Draggable: <code>u-isDraggable</code></h3>
+<div class="u-isDraggable">Should have <code>move</code> cursor</div>
+
+<h3 class="sg-Heading">Disabled: <code>u-isDisabled</code></h3>
+<div class="u-isDisabled">Should have <code>default</code> cursor</div>
+
+{% endblock %}

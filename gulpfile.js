@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
+    myth = require('gulp-myth'),
+    pixrem = require('gulp-pixrem'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
@@ -13,16 +13,62 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
     lr = require('tiny-lr'),
-    server = lr();
+    server = lr(),
 
-gulp.task('styles', function() {
-  return gulp.src('src/styles/main.scss')
-    .pipe(sass({ style: 'expanded' }))
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('dist/assets/css'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('dist/assets/css'))
-    .pipe(livereload(server))
-    .pipe(notify({ message: 'Styles task complete' }));
+    paths = {
+      css: [
+        'source/assets/styles/alpha.css',
+        'source/assets/styles/variables.css',
+        'source/bower_components/normalize/normalize.css',
+        'source/assets/styles/base.css',
+        'source/bower_components/suit-utils-*/*.css',
+        'source/patternlab/**/**/*.css',
+        'source/patternlab/**/**/**/*.css',
+        'source/assets/styles/shame.css'
+      ],
+      svg: [
+        'source/assets/images/svg/*.svg'
+      ],
+      bitmap: [
+        'source/assets/images/bitmap/*'
+      ]
+    };
+
+// gulp.task('styles', function() {
+//   return gulp.src(paths.css)
+//     .pipe(gulp.dest('dist/assets/css/styles.css'))
+//     .pipe(rename({suffix: '.min'}))
+//     .pipe(minifycss())
+//     .pipe(gulp.dest('dist/assets/css'))
+//     .pipe(livereload(server))
+//     .pipe(notify({ message: 'Styles task complete' }));
+// });
+
+gulp.task('css', function() {
+  var stream = gulp.src(paths.css)
+    .pipe(myth())
+    .pipe(pixrem())
+    .pipe(concat("styles.css"))
+    // TODO: minify only minifiying pattern lab directories -- why?
+    // .pipe(minifycss())
+    .pipe(gulp.dest('dist/assets/css/'))
 });
+
+
+// gulp.task('css', function() {
+//     var stream = gulp.src(paths.css)
+//         .pipe(myth())
+//         .on('error', function(e){ handleError('Run Myth processing',e);})
+//         .pipe(concat("styles.css"))
+//         .on('error', function(e){ handleError('Concat CSS files',e);})
+//         .pipe(pixrem())
+//         .on('error', function(e){ handleError('Pixel fallback for rems',e);})
+//         .pipe(minifyCSS())
+//         .on('error', function(e){ handleError('Minify CSS files',e);})
+//         .pipe(gulp.dest('static'))
+//         .on('error', function(e){ handleError('Save CSS file',e);});
+// });
+
+// gulp.task('default', ['css']);
+
+

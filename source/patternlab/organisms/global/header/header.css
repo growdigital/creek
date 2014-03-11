@@ -1,0 +1,15 @@
+.Header-brand {
+  background-color: var(blue);
+  padding: 0.6875rem 0.5625rem;
+}
+.Header-logo {
+  float: left;
+  width: 79%;
+}
+.Header-menu {
+  float: right;
+}
+.Header-contact {
+  background-color: var(sage_21);
+  padding: 0.6875rem 0.5625rem;
+}

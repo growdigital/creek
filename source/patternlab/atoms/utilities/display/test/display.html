@@ -1,0 +1,31 @@
+{% extends "styleguide_base.html" %}
+{% block content %}
+
+<h1 class="sg-Heading">Test: SUIT utilities - <a href="https://github.com/suitcss/utils-display">display</a></h1>
+<div class="dev-Box">
+    <span class="u-block dev-Inner">
+        This <code>span</code> should be <code>block</code>, as it has <code><strong>u-block</strong></code> class.
+    </span>
+</div>
+<div class="dev-Box">
+    <span class="u-inlineBlock dev-Inner">
+        This <code>span</code> should be <code>inline-block</code>, as it has <code><strong>u-inlineBlock</strong></code> class.
+    </span>
+</div>
+<div class="dev-Box">
+    <div class="u-inline dev-Inner">
+        This <code>div</code> should be <code>inline</code>, as it has <code><strong>u-inline</strong></code> class.
+    </div>
+</div>
+<div class="dev-Box">
+    <div class="u-table dev-Inner">
+        <div class="u-tableCell dev-Inner">
+            This <code>div</code> should be <code>table-cell</code> within <code>table</code>, as it has <code><strong>u-tableCell</strong></code> class.
+        </div>
+        <div class="u-tableCell dev-Inner">
+            This <code>div</code> should be <code>table-cell</code> within <code>table</code> as it has <code><strong>u-tableCell</strong></code> class.
+        </div>
+    </div>
+</div>
+
+{% endblock %}

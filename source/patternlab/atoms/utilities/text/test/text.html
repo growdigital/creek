@@ -1,0 +1,72 @@
+{% extends "styleguide_base.html" %}
+{% block content %}
+
+<h1 class="sg-Heading">SUIT CSS: <a href="https://github.com/suitcss/utils-text">text utilities</a> tests</h1>
+
+<h2 class="sg-Heading"><code>.u-textBreak</code></h2>
+<p>breaks stings across multiple lines, when they are wider than the container</p>
+<div>
+<div class="dev-Box u-textBreak">
+    http://subdomain.exampledomain.com/averylongurlthatneedstobebrokenotherwiseitisgoingtokeepgoingforever
+</div>
+</div>
+<p>does not break strings that are not wider than the container</p>
+<div>
+<div class="dev-Box u-textBreak">
+    wraplongwords dontbreaklongwords
+    wraplongwords dontbreaklongwords
+    wraplongwords dontbreaklongwords
+    wraplongwords dontbreaklongwords
+    wraplongwords dontbreaklongwords
+</div>
+</div>
+
+<h2 class="sg-Heading"><code>.u-textCenter</code></h2>
+<p>center-aligns text</p>
+<div>
+<div class="dev-Box u-textCenter">
+  Lorem ipsum dolor sit amet.
+</div>
+</div>
+
+<h2 class="sg-Heading"><code>.u-textLeft</code></h2>
+<p>left-aligns text</p>
+<div>
+<div class="dev-Box u-textLeft">
+  Lorem ipsum dolor sit amet.
+</div>
+</div>
+
+<h2 class="sg-Heading"><code>.u-textRight</code></h2>
+<p>right-aligns text</p>
+<div>
+<div class="dev-Box u-textRight">
+  Lorem ipsum dolor sit amet.
+</div>
+</div>
+
+<h2 class="sg-Heading"><code>.u-textInheritColor</code></h2>
+<p>should inherit the ancestral text color</p>
+<div>
+<div class="dev-Box">
+  <a class="u-textInheritColor" href="#non">Should always be black</a>
+</div>
+</div>
+
+<h2 class="sg-Heading"><code>.u-textNoWrap</code></h2>
+<p>should not wrap text</p>
+<div>
+<div class="dev-Box u-textNoWrap">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit blandit dolor, at euismod ante eleifend in. Duis imperdiet cursus nibh, quis tincidunt nibh rhoncus at.
+</div>
+</div>
+
+<h2 class="sg-Heading"><code>.u-textTruncate</code></h2>
+<p>clips and truncates a single line of text, using an ellipsis</p>
+<div>
+<div class="dev-Box u-textTruncate">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit blandit dolor, at euismod ante eleifend in. Duis imperdiet cursus nibh, quis tincidunt nibh rhoncus at.
+</div>
+</div>
+
+{% endblock %}

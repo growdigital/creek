@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Myth CSS variables
+   ========================================================================== */
+
+:root {
+  /**
+   * Colors
+   */
+
+  /* Brand colors */
+  var-blue:     #22224c;
+  var-orange:   #cb4b16;
+  /* var-slate_80: #31495f; */
+  var-slate_73: #455d72;
+  var-slate_69: #53687c;
+
+  var-sage_30:  #bfc4a4;
+  var-sage_21:  #d1d8bf;
+
+  var-background: white;
+
+  /* Warm greys */
+  var-k94:      #141619;
+  var-grey_text:      #24272c;
+  var-k76:      #4c5259;
+  var-k61:      #737c86;
+  var-k50:      #8f97a0;
+  var-k34:      #b5bbc1;
+
+  /* Additional colors */
+  var-link:    blue;
+  var-visited: purple;
+
+  /**
+   * Type
+   */
+  var-head: sans-serif;
+  var-body: sans-serif;
+
+
+  /**
+   * Base variables, adapated from Suit CSS
+   * /
+
+  /* Base */
+  var-base_background:     var(background);
+  var-base_color:          var(grey_text);
+  var-base_fontfamily:     var(body);
+  var-base_fontsize:       16px;
+  var-base_lineheight:     1.4;
+  var-base_linkcolor:      var(link);
+  var-base_linkcolorhover: var(visited);
+
+  /**
+   * Breakpoints, use rework-breakpoints
+   */
+
+  /* var-small:   20em;  320px */
+  /* var-medium:  36em;  576px */
+  /* var-large:   62em;  992px */
+  /* var-x-large: 77em; 1232px */
+}
