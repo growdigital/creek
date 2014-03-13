@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     svgmin = require('gulp-svgmin'),
+    svg2png = require('gulp-svg2png'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
@@ -15,6 +16,7 @@ var gulp = require('gulp'),
     lr = require('tiny-lr'),
     server = lr(),
 
+    // Define paths variables
     paths = {
       styles: [
         'source/assets/styles/alpha.css',
@@ -32,7 +34,7 @@ var gulp = require('gulp'),
         'source/assets/scripts/*.js',
       ],
       vector: [
-        'source/assets/images/svg/**/*.svg'
+        'source/assets/images/svg/transparency/*.svg'
       ],
       bitmap: [
         'source/assets/images/bitmap/**/*.jpg'
@@ -49,6 +51,8 @@ var gulp = require('gulp'),
 //     .pipe(notify({ message: 'Styles task complete' }));
 // });
 
+
+// Mangle your CSS - preprocess, optimise, concatenate
 gulp.task('styles', function() {
   var stream = gulp.src(paths.styles)
     .pipe(myth())
@@ -61,7 +65,7 @@ gulp.task('styles', function() {
     .pipe(notify({ message: 'Styles task complete.' }));
 });
 
-
+// JS optimisation, linting, concatening etc
 gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
     // TODO: Fix JSHint!
@@ -78,6 +82,7 @@ gulp.task('scripts', function() {
 });
 
 // TODO: fix orchestrator error: > TypeError: Object #<Object> has no method 'forEach'
+// Bitmap image optimisation
 gulp.task('images', function() {
   return gulp.src('source/assets/images/bitmap/**/*')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
@@ -86,11 +91,35 @@ gulp.task('images', function() {
     .pipe(notify({ message: 'Images task complete' }));
 });
 
+// SVG optmisation and PNGinisationism
 gulp.task('vector', function() {
   return gulp.src(paths.vector)
-    .pipe(svgmin())
     // TODO: add parameters to gulp.dest so that forgets original directory!
+    // possibly in svgmin parameters, as svg2png works ok
+    .pipe(svgmin())
+    .pipe(gulp.dest('dist/assets/img/./'))
+    .pipe(svg2png())
     .pipe(gulp.dest('dist/assets/img/'));
+    // TODO: sort out workflow, optimise generated PNGs
 });
 
+// Clean task
+gulp.task('clean', function() {
+  return gulp.src(['dist/assets/css', 'dist/assets/js', 'dist/assets/img'], {read: false})
+    .pipe(clean());
+});
+
+// Keep a close eye on stuff
+gulp.task('watch', function() {
+// TODO: pass the paths variables, rather than rewrite out
+  // Watch .css files
+  gulp.watch('source/styles/**/*.css', ['styles']);
+
+  // Watch .js files
+  gulp.watch('source/scripts/**/*.js', ['scripts']);
+
+  // Watch image files
+  gulp.watch('source/images/**/*', ['images']);
+
+});
 
