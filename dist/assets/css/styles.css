@@ -1,0 +1,807 @@
+/* ==========================================================================
+   Alpha
+   ========================================================================== */
+
+/**
+ * For those bits of CSS that *have* to come first...
+ */
+
+@import url("//hello.myfonts.net/count/29ad58");
+/* ==========================================================================
+   Myth CSS variables
+   ========================================================================== */
+
+:root {
+  /**
+   * Colors
+   */
+  /* Brand colors */
+  /* var-slate_80: #31495f; */
+  /* Warm greys */
+  /* Additional colors */
+  /**
+   * Type
+   */
+  /**
+   * Base variables, adapated from Suit CSS
+   * /
+
+  /* Base */
+  /**
+   * Breakpoints, use rework-breakpoints
+   */
+  /* var-small:   20em;  320px */
+  /* var-medium:  36em;  576px */
+  /* var-large:   62em;  992px */
+  /* var-x-large: 77em; 1232px */
+}
+/* ==========================================================================
+   Base CSS
+   ========================================================================== */
+
+/**
+ * Adapted from suit-base CSS
+ * https://github.com/suitcss/base
+ * Also including base colours, font size, line height
+ */
+
+/* Apply a natural box layout model to all elements */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Responsive. Images. */
+
+img,
+embed,
+object,
+video {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.ie6 img {
+  width: 100%;
+}
+
+/* Apply base variables */
+
+html {
+  background-color: white;
+  color: #24272c;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: purple;
+  text-decoration: underline;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  margin: 0 0 0 24px;
+  margin: 0 0 0 1.5rem;
+  padding: 0;
+}
+
+li {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+/* ==========================================================================
+   Display utilities
+   ========================================================================== */
+
+/**
+ * Display-type utilities
+ */
+
+.u-inline {
+  display: inline !important;
+}
+
+.u-inlineBlock {
+  display: inline-block !important;
+}
+
+.u-block {
+  display: block !important;
+}
+
+.u-table {
+  display: table !important;
+}
+
+.u-tableCell {
+  display: table-cell !important;
+}
+/* ==========================================================================
+   Layout utilities
+   ========================================================================== */
+
+/**
+ * Vertical alignment utilities
+ * Depends on an appropriate `display` value.
+ */
+
+.u-alignTop {
+  vertical-align: top !important;
+}
+
+.u-alignMiddle {
+  vertical-align: middle !important;
+}
+
+.u-alignBaseline {
+  vertical-align: baseline !important;
+}
+
+.u-alignBottom {
+  vertical-align: bottom !important;
+}
+
+/**
+ * Contain floats
+ *
+ * Make an element expand to contain floated children.
+ * Uses pseudo-elements (micro clearfix).
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of the
+ *    element.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.u-cf:before,
+.u-cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.u-cf:after {
+  clear: both;
+}
+
+/**
+ * New block formatting context
+ *
+ * This affords some useful properties to the element. It won't wrap under
+ * floats. Will also contain any floated children.
+
+ * N.B. This will clip overflow. Use the alternative method below if this is
+ * problematic.
+ */
+
+.u-nbfc {
+  overflow: hidden !important;
+}
+
+/**
+ * New block formatting context (alternative)
+ *
+ * Alternative method when overflow must not be clipped.
+ *
+ * 1. Create a new block formatting context (NBFC).
+ * 2. Avoid shrink-wrap behaviour of table-cell.
+ *
+ * N.B. This breaks down in some browsers when elements within this element
+ * exceed its width.
+ */
+
+.u-nbfcAlt {
+  display: table-cell !important;
+  /* 1 */
+  width: 10000px !important;
+  /* 2 */
+}
+
+/**
+ * Floats
+ */
+
+.u-pullLeft {
+  float: left !important;
+}
+
+.u-pullRight {
+  float: right !important;
+}
+
+/**
+ * Object position helpers.
+ *
+ * Float an object left or right, and include some space between the object and
+ * proceeding objects.
+ */
+
+.u-objLeft {
+  float: left !important;
+  margin-right: 10px;
+}
+
+.u-objRight {
+  float: right !important;
+  margin-left: 10px;
+}
+
+/**
+ * 1. Remove excess space below images
+ * 2. Guard against `img {max-width:100%}` hiding this utility's images in
+ *    IE 8.
+ */
+
+.u-objLeft img,
+.u-objRight img {
+  display: block;
+  /* 1 */
+  max-width: none;
+  /* 2 */
+}
+/*! suit-utils-link v0.2.0 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   Link-specific utilities
+   ========================================================================== */
+
+/**
+ * Clean link
+ *
+ * A link without any text-decoration at all.
+ */
+
+.u-linkClean,
+.u-linkClean:hover,
+.u-linkClean:focus,
+.u-linkClean:active {
+  text-decoration: none !important;
+}
+
+/**
+ * Link complex
+ *
+ * A common pattern is to have a link with several pieces of text and/or an
+ * icon, where only one piece of text should display the underline when the
+ * link is the subject of user interaction.
+ *
+ * Example HTML:
+ *
+ * <a class="u-linkComplex" href="#">
+ *     Link complex
+ *     <span class="u-linkComplex-target">target</span>
+ * </a>
+ */
+
+.u-linkComplex,
+.u-linkComplex:hover,
+.u-linkComplex:focus,
+.u-linkComplex:active {
+  text-decoration: none !important;
+}
+
+.u-linkComplex:hover .u-linkComplex-target,
+.u-linkComplex:focus .u-linkComplex-target,
+.u-linkComplex:active .u-linkComplex-target {
+  text-decoration: underline !important;
+}
+
+/**
+ * Block-level link
+ *
+ * Combination of traits commonly used in vertical navigation lists.
+ */
+
+.u-linkBlock,
+.u-linkBlock:hover,
+.u-linkBlock:focus,
+.u-linkBlock:active {
+  display: block !important;
+  text-decoration: none !important;
+}
+
+/**
+ * Pseudo-link
+ *
+ * Another interactive element, e.g., `button`, styled to look like an anchor.
+ * Relies on the utility selector being added to the link base styles rule.
+ *
+ * `!important` is not used liberally because the root element, like normal
+ * links, is likely to be modified by components.
+ *
+ * Example base CSS:
+ *
+ * a,
+ * .u-linkPseudo {
+ *     color: lightblue;
+ * }
+ *
+ * a:hover,
+ * a:focus,
+ * a:active,
+ * .u-linkPseudo:hover,
+ * .u-linkPseudo:focus,
+ * .u-linkPseudo:active {
+ *     color: blue;
+ * }
+ *
+ * Example HTML:
+ *
+ * <button class="u-linkPseudo" type="button">
+ *     <a role="presentation">Button content</a>
+ * </button>
+ */
+
+.u-linkPseudo {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer !important;
+  font: inherit;
+}
+
+.u-linkPseudo:hover,
+.u-linkPseudo:focus,
+.u-linkPseudo:active {
+  background: transparent;
+  color: inherit;
+}
+/* ==========================================================================
+   States utilities
+   ========================================================================== */
+
+/**
+ * Indicate that interaction will result in an (in)action.
+ */
+
+.u-isActionable {
+  cursor: pointer !important;
+}
+
+.u-isDisabled {
+  cursor: default !important;
+}
+
+.u-isDraggable {
+  cursor: move !important;
+}
+
+/**
+ * Completely remove from the flow and screen readers.
+ */
+
+.u-isHidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+.u-isHiddenVisually {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+/**
+ * Control visibility without affecting flow.
+ */
+
+.u-isInvisible {
+  visibility: hidden !important;
+}
+
+.u-isVisible {
+  visibility: visible !important;
+}
+/* ==========================================================================
+   Text utilities
+   ========================================================================== */
+
+/**
+ * Horizontal text alignment
+ */
+
+.u-textCenter {
+  text-align: center !important;
+}
+
+.u-textLeft {
+  text-align: left !important;
+}
+
+.u-textRight {
+  text-align: right !important;
+}
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+.u-textTruncate {
+  max-width: 100%;
+  /* 1 */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+  /* 2 */
+}
+
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.u-textBreak {
+  word-wrap: break-word !important;
+}
+
+/**
+ * Inherit the ancestor's text color.
+ */
+
+.u-textInheritColor {
+  color: inherit !important;
+}
+
+/**
+ * Inherit the ancestor's text color for all states.
+ */
+
+.u-textInheritAllColor,
+.u-textInheritAllColor:hover,
+.u-textInheritAllColor:focus,
+.u-textInheritAllColor:active {
+  color: inherit !important;
+}
+/* ==========================================================================
+   MyFonts webfont for Museo
+   ========================================================================== */
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 2731352, 2014-01-23T06:48:47-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Museo Sans 700 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-sans/700/
+ *
+ * Webfont: Museo Sans 300 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-sans/300/
+ *
+ * Webfont: Museo Sans 500 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-sans/500/
+ *
+ * Webfont: Museo Sans 700 Italic by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-sans/700-italic/
+ *
+ * Webfont: Museo Sans 300 Italic by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-sans/300-italic/
+ *
+ * Webfont: Museo Sans 500 Italic by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-sans/500-italic/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2731352
+ * Licensed pageviews: 500,000
+ * Webfonts copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ *
+ * © 2014 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+
+/* @import added to alpha.css, to get it at top of styles.css file */
+
+/* @import url("//hello.myfonts.net/count/29ad58"); */
+
+@font-face {
+  font-family: 'MuseoSans-700';
+  src: url('../fonts/webfonts/29AD58_0_0.eot');
+  src: url('../fonts/webfonts/29AD58_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/29AD58_0_0.woff') format('woff'),url('../fonts/webfonts/29AD58_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MuseoSans-300';
+  src: url('../fonts/webfonts/29AD58_1_0.eot');
+  src: url('../fonts/webfonts/29AD58_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/29AD58_1_0.woff') format('woff'),url('../fonts/webfonts/29AD58_1_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MuseoSans-500';
+  src: url('../fonts/webfonts/29AD58_2_0.eot');
+  src: url('../fonts/webfonts/29AD58_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/29AD58_2_0.woff') format('woff'),url('../fonts/webfonts/29AD58_2_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MuseoSans-700Italic';
+  src: url('../fonts/webfonts/29AD58_3_0.eot');
+  src: url('../fonts/webfonts/29AD58_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/29AD58_3_0.woff') format('woff'),url('../fonts/webfonts/29AD58_3_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MuseoSans-300Italic';
+  src: url('../fonts/webfonts/29AD58_4_0.eot');
+  src: url('../fonts/webfonts/29AD58_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/29AD58_4_0.woff') format('woff'),url('../fonts/webfonts/29AD58_4_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MuseoSans-500Italic';
+  src: url('../fonts/webfonts/29AD58_5_0.eot');
+  src: url('../fonts/webfonts/29AD58_5_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/29AD58_5_0.woff') format('woff'),url('../fonts/webfonts/29AD58_5_0.ttf') format('truetype');
+}
+
+/* Fonts */
+
+/* TODO: may not use all of them, tidy up, rename later */
+
+/* TODO: use suit css naming ?? */
+
+.MuseoSans {
+  font-weight: normal;
+  font-style: normal;
+}
+
+.MuseoSans-700 {
+  font-family: MuseoSans-700;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.MuseoSans-300 {
+  font-family: MuseoSans-300;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.MuseoSans-500 {
+  font-family: MuseoSans-500;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.MuseoSans-700Italic {
+  font-family: MuseoSans-700Italic;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.MuseoSans-300Italic {
+  font-family: MuseoSans-300Italic;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.MuseoSans-500Italic {
+  font-family: MuseoSans-500Italic;
+  font-weight: normal;
+  font-style: normal;
+}
+/* ==========================================================================
+   Icon
+   ========================================================================== */
+
+/**
+ * SVG icons with PNG fallback
+ */
+
+.Icon {
+  background: url(/dist/assets/img/icons/sprite.svg) no-repeat;
+  display: inline-block;
+  line-height: 0;
+  vertical-align: bottom;
+}
+
+.Icon--22 {
+  height: 26px;
+  width: 26px;
+}
+
+.Icon--baseline {
+  vertical-align: baseline;
+}
+
+/* 22px */
+
+.Icon--22--article {
+  background-position: 0   0;
+}
+
+.Icon--22--event {
+  background-position: -22px 0;
+}
+
+.Icon--22--comment {
+  background-position: -44px 0;
+}
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+/**
+ * Headings, from h1 through to h5. Maybe even h6.
+ */
+
+/* TODO: Line height? colour? */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*color: gray;*/
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 32px;
+  font-size: 2rem;
+  margin: 0 0 4px;
+  margin: 0 0 0.3rem;
+}
+
+h2 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  margin: 0 0 4px;
+  margin: 0 0 0.3rem;
+}
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+  margin: 0 0 0.3rem;
+}
+
+h4 {
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 0 0 4px;
+  margin: 0 0 0.3rem;
+}
+
+/* h5 & h6 unspecified */
+
+/*
+h5  {
+    font-size: 1rem;
+    margin: 0 0 0.3rem;
+}
+h6  {
+    font-size: 1rem;
+    margin: 0 0 0.3rem;
+}
+*/
+/* ==========================================================================
+   Paragraph
+   ========================================================================== */
+
+/**
+ * Paragraph formatting
+ */
+
+p {
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 0 0 8px;
+  margin: 0 0 0.5rem;
+}
+.Header-brand {
+  background-color: #22224c;
+  padding: 11px 9px;
+  padding: 0.6875rem 0.5625rem;
+}
+
+.Header-logo {
+  float: left;
+  width: 79%;
+}
+
+.Header-menu {
+  float: right;
+}
+
+.Header-contact {
+  background-color: #d1d8bf;
+  padding: 11px 9px;
+  padding: 0.6875rem 0.5625rem;
+}
+/* Shame. Put shameful CSS in here. Refactor later. */
+
+/* Overriding some horrible admin bar CSS. Track it down, remove it. */
+
+html {
+  margin-top: 0 !important;
+}
+
+.post-45 .article__head {
+  display: none;
+  /* just for wireframes home */
+}

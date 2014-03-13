@@ -19,38 +19,27 @@ var gulp = require('gulp'),
     // Define paths variables
     paths = {
       styles: [
-        'source/assets/styles/alpha.css',
-        'source/assets/styles/variables.css',
-        'source/bower_components/normalize/normalize.css',
-        'source/assets/styles/base.css',
-        'source/bower_components/suit-utils-*/*.css',
-        'source/patternlab/**/**/*.css',
-        'source/patternlab/**/**/**/*.css',
-        'source/assets/styles/shame.css'
+        'src/assets/styles/alpha.css',
+        'src/assets/styles/variables.css',
+        'src/bower_components/normalize/normalize.css',
+        'src/assets/styles/base.css',
+        'src/bower_components/suit-utils-*/*.css',
+        'src/patternlab/**/**/*.css',
+        'src/patternlab/**/**/**/*.css',
+        'src/assets/styles/shame.css'
       ],
       scripts: [
-        'source/bower_components/jquery/dist/jquery.js',
-        'source/bower_components/modernizr/modernizr.js',
-        'source/assets/scripts/*.js',
+        'src/bower_components/jquery/dist/jquery.js',
+        'src/bower_components/modernizr/modernizr.js',
+        'src/assets/scripts/*.js',
       ],
-      vector: [
-        'source/assets/images/svg/transparency/*.svg'
+      vectors: [
+        'src/assets/images/svg/transparency/*.svg'
       ],
       bitmap: [
-        'source/assets/images/bitmap/**/*.jpg'
+        'src/assets/images/bitmap/**/*.jpg'
       ]
     };
-
-// gulp.task('styles', function() {
-//   return gulp.src(paths.css)
-//     .pipe(gulp.dest('dist/assets/css/styles.css'))
-//     .pipe(rename({suffix: '.min'}))
-//     .pipe(minifycss())
-//     .pipe(gulp.dest('dist/assets/css'))
-//     .pipe(livereload(server))
-//     .pipe(notify({ message: 'Styles task complete' }));
-// });
-
 
 // Mangle your CSS - preprocess, optimise, concatenate
 gulp.task('styles', function() {
@@ -84,7 +73,7 @@ gulp.task('scripts', function() {
 // TODO: fix orchestrator error: > TypeError: Object #<Object> has no method 'forEach'
 // Bitmap image optimisation
 gulp.task('images', function() {
-  return gulp.src('source/assets/images/bitmap/**/*')
+  return gulp.src('src/assets/images/bitmap/**/*')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(gulp.dest('dist/assets/img'))
     .pipe(livereload(server))
@@ -92,8 +81,8 @@ gulp.task('images', function() {
 });
 
 // SVG optmisation and PNGinisationism
-gulp.task('vector', function() {
-  return gulp.src(paths.vector)
+gulp.task('vectors', function() {
+  return gulp.src(paths.vectors)
     // TODO: add parameters to gulp.dest so that forgets original directory!
     // possibly in svgmin parameters, as svg2png works ok
     .pipe(svgmin())
@@ -109,17 +98,31 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
+// Default task
+gulp.task('default', ['clean'], function() {
+  gulp.start('styles', 'scripts', /* 'images', */ 'vectors');
+});
+
 // Keep a close eye on stuff
 gulp.task('watch', function() {
 // TODO: pass the paths variables, rather than rewrite out
   // Watch .css files
-  gulp.watch('source/styles/**/*.css', ['styles']);
-
+  gulp.watch(paths.styles, ['styles']);
   // Watch .js files
-  gulp.watch('source/scripts/**/*.js', ['scripts']);
-
+  gulp.watch(paths.scripts, ['scripts']);
   // Watch image files
-  gulp.watch('source/images/**/*', ['images']);
-
+  // gulp.watch(paths.images, ['images']);
+  // Watch image files
+  gulp.watch(paths.vectors, ['vectors']);
 });
 
+// Live reload
+gulp.task('watch', function() {
+  // Listen on port 35729
+  server.listen(35729, function (err) {
+    if (err) {
+      return console.log(err)
+    };
+    // Watch tasks go inside inside server.listen()
+  });
+});
