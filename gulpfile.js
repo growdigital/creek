@@ -1,21 +1,28 @@
 var gulp = require('gulp'),
     // Load gulp plugins
+
+    // System
     cache      = require('gulp-cache'),
     clean      = require('gulp-clean'),
     concat     = require('gulp-concat'),
-    imagemin   = require('gulp-imagemin'),
-    jshint     = require('gulp-jshint'),
-    livereload = require('gulp-livereload'),
-    lr         = require('tiny-lr'),
-    minifycss  = require('gulp-minify-css'),
-    myth       = require('gulp-myth'),
-    notify     = require('gulp-notify'),
-    pixrem     = require('gulp-pixrem'),
     rename     = require('gulp-rename'),
+    // CSS
+    myth       = require('gulp-myth'),
+    minifycss  = require('gulp-minify-css'),
+    pixrem     = require('gulp-pixrem'),
+    // JavaScript
+    jshint     = require('gulp-jshint'),
+    uglify     = require('gulp-uglify'),
+    // Images
+    imagemin   = require('gulp-imagemin'),
     svg2png    = require('gulp-svg2png'),
     svgmin     = require('gulp-svgmin'),
-    uglify     = require('gulp-uglify'),
-    server     = lr(),
+    // Server
+    notify     = require('gulp-notify'),
+    watch      = require('gulp-watch'),
+    tinyLr     = require('tiny-lr'),
+    livereload = require('gulp-livereload'),
+    liveReloadServer = tinyLr(),
 
     // Define paths variables
     paths = {
@@ -86,8 +93,6 @@ gulp.task('images', function() {
 // SVG optmisation and PNGinisationism
 gulp.task('vectors', function() {
   return gulp.src(paths.vectors)
-    // TODO: add parameters to gulp.dest so that forgets original directory!
-    // possibly in svgmin parameters, as svg2png works ok
     .pipe(svgmin())
     .pipe(gulp.dest('dist/assets/img/./'))
     .pipe(svg2png())
@@ -103,29 +108,44 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-  gulp.start('styles', 'scripts', /* 'images', */ 'vectors');
+  gulp.start('styles', 'scripts', /* 'images', */ 'vectors', 'watch', 'livereload');
 });
 
 // Keep a close eye on stuff
 gulp.task('watch', function() {
-// TODO: pass the paths variables, rather than rewrite out
   // Watch .css files
-  gulp.watch(paths.styles, ['styles']);
+  gulp.watch(paths.styles, ['styles'])
   // Watch .js files
-  gulp.watch(paths.scripts, ['scripts']);
+  gulp.watch(paths.scripts, ['scripts'])
   // Watch image files
-  // gulp.watch(paths.images, ['images']);
+  // gulp.watch(paths.images, ['images'])
   // Watch image files
   gulp.watch(paths.vectors, ['vectors']);
 });
 
 // Live reload
-gulp.task('watch', function() {
+// gulp.task('watch', function() {
   // Listen on port 35729
-  server.listen(35729, function (err) {
-    if (err) {
-      return console.log(err)
-    };
+  // server.listen(35729, function (err) {
+  //   if (err) {
+  //     return console.log(err)
+  //   };
     // Watch tasks go inside inside server.listen()
-  });
+//   });
+// });
+
+// Live reload
+gulp.task('livereload', ['tiny-lr-server'], function() {
+    gulp.src(['static/styles.css','static/assets/images/*.svg'])
+        .pipe(watch())
+        .on('error', function(e){ handleError('Watch file for LiveReload refresh',e);})
+        .pipe(livereload(liveReloadServer));
+});
+
+// Server
+gulp.task('tiny-lr-server', function(next) {
+    liveReloadServer.listen(35729, function(err) {
+        if (err) return console.error(err);
+        next();
+    });
 });
