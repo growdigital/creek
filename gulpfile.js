@@ -37,8 +37,6 @@ var gulp = require('gulp'),
         'src/assets/styles/shame.css'
       ],
       scripts: [
-        'src/bower_components/jquery/dist/jquery.js',
-        'src/bower_components/modernizr/modernizr.js',
         'src/assets/scripts/*.js',
         'src/patternlab/**/**/*.js',
         'src/patternlab/**/**/**/*.js',
@@ -59,9 +57,9 @@ gulp.task('styles', function() {
     .pipe(concat("styles.css"))
     // TODO: minify only minifiying pattern lab directories -- why?
     // .pipe(minifycss())
-    .pipe(livereload(server))
+    .pipe(livereload(liveReloadServer))
     .pipe(gulp.dest('dist/assets/css/'))
-    .pipe(notify({ message: 'Styles task complete.' }));
+    // .pipe(notify({ message: 'Styles task complete.' }));
 });
 
 // JS optimisation, linting, concatening etc
@@ -76,8 +74,8 @@ gulp.task('scripts', function() {
     // .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('dist/assets/js'))
-    .pipe(livereload(server))
-    .pipe(notify({ message: 'Scripts task complete' }));
+    .pipe(livereload(liveReloadServer))
+    // .pipe(notify({ message: 'Scripts task complete' }));
 });
 
 // TODO: fix orchestrator error: > TypeError: Object #<Object> has no method 'forEach'
@@ -86,15 +84,15 @@ gulp.task('images', function() {
   return gulp.src('src/assets/images/bitmap/**/*')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(gulp.dest('dist/assets/img'))
-    .pipe(livereload(server))
-    .pipe(notify({ message: 'Images task complete' }));
+    .pipe(livereload(liveReloadServer))
+    // .pipe(notify({ message: 'Images task complete' }));
 });
 
 // SVG optmisation and PNGinisationism
 gulp.task('vectors', function() {
   return gulp.src(paths.vectors)
     .pipe(svgmin())
-    .pipe(gulp.dest('dist/assets/img/./'))
+    .pipe(gulp.dest('dist/assets/img/'))
     .pipe(svg2png())
     .pipe(gulp.dest('dist/assets/img/'));
     // TODO: sort out workflow, optimise generated PNGs
@@ -110,6 +108,7 @@ gulp.task('clean', function() {
 gulp.task('default', ['clean'], function() {
   gulp.start('styles', 'scripts', /* 'images', */ 'vectors', 'watch', 'livereload');
 });
+
 
 // Keep a close eye on stuff
 gulp.task('watch', function() {
@@ -136,9 +135,8 @@ gulp.task('watch', function() {
 
 // Live reload
 gulp.task('livereload', ['tiny-lr-server'], function() {
-    gulp.src(['static/styles.css','static/assets/images/*.svg'])
+    gulp.src(['dist/assets/css/styles.css','dist/assets/images/*.svg'])
         .pipe(watch())
-        .on('error', function(e){ handleError('Watch file for LiveReload refresh',e);})
         .pipe(livereload(liveReloadServer));
 });
 
@@ -149,3 +147,9 @@ gulp.task('tiny-lr-server', function(next) {
         next();
     });
 });
+
+gulp.task('watch', function () {
+    gulp.watch(paths.css, ['css'])
+    gulp.watch(paths.svg, ['svg']);
+});
+
