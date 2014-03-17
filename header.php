@@ -13,12 +13,8 @@
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/dist/assets/img/favicon.png">
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/jquery.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/modernizr.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/main.js"></script>
   <?php wp_head(); ?>
-
-  <script src="<?php echo get_template_directory_uri(); ?>/_blocks/organisms/menu/menu.js"></script>
-
 
 </head>
 <body>

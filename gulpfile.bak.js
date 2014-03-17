@@ -1,28 +1,28 @@
 var gulp = require('gulp'),
-    // Load gulp plugins
+  // Load gulp plugins
 
-    // System
-    cache      = require('gulp-cache'),
-    clean      = require('gulp-clean'),
-    concat     = require('gulp-concat'),
-    rename     = require('gulp-rename'),
-    // CSS
-    myth       = require('gulp-myth'),
-    minifycss  = require('gulp-minify-css'),
-    pixrem     = require('gulp-pixrem'),
-    // JavaScript
-    jshint     = require('gulp-jshint'),
-    uglify     = require('gulp-uglify'),
-    // Images
-    imagemin   = require('gulp-imagemin'),
-    svg2png    = require('gulp-svg2png'),
-    svgmin     = require('gulp-svgmin'),
-    // Server
-    notify     = require('gulp-notify'),
-    watch      = require('gulp-watch'),
-    tinyLr     = require('tiny-lr'),
-    livereload = require('gulp-livereload'),
-    liveReloadServer = tinyLr(),
+  // System
+  cache      = require('gulp-cache'),
+  clean      = require('gulp-clean'),
+  concat     = require('gulp-concat'),
+  rename     = require('gulp-rename'),
+  // CSS
+  myth       = require('gulp-myth'),
+  minifycss  = require('gulp-minify-css'),
+  pixrem     = require('gulp-pixrem'),
+  // JavaScript
+  jshint     = require('gulp-jshint'),
+  uglify     = require('gulp-uglify'),
+  // Images
+  imagemin   = require('gulp-imagemin'),
+  svg2png    = require('gulp-svg2png'),
+  svgmin     = require('gulp-svgmin'),
+  // Server
+  notify     = require('gulp-notify'),
+  watch      = require('gulp-watch'),
+  tinyLr     = require('tiny-lr'),
+  livereload = require('gulp-livereload'),
+  liveReloadServer = tinyLr(),
 
     // Define paths variables
     paths = {
@@ -39,7 +39,7 @@ var gulp = require('gulp'),
       scripts: [
         'src/assets/scripts/*.js',
         'src/patternlab/**/**/*.js',
-        'src/patternlab/**/**/**/*.js',
+        'src/patternlab/**/**/**/*.js'
       ],
       vectors: [
         'src/assets/images/svg/transparency/*.svg'
