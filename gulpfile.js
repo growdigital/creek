@@ -11,6 +11,7 @@ var gulp = require('gulp'),
   pixrem = require('gulp-pixrem'),
   svgmin = require('gulp-svgmin'),
   svg2png = require('gulp-svg2png'),
+  imagemin = require('gulp-imagemin'),
 
 
   // Server
@@ -85,6 +86,14 @@ gulp.task('svg2png', function() {
     .pipe(gulp.dest('tmp/assets/img/trans'));
 });
 
+// Transparent PNG to 8bit task
+gulp.task('pngquant', function() {
+  return gulp.src(paths.transbit)
+    .pipe(imagemin({ pngquant: true }))
+    .pipe(gulp.dest('dist/assets/img/'));
+});
+
+
 // Server tasks
 gulp.task('livereload', ['tiny-lr-server'], function() {
   gulp.src(['dist/assets/css/styles.css','dist/assets/img/*.svg'])
@@ -104,6 +113,8 @@ gulp.task('tiny-lr-server', function(next) {
 gulp.task('watch', function () {
   gulp.watch(paths.css, ['css'])
   gulp.watch(paths.svg, ['svgo']);
+  gulp.watch(paths.svg, ['svg2png']);
+  gulp.watch(paths.transbit, ['pngquant']);
 });
 
 // Default task
