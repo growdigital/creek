@@ -2,22 +2,23 @@ var gulp = require('gulp'),
   // Load gulp plugins
 
   // System
-  gutil = require('gulp-util'),
-  concat = require('gulp-concat'),
+  gutil     = require('gulp-util'),
+  concat    = require('gulp-concat'),
+  cache     = require('gulp-cache'),
 
   // Files
-  myth = require('gulp-myth'),
+  myth      = require('gulp-myth'),
   minifyCSS = require('gulp-minify-css'),
-  pixrem = require('gulp-pixrem'),
-  svgmin = require('gulp-svgmin'),
-  svg2png = require('gulp-svg2png'),
-  imagemin = require('gulp-imagemin'),
-
+  pixrem    = require('gulp-pixrem'),
+  svgmin    = require('gulp-svgmin'),
+  svg2png   = require('gulp-svg2png'),
+  imagemin  = require('gulp-imagemin'),
+  uglify    = require('gulp-uglify'),
 
   // Server
-  tinyLr = require('tiny-lr'),
-  livereload = require('gulp-livereload'),
-  watch = require('gulp-watch'),
+  tinyLr           = require('tiny-lr'),
+  livereload       = require('gulp-livereload'),
+  watch            = require('gulp-watch'),
   liveReloadServer = tinyLr(),
 
   // Define paths
@@ -37,16 +38,15 @@ var gulp = require('gulp'),
       'src/patternlab/**/**/*.js',
       'src/patternlab/**/**/**/*.js'
     ],
-    jquery: [
-      'src/bower_components/jquery/dist/jquery.min.js'
+    bowerjs: [
+      'src/bower_components/jquery/dist/jquery.min.js',
+      'src/bower_components/modernizr/modernizr.js'
     ],
     svg: [
       'src/assets/img/svg/*.svg'
     ],
     bitmap: [
-      'src/assets/img/bitmap/24bit/*'
-    ],
-    transbit: [
+      'src/assets/img/bitmap/24bit/*',
       'tmp/assets/img/trans/*'
     ]
   };
@@ -76,23 +76,39 @@ gulp.task('css', function() {
 gulp.task('svgo', function() {
   return gulp.src(paths.svg)
     .pipe(svgmin())
-    .pipe(gulp.dest('dist/assets/img'));
+    .pipe(gulp.dest('dist/assets/img/'));
 });
 
 // SVG to PNG task
 gulp.task('svg2png', function() {
   return gulp.src(paths.svg)
     .pipe(svg2png())
-    .pipe(gulp.dest('tmp/assets/img/trans'));
+    .pipe(gulp.dest('tmp/assets/img/trans/'));
 });
 
-// Transparent PNG to 8bit task
-gulp.task('pngquant', function() {
-  return gulp.src(paths.transbit)
-    .pipe(imagemin({ pngquant: true }))
+// Bitmap minimisation task
+// PNGs get converted into 8bit with pngquant
+// JPEGs get made progressive & compressed
+gulp.task('minimage', function() {
+  return gulp.src(paths.bitmap)
+    .pipe(cache(imagemin({ pngquant: true, optimizationLevel: 3, progressive: true })))
     .pipe(gulp.dest('dist/assets/img/'));
 });
 
+// Copy Bower JS components to dist task
+// Bespoke task
+gulp.task('copy', function() {
+  return gulp.src(paths.bowerjs)
+  .pipe(gulp.dest('dist/assets/js/'));
+})
+
+// JS uglify
+gulp.task('uglification', function() {
+  return gulp.src(paths.js)
+  .pipe(concat('main.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('dist/assets/js'));
+});
 
 // Server tasks
 gulp.task('livereload', ['tiny-lr-server'], function() {
@@ -112,10 +128,10 @@ gulp.task('tiny-lr-server', function(next) {
 // Watch task
 gulp.task('watch', function () {
   gulp.watch(paths.css, ['css'])
-  gulp.watch(paths.svg, ['svgo']);
-  gulp.watch(paths.svg, ['svg2png']);
-  gulp.watch(paths.transbit, ['pngquant']);
+  gulp.watch(paths.svg, ['svgo', 'svg2png']);
+  gulp.watch(paths.bitmap, ['minimage']);
+  gulp.watch(paths.js, ['uglification']);
 });
 
 // Default task
-gulp.task('default', ['css', 'svgo', 'svg2png', 'watch', 'livereload']);
+gulp.task('default', ['css', 'svgo', 'svg2png', 'minimage', 'uglification', 'watch', 'livereload']);
