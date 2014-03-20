@@ -43,7 +43,9 @@ var gulp = require('gulp'),
       'src/bower_components/modernizr/modernizr.js'
     ],
     svg: [
-      'src/assets/img/svg/*.svg'
+      'src/assets/img/svg/*.svg',
+      'src/patternlab/**/**/*.svg',
+      'src/patternlab/**/**/**/*.svg'
     ],
     bitmap: [
       'src/assets/img/bitmap/24bit/*',

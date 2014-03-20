@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Logotype
+   ========================================================================== */
+
+/**
+ * Some SVG styling with CSS. Using `svg-` namespace.
+ * Using IDs as can't add classes easily in Inkscape.
+ */
+
+#svg-Logotype {
+  fill: white;
+}
+
+#svg-Logotype-group:hover {
+  cursor: hover;
+}
+
+#svg-Logotype-group:hover #svg-Logotype {
+  fill: #cb4b16;
+}

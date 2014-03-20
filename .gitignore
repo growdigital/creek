@@ -1,5 +1,5 @@
 # Don't version the node_modules
-#make sure to install with `npm install`
+# make sure to install with `npm install`
 node_modules
 
 # Ditto don't version the bower_components.

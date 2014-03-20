@@ -1,0 +1,11 @@
+#logo:hover {
+  fill: blue;
+}
+
+#logogroup:hover {
+  cursor: hover;
+}
+
+#logogroup:hover #logo {
+  fill: #cb4b16;
+}
