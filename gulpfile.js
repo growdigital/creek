@@ -136,4 +136,5 @@ gulp.task('watch', function () {
 });
 
 // Default task
-gulp.task('default', ['css', 'svgo', 'svg2png', 'minimage', 'uglification', 'watch', 'livereload']);
+// temp disable: 'svgo', 'svg2png', 'minimage',
+gulp.task('default', ['css', 'uglification', 'watch', 'livereload']);

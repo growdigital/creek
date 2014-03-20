@@ -10,3 +10,6 @@ html {
   display: none; /* just for wireframes home */
 }
 
+#wrap {
+  min-width: 320px;
+}

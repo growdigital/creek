@@ -12,9 +12,9 @@
 }
 
 #svg-Logotype-group:hover {
-  cursor: hover;
+  cursor: pointer;
 }
 
 #svg-Logotype-group:hover #svg-Logotype {
-  fill: #cb4b16;
+  fill: #0389ff;
 }
