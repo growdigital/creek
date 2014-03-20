@@ -24,7 +24,9 @@
 <header class="Header" role="banner">
   <div class="Header-brand u-cf">
     <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-      <img class="Header-logo" src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
+      <object class="Header-logo" type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg">
+        <?php bloginfo('name'); ?> <?php bloginfo('description'); ?>
+      </object>
     </a>
     <div>
       <a href="#location">Location</a>

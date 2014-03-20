@@ -19,6 +19,7 @@ img, embed, object, video {
   height: auto;
   max-width: 100%;
 }
+
 .ie6 img {
   width: 100%;
 }
