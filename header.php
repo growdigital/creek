@@ -23,30 +23,35 @@
 
 <header class="Header" role="banner">
   <div class="Header-brand u-cf">
-    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>" style="outline: 1px solid red;">
       <object class="Header-logo" type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg">
         <?php bloginfo('name'); ?> <?php bloginfo('description'); ?>
       </object>
     </a>
-    <div>
-      <a href="#location">Location</a>
-    </div>
+    <a href="#location">
+      <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/icon-compass.svg" style="position: absolute; right: 27px; top: 15px;">
+    </a>
   </div>
-  <div class="Header-contact">
+  <div class="Header-contact u-cf ">
+        <div style="float:left;">
+        <a href="#menu" class="menu-link">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/icon-menu.svg">
+        </a>
+      </div>
     <div class="Header-address">
+
+
       <a href="#location">1 Abbey Street, Faversham, Kent ME13 7BE</a>
     </div>
     <div class="Header-tel">
-       ‎<a href="tel:+441795535515">01795 535 515</a>
+       ‎Telephone <a href="tel:+441795535515">01795 535 515</a>
     </div>
-  </div>
-        <a href="#menu" class="menu-link">Menu</a>
 
   <nav class="nav" id="menu" role="navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>
     <div class="open">
       Open: Tue–Sun, 10am–4pm
-  </div>
+    </div>
   </nav>
 
 
