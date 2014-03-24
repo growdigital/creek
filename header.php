@@ -28,14 +28,14 @@
         <?php bloginfo('name'); ?> <?php bloginfo('description'); ?>
       </object>
     </a>
-    <a href="#location">
-      <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/icon-compass.svg" style="position: absolute; right: 27px; top: 15px;">
+    <a href="#location" style="position: absolute; right: 27px; top: 15px;">
+      <i class="Icon Icon--36 Icon--36--compass"></i><span class="u-isHiddenVisually">Location</span>
     </a>
   </div>
   <div class="Header-contact u-cf ">
         <div style="float:left;">
         <a href="#menu" class="menu-link">
-          <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/icon-menu.svg">
+          <i class="Icon Icon--36 Icon--36--menu"></i><span class="u-isHiddenVisually">Menu</span>
         </a>
       </div>
     <div class="Header-address">

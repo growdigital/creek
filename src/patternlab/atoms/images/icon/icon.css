@@ -7,20 +7,26 @@
  */
 
 .Icon {
-  background: url(/dist/assets/img/icons/sprite.svg) no-repeat;
+  background-image: url(../img/icon.svg);
+  background-repeat: no-repeat;
   display: inline-block;
   line-height: 0;
   vertical-align: bottom;
 }
-.Icon--22 {
-  height: 26px;
-  width: 26px;
-}
-.Icon--baseline {
-  vertical-align: baseline;
+
+.lt-ie9 .Icon {
+  background-image: url(dist/assets/img/icon.png);
 }
 
-/* 22px */
-.Icon--22--article  { background-position:    0   0; }
-.Icon--22--event    { background-position:  -22px 0; }
-.Icon--22--comment  { background-position:  -44px 0; }
+
+/* 36 */
+.Icon--36 {
+  height: 36px;
+  width: 36px;
+}
+
+.Icon--36--compass { background-position:    0   0; }
+.Icon--36--menu    { background-position:  -36px 0; }
+
+.Icon--36--compass:hover { background-position:    0   -36px; }
+.Icon--36--menu:hover    { background-position:  -36px -36px; }
