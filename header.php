@@ -19,7 +19,8 @@
 
 </head>
 <body>
-<div class="wrap" id="wrap">
+
+<div class="Nav-wrap">
 
 <header class="Header" role="banner">
   <div class="Header-brand u-cf">
@@ -44,7 +45,7 @@
     </div>
   </div>
 
-  <nav class="nav" id="menu" role="navigation">
+  <nav class="Nav" id="menu" role="navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>
     <div class="open">
       Open: Tue–Sun, 10am–4pm

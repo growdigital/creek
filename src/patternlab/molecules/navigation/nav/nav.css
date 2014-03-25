@@ -1,61 +1,54 @@
-.wrap {
+.Nav-wrap {
   position: relative;
   transition: all 0.3s ease-out;
 }
-.wrap.active {
+.Nav-wrap.active {
   left: 16em;
 }
 
-
-nav[role=navigation] {
+.Nav {
   background: #808080;
   clear: both;
   overflow: hidden;
 }
-.js nav[role=navigation] {
+.js .Nav {
   width: 16em;
   height: 100%;
   position: absolute;
   top: 0;
   left: -16em;
 }
-nav[role=navigation] ul {
+.Nav ul {
   margin: 0;
   padding: 0;
   border-top: 1px solid #808080;
 }
-nav[role=navigation] li a {
+.Nav li a {
   display: block;
   padding: 0.8em;
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-.lorem {
-  clear: both;
-}
 
 @media screen and (min-width: 41.25em) {
-  a.menu-link {
-     display: none;
-  }
-  .js nav[role=navigation] {
+  .js .Nav {
     max-width: none;
     position: static;
     width: auto;
   }
-  .wrap.active {
+  .Nav-wrap.active {
     left: 0;
   }
-  nav[role=navigation] ul {
+  .Nav ul {
     margin: 0;
     border: 0;
   }
 
-  nav[role=navigation]  li {
+  .Nav  li {
     display: inline-block;
     margin: 0 0.25em;
   }
-  nav[role=navigation] li a {
+  .Nav li a {
     border: 0;
   }
 }

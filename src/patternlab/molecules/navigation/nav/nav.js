@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   var $menu = $('#menu'),
     $menulink = $('.Header-menu'),
-    $wrap = $('#wrap');
+    $wrap = $('.Nav-wrap');
 
   $menulink.click(function() {
     $menulink.toggleClass('active');

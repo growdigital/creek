@@ -1,1 +1,1 @@
-$(document).ready(function(){$("body").addClass("js");var e=($("#menu"),$(".Header-menu")),a=$("#wrap");e.click(function(){return e.toggleClass("active"),a.toggleClass("active"),!1})});
+$(document).ready(function(){$("body").addClass("js");var a=($("#menu"),$(".Header-menu")),e=$(".Nav-wrap");a.click(function(){return a.toggleClass("active"),e.toggleClass("active"),!1})});
