@@ -15,12 +15,13 @@
 .Header-menu {
   float: left;
   display: block;
-  margin: -0.2rem 0.5rem 0 -1rem;
+  margin: -0.3rem 0.5rem 0 -1rem;
 }
 
 .Header-contact {
   background-color: var(sage_21);
   font-size: 0.8rem;
+  line-height: 1.6;
   padding: 0.6875rem 0.5625rem;
 }
 

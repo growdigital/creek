@@ -29,14 +29,14 @@
   var-k34:      #b5bbc1;
 
   /* Additional colors */
-  var-link:    blue;
+  var-link:    var(hilite);
   var-visited: purple;
 
   /**
    * Type
    */
   var-head: sans-serif;
-  var-body: sans-serif;
+  var-body: MuseoSans-500;
 
 
   /**

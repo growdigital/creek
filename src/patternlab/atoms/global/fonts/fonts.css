@@ -45,8 +45,7 @@
 @font-face {
   font-family: 'MuseoSans-700';
   src: url('../fonts/museo/29AD58_0_0.eot');
-  src: url('../fonts/museo/29AD58_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/museo/29AD58_0_0.woff') format('woff'),url('../fonts/museo/29AD58_0_0.ttf') format('truetype')
-  ;}
+  src: url('../fonts/museo/29AD58_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/museo/29AD58_0_0.woff') format('woff'),url('../fonts/museo/29AD58_0_0.ttf') format('truetype');}
 
 @font-face {
   font-family: 'MuseoSans-300';

@@ -33,7 +33,7 @@
     </a>
   </div>
   <div class="Header-contact u-cf ">
-    <a href="#menu" class="Header-menu menu-link u-nbfc">
+    <a href="#menu" class="Header-menu u-nbfc">
       <i class="Icon Icon--36 Icon--36--menu"></i><span class="u-isHiddenVisually">Menu</span>
     </a>
     <div class="Header-address">
