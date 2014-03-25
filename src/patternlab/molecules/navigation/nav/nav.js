@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('body').addClass('js');
 
-  var $menu = $('#menu'),
+  var $menu = $('#Nav'),
     $menulink = $('.Header-menu'),
     $wrap = $('.Nav-wrap');
 

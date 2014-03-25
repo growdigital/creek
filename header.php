@@ -38,16 +38,16 @@
       <i class="Icon Icon--36 Icon--36--menu"></i><span class="u-isHiddenVisually">Menu</span>
     </a>
     <div class="Header-address">
-      <a href="#location">1 Abbey Street, Faversham, Kent ME13&nbsp;7BE</a>
+      <a class="LinkLight" href="#location">1 Abbey Street, Faversham, Kent ME13&nbsp;7BE</a>
     </div>
     <div class="Header-tel">
-       ‎Telephone <a href="tel:+441795535515">01795 535 515</a>
+       <a class="LinkLight" href="tel:+441795535515">‎Telephone 01795 535 515</a>
     </div>
   </div>
 
-  <nav class="Nav" id="menu" role="navigation">
+  <nav class="Nav" id="Nav" role="navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>
-    <div class="open">
+    <div class="Nav-open">
       Open: Tue–Sun, 10am–4pm
     </div>
   </nav>

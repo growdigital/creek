@@ -2,6 +2,9 @@
    Global header
    ========================================================================== */
 
+/**
+ * The header for the whole of the site
+ */
 .Header-brand {
   background-color: var(blue);
   padding: 0.6875rem 0.5625rem;
@@ -28,7 +31,7 @@
   background-color: var(sage_21);
   font-size: 0.8rem;
   line-height: 1.6;
-  padding: 0.6875rem 0.5625rem;
+  padding: 0.6875rem 0.5625rem 0.5rem;
 }
 
 .Header-location {
