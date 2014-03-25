@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('body').addClass('js');
 
   var $menu = $('#menu'),
-    $menulink = $('.menu-link'),
+    $menulink = $('.Header-menu'),
     $wrap = $('#wrap');
 
   $menulink.click(function() {

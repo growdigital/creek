@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Global header
+   ========================================================================== */
+
 .Header-brand {
   background-color: var(blue);
   padding: 0.6875rem 0.5625rem;
@@ -9,10 +13,19 @@
 }
 
 .Header-menu {
-  float: right;
+  float: left;
+  display: block;
+  margin: -0.2rem 0.5rem 0 -1rem;
 }
 
 .Header-contact {
   background-color: var(sage_21);
+  font-size: 0.8rem;
   padding: 0.6875rem 0.5625rem;
+}
+
+.Header-location {
+  position: absolute;
+  right: 5%;
+  top: 0.4%;
 }

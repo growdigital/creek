@@ -5,11 +5,7 @@
 .wrap.active {
   left: 16em;
 }
-a.menu-link {
-  float: left;
-  display: block;
-  padding: 1rem;
-}
+
 
 nav[role=navigation] {
   background: #808080;
