@@ -43,9 +43,8 @@ var gulp = require('gulp'),
       'src/bower_components/modernizr/modernizr.js'
     ],
     svg: [
-      'src/assets/img/svg/*.svg',
-      'src/patternlab/**/**/*.svg',
-      'src/patternlab/**/**/**/*.svg'
+      // Optimise logotype & favicon manually
+      'src/patternlab/atoms/images/icon/icon.svg',
     ],
     bitmap: [
       'src/assets/img/bitmap/24bit/*',
@@ -136,5 +135,5 @@ gulp.task('watch', function () {
 });
 
 // Default task
-// temp disable: 'svgo', 'svg2png', 'minimage',
-gulp.task('default', ['css', 'uglification', 'watch', 'livereload']);
+// temp disable:  'minimage',
+gulp.task('default', ['css', 'uglification', 'svgo', 'svg2png', 'watch', 'livereload']);
