@@ -24,10 +24,8 @@
 
 <header class="Header" role="banner">
   <div class="Header-brand u-cf">
-    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-      <object class="Header-logo" type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg">
-        <?php bloginfo('name'); ?> <?php bloginfo('description'); ?>
-      </object>
+    <a href="<?php bloginfo('url'); ?>" title="Link to <?php bloginfo('name'); ?> home page">
+      <img class="Header-logo LinkOpacity" src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>">
     </a>
     <a class="Header-location" href="#location">
       <i class="Icon Icon--36 Icon--36--compass"></i><span class="u-isHiddenVisually">Location</span>

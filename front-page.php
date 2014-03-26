@@ -23,24 +23,26 @@
   $events_current = get_posts($args);
 ?>
 <?php foreach ($events_current as $post) : setup_postdata($post); ?>
-<article class="Article">
+<article class="Article u-cf">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
-  <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
-  <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-  <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
-  <?php
-    $artists = get_field('artist');
-    if($artists) {
-      echo '<p>';
-      foreach($artists as $artist) {
-        $artistName[] = $artist['artist_name'];
+  <a class="u-pullLeft" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <div class="u-nbfc">
+    <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+    <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
+    <?php
+      $artists = get_field('artist');
+      if($artists) {
+        echo '<p>';
+        foreach($artists as $artist) {
+          $artistName[] = $artist['artist_name'];
+        }
+        echo implode(', ', $artistName);
+        unset($artistName);
+        echo '</p>';
       }
-      echo implode(', ', $artistName);
-      unset($artistName);
-      echo '</p>';
-    }
-  ?>
-  <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+    ?>
+    <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+  </div>
 </article>
 <?php
   endforeach;
@@ -66,7 +68,7 @@
   $events_next = get_posts($args);
 ?>
 <?php foreach ($events_next as $post) : setup_postdata($post); ?>
-<article class="Article">
+<article class="Article u-cf">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
@@ -113,22 +115,23 @@
   $courses_next = get_posts($args);
 ?>
 <?php foreach ($courses_next as $post) : setup_postdata($post); ?>
-<article class="Article">
+<article class="Article u-cf">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
-  <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
-  <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-  <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
+  <a class="Article-mediaImg u-pullLeft" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <div class="u-nbfc">
+    <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+    <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
 
-<?php // echo eo_get_schedule_start( 'jS M YY', 7 ); ?>
-<?php // echo eo_get_schedule_last( 'jS M YY', 7 ); ?>
+    <?php // echo eo_get_schedule_start( 'jS M YY', 7 ); ?>
+    <?php // echo eo_get_schedule_last( 'jS M YY', 7 ); ?>
 
-<?php if( eo_reoccurs() ){
-            echo eo_get_schedule_start('D jS M Y') . ' to ' . eo_get_schedule_end('D jS M Y');
-      }else{
-            echo eo_get_the_start('D jS M Y');
-      }
- ?>
-
+    <?php if( eo_reoccurs() ){
+                echo eo_get_schedule_start('D jS M Y') . ' to ' . eo_get_schedule_end('D jS M Y');
+          }else{
+                echo eo_get_the_start('D jS M Y');
+          }
+     ?>
+  </div>
 </article>
 <?php
   endforeach;
@@ -180,7 +183,7 @@
   <ul>
 
   <?php while(has_sub_field('section')): ?>
-    <article class="Article" class="<?php the_sub_field('section_promoted'); ?>"> <!-- TODO: if true, then class = is-promoted -->
+    <article class="Article u-cf" class="<?php the_sub_field('section_promoted'); ?>"> <!-- TODO: if true, then class = is-promoted -->
       <h1><?php the_sub_field('section_title'); ?></h1>
       <img src="<?php
         $image = get_sub_field('section_image');
