@@ -6,12 +6,8 @@
  * Headings, from h1 through to h5. Maybe even h6.
  */
 
-
-/* TODO: Line height? colour? */
-
 .Heading {
-  /*color: gray;*/
-  font-family: MuseoSans-300;
+  font-family: var(head);
   font-size: 1.5rem;
   font-weight: 300;
   font-style: normal;
@@ -30,7 +26,7 @@
   font-size: 1.2rem;
   letter-spacing: 0.15rem;
   margin-bottom: 0.6rem;
-  padding: 0.6rem 0.2rem 0.5rem 0.4rem;
+  padding: 0.6rem 0.2rem 0.5rem 0.5rem;
   text-transform: uppercase;
 }
 

@@ -1,3 +1,14 @@
+/* ==========================================================================
+   Nav
+   ========================================================================== */
+
+/**
+ * Main site navigation.
+ * Taken from Brad Frost Responsive Patterns
+ * Left Nav Flyout
+ * http://bradfrost.github.io/this-is-responsive/patterns.html
+ */
+
 .Nav-wrap {
   position: relative;
   transition: all 0.3s ease-out;
@@ -24,14 +35,14 @@
 .Nav ul {
   margin: 0;
   padding: 0;
-  border-top: 1px solid var(k61);
+  border-top: 1px solid color(black tint(55%));
 }
 
 .Nav li a,
 .Nav-open {
   color: white;
   display: block;
-  border-bottom: 1px solid var(sage_21);
+  border-bottom: 1px solid var(grey_wash);
   font-family: MuseoSans-300;
   letter-spacing: 0.2rem;
   padding: 0.8rem;
@@ -41,6 +52,8 @@
 
 .Nav-open {
   font-family: MuseoSans-300Italic;
+  padding-right: 8rem;
+  text-transform: none;
 }
 
 .Nav li a:hover {
@@ -76,6 +89,3 @@
 
 }
 
-.Nav-open {
-
-}

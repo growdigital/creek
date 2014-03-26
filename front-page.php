@@ -23,7 +23,7 @@
   $events_current = get_posts($args);
 ?>
 <?php foreach ($events_current as $post) : setup_postdata($post); ?>
-<article>
+<article class="Article">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
@@ -66,7 +66,7 @@
   $events_next = get_posts($args);
 ?>
 <?php foreach ($events_next as $post) : setup_postdata($post); ?>
-<article>
+<article class="Article">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
@@ -113,7 +113,7 @@
   $courses_next = get_posts($args);
 ?>
 <?php foreach ($courses_next as $post) : setup_postdata($post); ?>
-<article>
+<article class="Article">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
   <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
@@ -180,7 +180,7 @@
   <ul>
 
   <?php while(has_sub_field('section')): ?>
-    <article class="<?php the_sub_field('section_promoted'); ?>"> <!-- TODO: if true, then class = is-promoted -->
+    <article class="Article" class="<?php the_sub_field('section_promoted'); ?>"> <!-- TODO: if true, then class = is-promoted -->
       <h1><?php the_sub_field('section_title'); ?></h1>
       <img src="<?php
         $image = get_sub_field('section_image');
