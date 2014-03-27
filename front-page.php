@@ -23,10 +23,10 @@
   $events_current = get_posts($args);
 ?>
 <?php foreach ($events_current as $post) : setup_postdata($post); ?>
-<article class="Article u-cf">
+<article class="Article Media">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
-  <a class="u-pullLeft" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
-  <div class="u-nbfc">
+  <a class="Media-img" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <div class="Media-body">
     <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
     <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
     <?php

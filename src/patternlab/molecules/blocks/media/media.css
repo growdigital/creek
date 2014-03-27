@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Media object
+   ========================================================================== */
+
+/**
+ * The poster child of modular CSS
+ */
+
+.Media, .Media-body {
+  overflow: hidden;
+}
+
+.ie6 .Media, .ie6 .Media-body {
+  overflow:visible;
+  zoom: 1;
+}
+
+.Media-img {
+  float: left;
+  margin-right: 0.6rem;
+}
+
+.Media-img img {
+  display: block;
+}
+
+.Media-img--extend {
+  float: right;
+  margin-right: 0.6rem;
+}
