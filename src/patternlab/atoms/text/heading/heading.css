@@ -20,6 +20,11 @@
   color: var(slate_73);
 }
 
+.Heading--less {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
 .Heading--support {
   background-color: var(grey_wash);
   color: var(grey_support);
