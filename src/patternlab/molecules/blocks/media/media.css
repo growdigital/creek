@@ -15,9 +15,24 @@
   zoom: 1;
 }
 
+.Media--golden {
+  margin-left: 2.34375%;
+  margin-right: 2.34375%;
+}
+
+.Media-body--golden {
+  padding-top: 0.2rem;
+  width: 67.2746977%;
+}
+
 .Media-img {
   float: left;
   margin-right: 0.6rem;
+}
+
+.Media-img--golden {
+  margin-right: 2.34375%;
+  width: 25.6940523%;
 }
 
 .Media-img img {
@@ -26,5 +41,5 @@
 
 .Media-img--extend {
   float: right;
-  margin-right: 0.6rem;
+  margin-left: 0.6rem;
 }

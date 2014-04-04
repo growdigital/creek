@@ -19,5 +19,15 @@ html {
 }
 
 .u-RespBreak {
+  display: block;
+}
 
+@media screen and (min-width: 30em) {
+  .u-RespBreak {
+    display: none;
+  }
+}
+
+.Section {
+  padding-bottom: 0.75rem;
 }

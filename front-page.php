@@ -7,7 +7,7 @@
 <h1 class="u-isHiddenVisually">Exhibitions</h1>
 
 <!-- CURRENT EXHIBITIONS -->
-<div class="exhibitions-current">
+<div class="Section u-cf exhibitions-current">
 <h2 class="Heading Heading--support">Current exhibitions</h2>
 <?php
   $args = array(
@@ -22,10 +22,10 @@
   $events_current = get_posts($args);
 ?>
 <?php foreach ($events_current as $post) : setup_postdata($post); ?>
-<article class="ArticleThumb Media">
+<article class="ArticleThumb Media Media--golden">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
-  <a class="Media-img" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
-  <div class="Media-body">
+  <a class="Media-img Media-img--golden" href="<?php the_permalink(); ?>"><img class="ArticleThumb-img" src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <div class="Media-body Media-body--golden">
     <h1 class="Heading Heading--less"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
     <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
     <?php
@@ -40,7 +40,7 @@
         echo '</p>';
       }
     ?>
-    <p class="ArticleThumb-date"><?php echo eo_get_the_start('D jS M Y'); ?> to<br class="u-RespBreak"> <?php echo eo_get_the_end('D jS M Y'); ?></p>
+    <p class="ArticleThumb-date"><?php echo eo_get_the_start('D jS M Y'); ?> <br class="u-RespBreak">to <?php echo eo_get_the_end('D jS M Y'); ?></p>
   </div>
 </article>
 <?php
@@ -67,12 +67,12 @@
   $events_next = get_posts($args);
 ?>
 <?php foreach ($events_next as $post) : setup_postdata($post); ?>
-<article class="Article Media">
+<article class="ArticleThumb Media Media--golden">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
-  <a class="Media-img" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
-  <div class="Media-body">
-    <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-    <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
+  <a class="Media-img Media-img--golden" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <div class="Media-body Media-body--golden">
+    <h1 class="Heading Heading--less"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+    <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
     <?php
       $artists = get_field('artist');
       if($artists) {
@@ -85,7 +85,7 @@
         echo '</p>';
       }
     ?>
-    <p><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+    <p class="ArticleThumb-date"><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
   </div>
 </article>
 <?php
@@ -116,22 +116,20 @@
   $courses_next = get_posts($args);
 ?>
 <?php foreach ($courses_next as $post) : setup_postdata($post); ?>
-<article class="Article u-cf">
+<article class="ArticleThumb Media Media--golden">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
-  <a class="Article-mediaImg u-pullLeft" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
-  <div class="u-nbfc">
-    <h1 class="Heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-    <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
-
-    <?php // echo eo_get_schedule_start( 'jS M YY', 7 ); ?>
-    <?php // echo eo_get_schedule_last( 'jS M YY', 7 ); ?>
-
-    <?php if( eo_reoccurs() ){
-                echo eo_get_schedule_start('D jS M Y') . ' to ' . eo_get_schedule_end('D jS M Y');
-          }else{
-                echo eo_get_the_start('D jS M Y');
-          }
-     ?>
+  <a class="Media-img Media-img--golden" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <div class="Media-body Media-body--golden">
+    <h1 class="Heading Heading--less"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+    <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
+    <p class="ArticleThumb-date">
+      <?php if( eo_reoccurs() ){
+                  echo eo_get_schedule_start('D jS M Y') . ' to ' . eo_get_schedule_end('D jS M Y');
+            }else{
+                  echo eo_get_the_start('D jS M Y');
+            }
+       ?>
+      </p>
   </div>
 </article>
 <?php
@@ -174,7 +172,6 @@
 </div><!-- /.courses_currently_running -->
 
 </section><!-- /.courses -->
-
 
 <? // $post_type = get_post_type_object('event'); var_dump($post_type);?>
 

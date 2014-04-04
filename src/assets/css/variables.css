@@ -25,10 +25,10 @@
   var-grey_text:    #4c5259;
   var-grey_support: #b4babf;
   var-grey_wash: #f3f5f5;
-  var-k76:      #4c5259;
   var-k61:      #737c86;
   var-k50:      #8f97a0;
   var-k34:      #b5bbc1;
+
 
   /* Additional colors */
   var-link:    var(hilite);
