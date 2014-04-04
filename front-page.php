@@ -69,7 +69,7 @@
 <?php foreach ($events_next as $post) : setup_postdata($post); ?>
 <article class="ArticleThumb Media Media--golden">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
-  <a class="Media-img Media-img--golden" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <a class="Media-img Media-img--golden" href="<?php the_permalink(); ?>"><img class="ArticleThumb-img" src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <div class="Media-body Media-body--golden">
     <h1 class="Heading Heading--less"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
     <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
@@ -118,7 +118,7 @@
 <?php foreach ($courses_next as $post) : setup_postdata($post); ?>
 <article class="ArticleThumb Media Media--golden">
   <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
-  <a class="Media-img Media-img--golden" href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]; ?>" alt="" /></a>
+  <a class="Media-img Media-img--golden" href="<?php the_permalink(); ?>"><img class="ArticleThumb-img" src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <div class="Media-body Media-body--golden">
     <h1 class="Heading Heading--less"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
     <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
