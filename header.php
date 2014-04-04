@@ -27,8 +27,9 @@
     <a href="<?php bloginfo('url'); ?>" title="Link to <?php bloginfo('name'); ?> home page">
       <img class="Header-logo LinkOpacity" src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>">
     </a>
-    <a class="Header-location" href="#location">
-      <i class="Icon Icon--36 Icon--36--compass"></i><span class="u-isHiddenVisually">Location</span>
+    <a class="Header-tel" href="tel:+441795535515">‎
+      <i class="Icon Icon--36 Icon--36--phone"></i>
+      <span class="u-isHiddenVisually">Telephone 01795 535 515</span>
     </a>
   </div>
   <div class="Header-contact u-cf ">
@@ -37,9 +38,6 @@
     </a>
     <div class="Header-address">
       <a class="LinkLight" href="#location">1 Abbey Street, Faversham, Kent ME13&nbsp;7BE</a>
-    </div>
-    <div class="Header-tel">
-       <a class="LinkLight" href="tel:+441795535515">‎Telephone 01795 535 515</a>
     </div>
   </div>
 
