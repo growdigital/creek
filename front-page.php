@@ -27,7 +27,6 @@
   <a class="Media-img Media-img--golden" href="<?php the_permalink(); ?>"><img class="ArticleThumb-img" src="<?php echo $thumb[0]; ?>" alt="" /></a>
   <div class="Media-body Media-body--golden">
     <h1 class="Heading Heading--less"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-    <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
     <?php
       $artists = get_field('artist');
       if($artists) {
@@ -40,6 +39,7 @@
         echo '</p>';
       }
     ?>
+    <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
     <p class="ArticleThumb-date"><?php echo eo_get_the_start('D jS M Y'); ?> <br class="u-RespBreak">to <?php echo eo_get_the_end('D jS M Y'); ?></p>
   </div>
 </article>
