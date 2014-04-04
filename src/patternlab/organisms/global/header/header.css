@@ -5,14 +5,23 @@
 /**
  * The header for the whole of the site
  */
+
 .Header-brand {
   background-color: var(blue);
-  padding: 0.6875rem 0.5625rem;
+  display: table;
+  padding: 0.6875rem 4% 0.5rem 2.34375%;
 }
 
 .Header-logo {
-  float: left;
-  width: 79%;
+  display: table-cell;
+  width: 100%;
+}
+
+.Header-tel {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+  width: 21%;
 }
 
 .Header-menu {
@@ -35,13 +44,7 @@
 }
 
 @media screen and (min-wdith: 21em) {
-  .Header-menu {
+  .Header-contact {
     font-size: 0.9rem;
   }
-}
-
-.Header-tel {
-  position: absolute;
-  right: 5%;
-  top: 0.4%;
 }

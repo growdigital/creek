@@ -16,14 +16,13 @@
   <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/modernizr.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/main.js"></script>
   <?php wp_head(); ?>
-
 </head>
 <body>
 
 <div class="Nav-wrap">
 
 <header class="Header" role="banner">
-  <div class="Header-brand u-cf">
+  <div class="Header-brand">
     <a href="<?php bloginfo('url'); ?>" title="Link to <?php bloginfo('name'); ?> home page">
       <img class="Header-logo LinkOpacity" src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>">
     </a>
