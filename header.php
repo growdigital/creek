@@ -43,7 +43,8 @@
   <nav class="Nav" id="Nav" role="navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'menu_primary' ) ); ?>
     <div class="Nav-open">
-      Open: Tue–Sun, 10am–4pm
+      <p>Open:<br> Tue–Sun, 10am–4pm</p>
+      <p>Office only:<br> Mon–Fri, 9am–6pm</p>
     </div>
   </nav>
 

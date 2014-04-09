@@ -50,47 +50,32 @@
 
 </div><!-- /.exhibitions-current -->
 
-
 <!-- NEXT EXHIBITIONS -->
 <div class="exhibitions-next">
 <h2 class="Heading Heading--support">Next exhibitions</h2>
 
 <?php
   $args = array(
-    'numberposts'        => 'all',
-    'post_type'          => 'event',
-    'event-category'     => 'exhibition',
-    'post_status'        => 'publish',
-    'event_start_after'  => 'today',
-    'suppress_filters'   =>  false
+    'numberposts'       => 'all',
+    'post_type'         => 'event',
+    'event-category'    => 'exhibition',
+    'post_status'       => 'publish',
+    'event_start_after' => 'today',
+    'suppress_filters'  =>  false
   );
   $events_next = get_posts($args);
+  echo '<ul>';
 ?>
 <?php foreach ($events_next as $post) : setup_postdata($post); ?>
-<article class="ArticleThumb Media Media--golden">
-  <?php $thumb = wp_get_attachment_image_src(get_field('poster_image'), 'a4_thumbnail'); ?>
-  <a class="Media-img Media-img--golden" href="<?php the_permalink(); ?>"><img class="ArticleThumb-img" src="<?php echo $thumb[0]; ?>" alt="" /></a>
-  <div class="Media-body Media-body--golden">
-    <h1 class="Heading Heading--less"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-    <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
-    <?php
-      $artists = get_field('artist');
-      if($artists) {
-        echo '<p>';
-        foreach($artists as $artist) {
-          $artistName[] = $artist['artist_name'];
-        }
-        echo implode(', ', $artistName);
-        unset($artistName);
-        echo '</p>';
-      }
-    ?>
-    <p class="ArticleThumb-date"><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
-  </div>
-</article>
+<li>
+  <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+  <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
+  <p><?php echo eo_get_the_start('D jS M Y'); ?> <br class="u-RespBreak">to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+</li>
 <?php
   endforeach;
   wp_reset_postdata();
+  echo '</ul>';
 ?>
 
 </div><!-- /.exhibitions-next -->
@@ -172,6 +157,14 @@
 </div><!-- /.courses_currently_running -->
 
 </section><!-- /.courses -->
+
+
+<!-- Home page blurb content -->
+
+<?php while (have_posts()) : the_post(); ?>
+  <?php the_content(); ?>
+<?php endwhile; ?>
+
 
 <? // $post_type = get_post_type_object('event'); var_dump($post_type);?>
 
