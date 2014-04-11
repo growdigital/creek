@@ -23,20 +23,20 @@
 
 <header class="Header" role="banner">
   <div class="Header-brand">
-    <a href="<?php bloginfo('url'); ?>" title="Link to <?php bloginfo('name'); ?> home page">
-      <img class="Header-logo LinkOpacity" src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>">
+    <a class="Header-logo LinkOpacity" href="<?php bloginfo('url'); ?>" title="Link to <?php bloginfo('name'); ?> home page">
+      <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>">
     </a>
-    <a class="Header-tel" href="tel:+441795535515">‎
-      <i class="Icon Icon--36 Icon--36--phone"></i>
+    <a class="Header-tel LinkOpacity" href="#" title="Creek Creative telephone number 01795 535 515">
+      <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/icon-tel.svg" alt="Tel 01795535515">
       <span class="u-isHiddenVisually">Telephone 01795 535 515</span>
     </a>
   </div>
   <div class="Header-contact u-cf ">
-    <a href="#menu" class="Header-menu u-nbfc">
+    <a href="#menu" class="Header-menu">
       <i class="Icon Icon--36 Icon--36--menu"></i><span class="u-isHiddenVisually">Menu</span>
     </a>
     <div class="Header-address">
-      <a class="LinkLight" href="#location">1 Abbey Street, Faversham, Kent ME13&nbsp;7BE</a>
+      <a class="LinkLight" href="#location" title="Link to Location information at bottom of page">1 Abbey Street, Faversham, Kent ME13&nbsp;7BE</a>
     </div>
   </div>
 

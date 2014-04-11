@@ -7,21 +7,22 @@
  */
 
 .Header-brand {
+  align-items: stretch;
   background-color: var(blue);
-  display: table;
+  display: flex;
   padding: 0.6875rem 4% 0.6875rem 2.34375%;
 }
 
 .Header-logo {
-  display: table-cell;
-  width: 100%;
+  display: block;
+  flex: 1;
 }
 
 .Header-tel {
-  display: table-cell;
-  text-align: right;
-  vertical-align: middle;
-  width: 21%;
+  display: block;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+  width: 12%;
 }
 
 .Header-menu {

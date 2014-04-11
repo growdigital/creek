@@ -31,3 +31,8 @@ html {
 .Section {
   /*padding-bottom: 0.75rem;*/
 }
+
+
+.debug-Outline {
+  outline: 1px solid red;
+}
