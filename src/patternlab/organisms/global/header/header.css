@@ -9,20 +9,20 @@
 .Header-brand {
   align-items: stretch;
   background-color: var(blue);
-  display: flex;
+  display: table;
   padding: 0.6875rem 4% 0.6875rem 2.34375%;
 }
 
 .Header-logo {
-  display: block;
-  flex: 1;
+  display: table-cell;
+  width: 80%;
 }
 
 .Header-tel {
-  display: block;
-  margin-left: 1rem;
-  padding-top: 0.5rem;
-  width: 12%;
+  display: table-cell;
+  padding: 2% 0 0 1rem;
+  vertical-align: top;
+  width: 14%;
 }
 
 .Header-menu {
