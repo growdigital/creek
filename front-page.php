@@ -64,13 +64,13 @@
     'suppress_filters'  =>  false
   );
   $events_next = get_posts($args);
-  echo '<ul>';
+  echo '<ul class="Listing">';
 ?>
 <?php foreach ($events_next as $post) : setup_postdata($post); ?>
 <li>
-  <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-  <p><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
-  <p><?php echo eo_get_the_start('D jS M Y'); ?> <br class="u-RespBreak">to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+  <h3 class="Heading Heading--less"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+  <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
+  <p class="ArticleThumb-date"><?php echo eo_get_the_start('D jS M Y'); ?> to <?php echo eo_get_the_end('D jS M Y'); ?></p>
 </li>
 <?php
   endforeach;

@@ -19,7 +19,7 @@ html {
   display: block;
 }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 25em) {
   .u-RespBreak {
     display: none;
   }
@@ -47,3 +47,20 @@ html {
   opacity: 0.7;
 }
 
+/* ==========================================================================
+   Listing
+   ========================================================================== */
+
+/**
+ * Alternate listing list
+ */
+
+.Listing {
+  list-style-type: none;
+  margin: 0 2.34375% 1rem 2.34375%;
+  padding: 0;
+}
+
+.Listing > * {
+margin-bottom: 1rem;
+}
