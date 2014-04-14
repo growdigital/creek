@@ -64,3 +64,31 @@ html {
 .Listing > * {
 margin-bottom: 1rem;
 }
+
+/* ==========================================================================
+   Section
+   ========================================================================== */
+
+/**
+ * List of sections on home page
+ */
+
+.Section  p {
+  color: var(k80);
+  font-size: 0.9em;
+  margin-bottom: 1rem;
+}
+
+.Section-list {
+  margin: 0 2.34375%;
+  padding: 0;
+}
+
+.Section-image {
+  /*border: 1px solid var(k34);*/
+  /*float: left;*/
+  /*height: 69px;*/
+  /*margin-right: 2.34375%;*/
+  /*width: 25.6940523%;*/
+  margin-bottom: 0.5rem;
+}
