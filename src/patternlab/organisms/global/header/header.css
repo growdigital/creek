@@ -11,6 +11,7 @@
   background-color: var(blue);
   display: table;
   padding: 0.6875rem 4% 0.6875rem 2.34375%;
+  width: 100%;
 }
 
 .Header-logo {
@@ -20,7 +21,7 @@
 
 .Header-tel {
   display: table-cell;
-  padding: 2% 0 0 1rem;
+  padding: 2% 0 0 1.2rem;
   vertical-align: top;
   width: 14%;
 }

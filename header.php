@@ -26,7 +26,7 @@
     <a class="Header-logo LinkOpacity" href="<?php bloginfo('url'); ?>" title="Link to <?php bloginfo('name'); ?> home page">
       <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>">
     </a>
-    <a class="Header-tel LinkOpacity" href="#" title="Creek Creative telephone number 01795 535 515">
+    <a class="Header-tel LinkOpacity" href="tel:+441795535515" title="Creek Creative telephone number 01795 535 515">
       <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/icon-tel.svg" alt="Tel 01795535515">
       <span class="u-isHiddenVisually">Telephone 01795 535 515</span>
     </a>
