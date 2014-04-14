@@ -1,4 +1,4 @@
-<footer class="footer_main">
+<footer class="Footer">
 
 
   <nav class="NavToo">
@@ -28,14 +28,46 @@
       </div>
   </section>
 
-  <section class="footer__contact">
-  Creek Creative &copy; 2013 | <a href="mailto:info@creek-creative.org">info@creek-creative.org</a> | <a href="tel:+441795535515">01795 535 515</a> | Registered Community Interest Company No. 6702090<br/>
-  <a href="https://twitter.com/creek_creative">Twitter</a> | <a href="https://www.facebook.com/Studio.Provider">Facebook</a> | <a href="https://plus.google.com/109752071484700783468/about">Google+</a>
-</section><!-- /.footer__contact -->
+  <section class="Footer-contact">
 
-  <div class="supporters">
-    <p>Supported by:</p>
-    <a href="http://www.artscouncil.org.uk/funding/">Arts Council England</a> | <a href="http://www.swale.gov.uk/">Swale Borough Council</a> | <a href="">Kent County Council</a> | <a href="http://nfasp.org.uk/">The National Federation of Artist Studio Providers</a> | <a href="http://www.acme.org.uk/">Acme Studios</a> | <a href="http://www.faversham.org/business/fep.aspx">Faversham Enterprise Partnership</a>
+    <ol class="Footer-smallprint">
+      <li>Creek Creative &copy; 2013</li>
+      <li><a href="mailto:info@creek-creative.org">info@creek-creative.org</a> </li>
+      <li><a href="tel:+441795535515">01795 535 515</a></li>
+      <li>Registered Community Interest Company No. 6702090</li>
+    </ol>
+
+    <ol class="Social">
+      <li>
+        <a href="https://twitter.com/creek_creative">
+          <i class="Icon Icon--36 Icon--36--twitter"></i>
+          <span class="u-isHiddenVisually">Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/Studio.Provider">
+          <i class="Icon Icon--36 Icon--36--facebook"></i>
+          <span class="u-isHiddenVisually">Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://plus.google.com/109752071484700783468/about">
+          <i class="Icon Icon--36 Icon--36--google"></i><span class="u-isHiddenVisually">Google+</span>
+        </a>
+      </li>
+    </ol>
+  </section>
+
+  <div class="Supporters">
+    <h3 class="Heading Heading--support">Supported by:</h3>
+    <ol class="Supporters-list">
+      <li><a href="http://www.artscouncil.org.uk/funding/">Arts Council England</a></li>
+      <li><a href="http://www.swale.gov.uk/">Swale Borough Council</a></li>
+      <li><a href="">Kent County Council</a></li>
+      <li><a href="http://nfasp.org.uk/">The National Federation of Artist Studio Providers</a></li>
+      <li><a href="http://www.acme.org.uk/">Acme Studios</a></li>
+      <li><a href="http://www.faversham.org/business/fep.aspx">Faversham Enterprise Partnership</a></li>
+    </ol>
   </div>
 </footer>
 

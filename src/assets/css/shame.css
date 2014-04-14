@@ -154,20 +154,69 @@ margin-bottom: 1rem;
   padding: 1rem 0; /* TODO very very temporary */
 }
 
-.footer_main {
+.Footer {
   background-color: var(blue);
   color: white;
   padding-bottom: 2rem;
 }
 
-.supporters,
-.footer__contact {
+.Supporters,
+.Footer-contact {
     margin-left: 2.34375%;
   margin-right: 2.34375%;
   padding-top: 1rem;
   text-align: center;
 }
 
-.footer_main a {
+.Footer a {
   color: #B2E0FF;
+}
+
+.Footer-smallprint {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.Footer-smallprint > * {
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.Footer-smallprint > *::after {
+  content: " | ";
+}
+
+.Footer-smallprint > *:last-child::after {
+  content: "";
+}
+
+.Social {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.Social > * {
+  display: inline-block;
+  margin: 0rem 0.8rem;
+}
+
+.Supporters-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Supporters-list > * {
+  display: inline-block;
+}
+
+.Supporters-list > *::after {
+  content: " | ";
+}
+
+.Supporters-list > *:last-child::after {
+  content: "";
 }

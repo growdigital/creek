@@ -25,8 +25,12 @@
   width: 36px;
 }
 
-.Icon--36--tel     { background-position:    0   0; }
-.Icon--36--menu    { background-position:  -36px 0; }
+.Icon--36--menu     { background-position:    0   0; }
+.Icon--36--twitter    { background-position:  -36px 0; }
+.Icon--36--facebook    { background-position:  -72px 0; }
+.Icon--36--google    { background-position:  -108px 0; }
 
-.Icon--36--tel:hover { background-position:    0   -36px; }
-.Icon--36--menu:hover{ background-position:  -36px -36px; }
+.Icon--36--menu:hover { background-position:    0   -36px; }
+.Icon--36--twitter:hover{ background-position:  -36px -36px; }
+.Icon--36--facebook:hover{ background-position:  -72px -36px; }
+.Icon--36--google:hover{ background-position:  -108px -36px; }
