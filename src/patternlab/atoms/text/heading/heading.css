@@ -35,6 +35,18 @@
   text-transform: uppercase;
 }
 
+/* TODO: separate out colour from style on Heading--support, as have multiple variations */
+.Heading--supportwo {
+  background-color: var(sage_dark);
+  color: white;
+  margin-bottom: 0 !important;
+}
+
+.Heading--temp {
+  background-color: var(sage_darker);
+  background-color: #798a99;
+}
+
 h1  {
   font-size: 2rem;
   margin: 0 0 0.3rem;

@@ -85,11 +85,6 @@ margin-bottom: 1rem;
 }
 
 .Section-image {
-  /*border: 1px solid var(k34);*/
-  /*float: left;*/
-  /*height: 69px;*/
-  /*margin-right: 2.34375%;*/
-  /*width: 25.6940523%;*/
   margin-bottom: 0.5rem;
 }
 
@@ -132,4 +127,47 @@ margin-bottom: 1rem;
 .NavToo .menu > * a:active {
   background-color: var(slate_73);
   color: white;
+}
+
+/* ==========================================================================
+   Location
+   ========================================================================== */
+
+/**
+ * Location details, in the footer
+ */
+
+.Location {
+  background-color: var(sage_darkerstill);
+  background-color: #677a8b;
+  color: white;
+  /* TODO: refactor, as this is used throughout home page */
+}
+
+.Location a {
+  color: #B2E0FF;
+}
+
+.MobileMargin {
+  margin-left: 2.34375%;
+  margin-right: 2.34375%;
+  padding: 1rem 0; /* TODO very very temporary */
+}
+
+.footer_main {
+  background-color: var(blue);
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.supporters,
+.footer__contact {
+    margin-left: 2.34375%;
+  margin-right: 2.34375%;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footer_main a {
+  color: #B2E0FF;
 }

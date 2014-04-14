@@ -18,6 +18,11 @@
   var-sage_30:  #bfc4a4;
   var-sage_21:  #d1d8bf;
 
+  /* TODO: sort out sensible names */
+  var-sage_dark: #acb194;
+  var-sage_darker: #979a81;
+  var-sage_darkerstill: #8f937b;
+
   var-background: white;
 
   /* Warm greys */
