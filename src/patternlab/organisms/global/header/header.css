@@ -26,10 +26,18 @@
   width: 14%;
 }
 
+.Header-contact {
+  background-color: var(sage_21);
+  display: table;
+  font-size: 0.8rem;
+  padding: 0.3rem 0 0.3rem 2.34375%;
+  width: 100%;
+}
+
 .Header-menu {
-  float: left;
-  display: block;
-  margin: -0.3rem 0.8125rem 0 0;
+  display: table-cell;
+  vertical-align: middle;
+  width: 36px;
 }
 
 @media screen and (min-width: 41.25em) {
@@ -38,15 +46,20 @@
   }
 }
 
-.Header-contact {
-  background-color: var(sage_21);
-  font-size: 0.8rem;
-  line-height: 1.6;
-  padding: 0.6875rem 0.5625rem 0.5rem;
+.Header-address {
+  display: table-cell;
+  padding-left: 2%;
+  vertical-align: middle;
 }
 
-@media screen and (min-wdith: 21em) {
-  .Header-contact {
-    font-size: 0.9rem;
+@media screen and (min-width: 21em) {
+  .Header-address {
+    padding-left: 3%;
+  }
+}
+
+@media screen and (min-width: 25em) {
+  .Header-address {
+    font-size: 1rem;
   }
 }

@@ -37,7 +37,8 @@
       <span class="u-isHiddenVisually">Menu</span>
     </a>
     <div class="Header-address">
-      <a class="LinkLight" href="#location" title="Link to Location information at bottom of page">1 Abbey Street, Faversham, Kent ME13&nbsp;7BE</a>
+      <a class="LinkLight" href="#location" title="Link to Location information at bottom of page">
+        1 Abbey Street, Faversham, Kent ME13&nbsp;7BE</a>
     </div>
   </div>
 
