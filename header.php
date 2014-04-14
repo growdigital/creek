@@ -31,9 +31,10 @@
       <span class="u-isHiddenVisually">Telephone 01795 535 515</span>
     </a>
   </div>
-  <div class="Header-contact u-cf ">
+  <div class="Header-contact">
     <a href="#menu" class="Header-menu">
-      <i class="Icon Icon--36 Icon--36--menu"></i><span class="u-isHiddenVisually">Menu</span>
+      <i class="Icon Icon--36 Icon--36--menu"></i>
+      <span class="u-isHiddenVisually">Menu</span>
     </a>
     <div class="Header-address">
       <a class="LinkLight" href="#location" title="Link to Location information at bottom of page">1 Abbey Street, Faversham, Kent ME13&nbsp;7BE</a>
