@@ -1,7 +1,7 @@
 <footer class="footer_main">
 
 
-  <nav class="nav">
+  <nav class="NavToo">
     <?php wp_nav_menu( array( 'theme_location' => 'menu_secondary' ) ); ?>
   </nav>
 
