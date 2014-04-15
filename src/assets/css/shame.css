@@ -139,7 +139,7 @@ margin-bottom: 1rem;
 
 .Location {
   background-color: var(sage_darkerstill);
-  background-color: #677a8b;
+  background-color: #798a99;
   color: white;
   /* TODO: refactor, as this is used throughout home page */
 }
@@ -148,11 +148,6 @@ margin-bottom: 1rem;
   color: #B2E0FF;
 }
 
-.MobileMargin {
-  margin-left: 2.34375%;
-  margin-right: 2.34375%;
-  padding: 1rem 0; /* TODO very very temporary */
-}
 
 .Footer {
   background-color: var(blue);
@@ -160,14 +155,15 @@ margin-bottom: 1rem;
   padding-bottom: 2rem;
 }
 
-.Supporters,
+
+
 .Footer-contact {
-    margin-left: 2.34375%;
+  margin-left: 2.34375%;
   margin-right: 2.34375%;
   padding-top: 1rem;
-  text-align: center;
 }
 
+.LinkLightest,
 .Footer a {
   color: #B2E0FF;
 }
@@ -219,4 +215,10 @@ margin-bottom: 1rem;
 
 .Supporters-list > *:last-child::after {
   content: "";
+}
+
+.MobileMargin {
+  margin-left: 2.34375%;
+  margin-right: 2.34375%;
+  padding: 1rem 0; /* TODO very very temporary */
 }

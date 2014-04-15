@@ -38,13 +38,19 @@
 /* TODO: separate out colour from style on Heading--support, as have multiple variations */
 .Heading--supportwo {
   background-color: var(sage_dark);
+  background-color: #576d80;
   color: white;
   margin-bottom: 0 !important;
 }
 
 .Heading--temp {
   background-color: var(sage_darker);
-  background-color: #798a99;
+  background-color: #677a8b;
+}
+
+.Heading--bluenotso {
+  background-color: #323254;
+  color: white;
 }
 
 h1  {
