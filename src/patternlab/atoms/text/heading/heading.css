@@ -9,8 +9,8 @@
 .Heading {
   font-family: var(head);
   font-size: 1.5rem;
-  font-weight: 300;
   font-style: normal;
+  font-weight: 300;
   margin-bottom: 0.3rem;
 }
 
