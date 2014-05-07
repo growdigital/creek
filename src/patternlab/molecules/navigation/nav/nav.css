@@ -38,7 +38,7 @@
   border-top: 1px solid color(black tint(55%));
 }
 
-.Nav li a,
+.Nav a,
 .Nav-open {
   color: white;
   display: block;
@@ -55,7 +55,7 @@
   text-transform: none;
 }
 
-.Nav li a:hover {
+.Nav a:hover {
   background-color: var(sage_30);
   color: var(grey_text);
 }

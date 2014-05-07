@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Logos of the sponsors
+   ========================================================================== */
+
+/**
+ * Sponsors & supporters logos, used as background images
+ */
+
+.Logos {
+  background-image: url(../img/logos.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 0;
+  vertical-align: bottom;
+}
+
+.Logos--artsCouncil {
+  background-position: 0 0;
+  height: 68px;
+  width: 253px;
+}

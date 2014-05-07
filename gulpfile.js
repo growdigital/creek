@@ -45,6 +45,7 @@ var gulp = require('gulp'),
     svg: [
       // Optimise logotype & favicon manually
       'src/patternlab/atoms/images/icon/icon.svg',
+      'src/patternlab/atoms/images/logos/logos.svg',
       'src/patternlab/atoms/images/logotype/logotype.svg',
       'src/assets/img/svg/icon-phone.svg'
     ],

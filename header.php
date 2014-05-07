@@ -26,10 +26,6 @@
     <a class="Header-logo LinkOpacity" href="<?php bloginfo('url'); ?>" title="Link to <?php bloginfo('name'); ?> home page">
       <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>">
     </a>
-    <a class="Header-tel LinkOpacity" href="tel:+441795535515" title="Creek Creative telephone number 01795 535 515">
-      <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/icon-tel.svg" alt="Tel 01795535515">
-      <span class="u-isHiddenVisually">Telephone 01795 535 515</span>
-    </a>
   </div>
   <div class="Header-contact">
     <a href="#menu" class="Header-menu">
@@ -38,8 +34,13 @@
     </a>
     <div class="Header-address">
       <a class="LinkLight" href="#location" title="Link to Location information at bottom of page">
-        1 Abbey Street, Faversham, Kent ME13&nbsp;7BE</a>
+        1 Abbey Street, Faversham, <span class="Hide--small">Kent </span>ME13&nbsp;7BE<span class="Hide--medium"> England</span>
+      </a>
     </div>
+    <a class="Header-tel LinkOpacity" href="tel:+441795535515" title="Creek Creative telephone number 01795 535 515">
+      <i class="Icon Icon--36 Icon--36--tel"></i>
+      <span class="u-isHiddenVisually">Telephone 01795 535 515</span>
+    </a>
   </div>
 
   <nav class="Nav" id="Nav" role="navigation">
@@ -48,6 +49,7 @@
       <p>Open:<br> Tue–Sun, 10am–4pm</p>
       <p>Office only:<br> Mon–Fri, 9am–6pm</p>
     </div>
+    <p><a href="#NavToo">Company info</a></p>
   </nav>
 
 </header>

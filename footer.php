@@ -1,13 +1,13 @@
 <footer class="Footer">
 
 
-  <nav class="NavToo">
+  <nav class="NavToo" id="NavToo">
     <?php wp_nav_menu( array( 'theme_location' => 'menu_secondary' ) ); ?>
   </nav>
 
   <section class="Location" id="location">
     <h1 class="Heading Heading--support Heading--supportwo u-textCenter">Location</h1>
-      <h2 class="Heading Heading--support  Heading--supportwo u-textCenter" style="background:transparent;"><a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en" title="Link to Creek Creative on Google Maps">Google Maps ME13 7BE</a></h2>
+      <h2 class="Heading Heading--support  Heading--supportwo u-textCenter" style="background:transparent;"><a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en" title="Link to Creek Creative on Google Maps">Map: 1 Abbey Street ME13 7BE</a></h2>
       <h2 class="Heading Heading--support Heading--supportwo Heading--temp u-textCenter">Railway station</h2>
       <div class="MobileMargin">
         <ul>
@@ -58,16 +58,19 @@
   <div class="Supporters u-textCenter">
     <h3 class="Heading Heading--support Heading--temp Heading--bluenotso">Supported by</h3>
     <ol class="Supporters-list MobileMargin">
-      <li><a href="http://www.artscouncil.org.uk/funding/">Arts Council England</a></li>
+      <li>
+        <a href="http://www.artscouncil.org.uk/funding/">
+          <i class="Logos Logos--artsCouncil"></i>
+          <span class="u-isHiddenVisually">Arts Council England</span>
+        </a>
+      </li>
       <li><a href="http://www.swale.gov.uk/">Swale Borough Council</a></li>
       <li><a href="">Kent County Council</a></li>
       <li><a href="http://nfasp.org.uk/">The National Federation of Artist Studio Providers</a></li>
-      <li><a href="http://www.acme.org.uk/">Acme Studios</a></li>
-      <li><a href="http://www.faversham.org/business/fep.aspx">Faversham Enterprise Partnership</a></li>
     </ol>
   </div>
 </footer>
 
-</div><!-- /.wrap -->
+</div>
 </body>
 </html>

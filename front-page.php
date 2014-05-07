@@ -6,7 +6,7 @@
 
   <h1 class="u-isHiddenVisually">Exhibitions</h1>
 
-  <!-- CURRENT EXHIBITIONS -->
+  <!-- Current exhibitions -->
   <div>
     <h2 class="Heading Heading--support">Current exhibitions</h2>
     <?php
@@ -49,7 +49,7 @@
     ?>
   </div>
 
-  <!-- NEXT EXHIBITIONS -->
+  <!-- Next exhibitions -->
   <div>
     <h2 class="Heading Heading--support">Next exhibitions</h2>
 
