@@ -8,14 +8,14 @@
     <h1 class="Heading Heading--support Heading--supportwo u-textCenter">Location</h1>
       <h2 class="Heading Heading--support  Heading--supportwo u-textCenter" style="background:transparent;"><a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en" title="Link to Creek Creative on Google Maps">Map: 1 Abbey Street ME13&nbsp;7BE</a></h2>
       <h2 class="Heading Heading--support Heading--supportwo Heading--temp u-textCenter">Railway station</h2>
-      <div class="MobileMargin">
+      <div class="Footer-margin">
         <ul>
           <li>Faversham (FAV) <a href="http://traintimes.org.uk/dep/FAV">train departures</a></li>
           <li>Station Road, Faversham <a href="https://maps.google.co.uk/maps?saddr=Faversham+%4051.311710,0.891060&daddr=Creek+Creative+Studios,+Abbey+Street,+Faversham&hl=en&ll=51.314346,0.893025&spn=0.009979,0.022724&sll=51.316284,0.890831&sspn=0.002495,0.005681&geocode=FV70DgMdtJgNAA%3BFbwLDwMdiJ8NACF-cqj0Z-UKXCnFW2wGHtPeRzF-cqj0Z-UKXA&dirflg=w&mra=ls&t=m&z=16">ME13 8EB</a></li>
         </ul>
       </div>
       <h2 class="Heading Heading--support Heading--supportwo Heading--temp u-textCenter">Parking</h2>
-      <div class="MobileMargin">
+      <div class="Footer-margin">
         <ul>
           <li><a href="https://maps.google.co.uk/maps?saddr=Belvedere+Road,+Faversham&daddr=Creek+Creative+Studios,+Abbey+Street,+Faversham&hl=en&sll=51.314346,0.893025&sspn=0.009979,0.022724&geocode=FcwRDwMdw6INACnhWUff4dLeRzHM-i52e7H3lw%3BFbwLDwMdiJ8NACF-cqj0Z-UKXCnFW2wGHtPeRzF-cqj0Z-UKXA&oq=Belve&dirflg=w&mra=ls&t=m&z=18">Belvedere Road</a>: free on-road parking, parallel to Abbey Street.</li>
           <li><a href="https://maps.google.co.uk/maps?saddr=Abbey+Street,+Faversham&daddr=Creek+Creative+Studios,+Abbey+Street,+Faversham&hl=en&ll=51.318403,0.894093&spn=0.002494,0.005681&sll=51.318407,0.892888&sspn=0.002494,0.005681&geocode=FcgRDwMdwqgNACnxsRzB4dLeRzFMdQjJqWgbhg%3BFbwLDwMdiJ8NACF-cqj0Z-UKXCnFW2wGHtPeRzF-cqj0Z-UKXA&dirflg=w&mra=ls&t=m&z=18">Abbey Street</a>: Free 1 hour parking.</li>
@@ -54,9 +54,9 @@
     </ol>
   </section>
 
-  <section class="Supporters u-textCenter">
+  <section class="Supporters">
     <h3 class="Heading Heading--support Heading--temp Heading--bluenotso">Supported by</h3>
-    <ol class="Supporters-list MobileMargin">
+    <ol class="Supporters-list Footer-margin">
       <li>
         <a href="http://www.artscouncil.org.uk/funding/">
           <i class="Logos Logos--artsCouncil"></i>

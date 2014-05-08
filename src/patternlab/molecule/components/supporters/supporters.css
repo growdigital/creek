@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Supporters
+   ========================================================================== */
+
+/**
+ * List of supporters, wit icons etc
+ */
+
+.Supporters {
+  text-align: center;
+}
+
+.Supporters-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Supporters-list > * {
+  display: inline-block;
+}
+
+.Supporters-list > *::after {
+  content: " | ";
+}
+
+.Supporters-list > *:last-child::after {
+  content: "";
+}

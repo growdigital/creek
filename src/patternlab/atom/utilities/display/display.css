@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Display utilities
+   ========================================================================== */
+
+/**
+ * Text utilities in addition to SUIT CSS display utilities:
+ * https://github.com/suitcss/utils-display
+ */
+
+/* Hide utility a la Pattern Lab*/
+
+@media screen and (max-width: 22em) {
+  .u-hideSmall {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 32em) {
+  .u-hideMedium {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .u-hideLarge {
+    display: none;
+  }
+}
