@@ -1,6 +1,5 @@
 <footer class="Footer">
 
-
   <nav class="NavToo" id="NavToo">
     <?php wp_nav_menu( array( 'theme_location' => 'menu_secondary' ) ); ?>
   </nav>
@@ -55,7 +54,7 @@
     </ol>
   </section>
 
-  <div class="Supporters u-textCenter">
+  <section class="Supporters u-textCenter">
     <h3 class="Heading Heading--support Heading--temp Heading--bluenotso">Supported by</h3>
     <ol class="Supporters-list MobileMargin">
       <li>
@@ -68,7 +67,7 @@
       <li><a href="">Kent County Council</a></li>
       <li><a href="http://nfasp.org.uk/">The National Federation of Artist Studio Providers</a></li>
     </ol>
-  </div>
+  </section>
 </footer>
 
 </div>

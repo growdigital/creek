@@ -13,6 +13,7 @@ var gulp = require('gulp'),
   svgmin    = require('gulp-svgmin'),
   svg2png   = require('gulp-svg2png'),
   imagemin  = require('gulp-imagemin'),
+  rename    = require('gulp-rename'),
   uglify    = require('gulp-uglify'),
 
   // Server
@@ -81,6 +82,7 @@ gulp.task('css', function() {
 gulp.task('svgo', function() {
   return gulp.src(paths.svg)
     .pipe(svgmin())
+    .pipe(rename({dirname: ""}))
     .pipe(gulp.dest('dist/assets/img/'));
 });
 
@@ -88,6 +90,7 @@ gulp.task('svgo', function() {
 gulp.task('svg2png', function() {
   return gulp.src(paths.svg)
     .pipe(svg2png())
+    .pipe(rename({dirname: ""}))
     .pipe(gulp.dest('tmp/assets/img/trans/'));
 });
 
@@ -97,6 +100,7 @@ gulp.task('svg2png', function() {
 gulp.task('minimage', function() {
   return gulp.src(paths.bitmap)
     .pipe(cache(imagemin({ pngquant: true, optimizationLevel: 3, progressive: true })))
+    .pipe(rename({dirname: ""}))
     .pipe(gulp.dest('dist/assets/img/'));
 });
 

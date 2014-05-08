@@ -1,21 +1,11 @@
 /* ==========================================================================
-   Link light
+   Link opacity
    ========================================================================== */
 
 /**
- * A lighter, less obtrusive link style for text
+ * Makes a link go all on transparent-ish on hover
  */
-
-.LinkLight,
-.LinkLight:hover  {
-  color: var(slate_73);
-}
 
 .LinkOpacity:hover {
   opacity: 0.7;
-}
-
-.LinkLightest,
-.LinkLightest:hover {
-  color: var(link_lightest);
 }

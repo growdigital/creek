@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Global footer
+   ========================================================================== */
+
+/**
+ * The footer for the whole of the site
+ */
+
+.Footer {
+  background-color: var(blue);
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.Footer-location {
+  background-color: var(slate_bg);
+}
+
+.Footer-contact {
+  margin-left: 2.34375%;
+  margin-right: 2.34375%;
+  padding-top: 1rem;
+}
+
+.Footer-smallprint {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.Footer-smallprint > * {
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.Footer-smallprint > *::after {
+  content: " | ";
+}
+
+.Footer-smallprint > *:last-child::after {
+  content: "";
+}
+
+.Footer a {
+  color: var(link_lightest);
+}
+

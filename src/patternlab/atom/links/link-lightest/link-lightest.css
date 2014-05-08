@@ -3,17 +3,8 @@
    ========================================================================== */
 
 /**
- * A lighter, less obtrusive link style for text
+ * Very light link style for white outed text
  */
-
-.LinkLight,
-.LinkLight:hover  {
-  color: var(slate_73);
-}
-
-.LinkOpacity:hover {
-  opacity: 0.7;
-}
 
 .LinkLightest,
 .LinkLightest:hover {

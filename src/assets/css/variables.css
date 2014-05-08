@@ -25,6 +25,8 @@
   var-sage_30:  #bfc4a4;
   var-sage_21:  #d1d8bf;
 
+  var-link_lightest: #b2e0ff;
+
   /* TODO: sort out sensible names */
   var-sage_dark: #acb194;
   var-sage_darker: #979a81;
@@ -65,7 +67,7 @@
   var-base_fontsize:       16px;
   var-base_lineheight:     1.4;
   var-base_linkcolor:      var(link);
-  var-base_linkcolorhover: var(visited);
+  var-base_linkcolorhover: var(link);
 
   /**
    * Breakpoints, use rework-breakpoints
