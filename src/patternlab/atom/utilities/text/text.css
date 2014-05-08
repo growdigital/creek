@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Text utilities
+   ========================================================================== */
+
+/**
+ * Text utilities in addition to SUIT CSS text utilities:
+ * https://github.com/suitcss/utils-text
+ */
+
+ /* Responsive line break */
+.u-textBreak {
+  display: block;
+}
+
+@media screen and (min-width: 25em) {
+  .u-textBreak {
+    display: none;
+  }
+}

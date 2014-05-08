@@ -10,6 +10,7 @@
  */
 
 .Nav-wrap {
+  min-width: 18em;
   position: relative;
   transition: all 0.3s ease-out;
 }

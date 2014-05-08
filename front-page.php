@@ -40,7 +40,7 @@
           }
         ?>
         <p class="ArticleThumb-desc"><?php $excerpt =  get_field('event_excerpt'); echo $excerpt; ?></p>
-        <p class="ArticleThumb-date"><?php echo eo_get_the_start('D jS M Y'); ?> <br class="u-RespBreak">to <?php echo eo_get_the_end('D jS M Y'); ?></p>
+        <p class="ArticleThumb-date"><?php echo eo_get_the_start('D jS M Y'); ?> <br class="u-textBreak">to <?php echo eo_get_the_end('D jS M Y'); ?></p>
       </div>
     </article>
     <?php
@@ -156,18 +156,18 @@
 
 <? // $post_type = get_post_type_object('event'); var_dump($post_type);?>
 
-<section class="Section-wrap">
+<section class="Letterbox-wrap">
 
   <h2 class="Heading Heading--support">What we offer</h2>
 
   <?php if(get_field('section')): ?>
 
-    <ul class="Section-list">
+    <ul class="Letterbox-list">
 
     <?php while(has_sub_field('section')): ?>
-      <article class="Section" class="<?php the_sub_field('section_promoted'); ?>"> <!-- TODO: if true, then class = is-promoted -->
+      <article class="Letterbox" class="<?php the_sub_field('section_promoted'); ?>"> <!-- TODO: if true, then class = is-promoted -->
         <h1 class="Heading Heading--less"><?php the_sub_field('section_title'); ?></h1>
-        <img class="Section-image u-nbfc" src="<?php
+        <img class="Letterbox-image u-nbfc" src="<?php
           $image = get_sub_field('section_image');
           $size = $image['sizes'];
           echo $size['medium'] . '"' . ' alt="' . $image['alt'];  ?>"/>

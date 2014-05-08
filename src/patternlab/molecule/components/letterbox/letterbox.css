@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Letterbox
+   ========================================================================== */
+
+/**
+ * List of Letterbox sections,  on home page
+ */
+
+.Letterbox  p {
+  color: var(k80);
+  font-size: 0.9em;
+  margin-bottom: 1rem;
+}
+
+.Letterbox-list {
+  margin: 0 2.34375%;
+  padding: 0;
+}
+
+.Letterbox-image {
+  margin-bottom: 0.5rem;
+}

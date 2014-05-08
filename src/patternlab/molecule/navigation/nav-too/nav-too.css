@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Nav Too
+   ========================================================================== */
+
+/**
+ * Secondary navigation, located in the footer regions
+ */
+
+.NavToo {
+  background-color: var(sage_21);
+  padding: 0.5rem 0;
+}
+
+.NavToo .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center
+}
+
+.NavToo .menu > * {
+  display: inline-block;
+}
+
+.NavToo .menu > * a {
+  color: var(slate_73);
+  display: block;
+  font-family: MuseoSans-300;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  padding: 0.5rem 0.8rem 0.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.NavToo .menu > * a:hover,
+.NavToo .menu > * a:active {
+  background-color: var(slate_73);
+  color: white;
+}

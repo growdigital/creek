@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Debug CSS
+   ========================================================================== */
+
+/**
+ * Uses .debug- namespace
+ */
+
+.debug-Outline {
+  outline: 1px solid red;
+}
+
+.debug-Bg {
+  background-color: navajowhite;
+}

@@ -5,9 +5,9 @@
     <?php wp_nav_menu( array( 'theme_location' => 'menu_secondary' ) ); ?>
   </nav>
 
-  <section class="Location" id="location">
+  <section class="Footer-location" id="location">
     <h1 class="Heading Heading--support Heading--supportwo u-textCenter">Location</h1>
-      <h2 class="Heading Heading--support  Heading--supportwo u-textCenter" style="background:transparent;"><a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en" title="Link to Creek Creative on Google Maps">Map: 1 Abbey Street ME13 7BE</a></h2>
+      <h2 class="Heading Heading--support  Heading--supportwo u-textCenter" style="background:transparent;"><a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en" title="Link to Creek Creative on Google Maps">Map: 1 Abbey Street ME13&nbsp;7BE</a></h2>
       <h2 class="Heading Heading--support Heading--supportwo Heading--temp u-textCenter">Railway station</h2>
       <div class="MobileMargin">
         <ul>

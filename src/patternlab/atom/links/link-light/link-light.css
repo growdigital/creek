@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Link light
+   ========================================================================== */
+
+/**
+ * A lighter, less obtrusive link style for text
+ */
+
+.LinkLight,
+.LinkLight:hover  {
+  color: var(slate_73);
+}
+
+.LinkOpacity:hover {
+  opacity: 0.7;
+}

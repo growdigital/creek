@@ -31,6 +31,7 @@ var gulp = require('gulp'),
       'src/bower_components/suit-utils-*/*.css',
       'src/patternlab/**/**/*.css',
       'src/patternlab/**/**/**/*.css',
+      'src/assets/css/debug.css',
       'src/assets/css/shame.css'
     ],
     js: [
