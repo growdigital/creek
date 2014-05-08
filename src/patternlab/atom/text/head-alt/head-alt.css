@@ -1,12 +1,12 @@
 /* ==========================================================================
-   Heading Alt
+   Head Alt
    ========================================================================== */
 
 /**
  * Alternative heading, for supporting headings. Less in your type face.
  */
 
-.HeadingAlt {
+.HeadAlt {
   background-color: var(grey_wash);
   color: var(grey_support);
   font-family: var(head);
@@ -19,16 +19,29 @@
   text-transform: uppercase;
 }
 
-.HeadingAlt--slate {
-  background-color: var(slate_73);
+.HeadAlt--slim {
+  margin-bottom: 0;
+}
+
+.HeadAlt--slate {
+  background-color: var(slate_mid);
   color: white;
 }
 
-.HeadingAlt--slated {
-  background-color: var(slate_69);
+.HeadAlt--slated {
+  background-color: var(slate_d);
   color: white;
 }
 
-.HeadingAlt--blue {
+.HeadAlt--blued {
+  background-color: var(bluetint);
+  color: white;
+}
 
+.HeadAlt--h {
+  background-color: transparent;
+}
+
+.HeadAlt--h a {
+  color: var(slate_73) !important;
 }

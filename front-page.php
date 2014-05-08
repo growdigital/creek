@@ -8,7 +8,7 @@
 
   <!-- Current exhibitions -->
   <div>
-    <h2 class="Heading Heading--support">Current exhibitions</h2>
+    <h2 class="HeadAlt">Current exhibitions</h2>
     <?php
       $args = array(
         'numberposts'        => 'all',
@@ -51,7 +51,7 @@
 
   <!-- Next exhibitions -->
   <div>
-    <h2 class="Heading Heading--support">Next exhibitions</h2>
+    <h2 class="HeadAlt">Next exhibitions</h2>
 
     <?php
       $args = array(
@@ -83,7 +83,7 @@
 
   <!-- NEXT COURSES -->
   <div class="courses_coming_up">
-  <h2 class="Heading Heading--support">Upcoming courses</h2>
+  <h2 class="HeadAlt">Upcoming courses</h2>
 
   <?php
     $args = array(
@@ -124,7 +124,7 @@
 
   <!-- CURRENT COURSES -->
   <div class="courses_currently_running">
-  <h2 class="Heading Heading--support">Current courses</h2>
+  <h2 class="HeadAlt">Current courses</h2>
 
   <?php
     $args = array(
@@ -158,7 +158,7 @@
 
 <section class="Letterbox-wrap">
 
-  <h2 class="Heading Heading--support">What we offer</h2>
+  <h2 class="HeadAlt">What we offer</h2>
 
   <?php if(get_field('section')): ?>
 

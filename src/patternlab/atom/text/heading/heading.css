@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /**
- * Headings, from h1 through to h5. Maybe even h6.
+ * Custom default headings. Just add class.
  */
 
 .Heading {
@@ -25,62 +25,5 @@
   line-height: 1;
 }
 
-.Heading--support {
-  background-color: var(grey_wash);
-  color: var(grey_support);
-  font-size: 1.2rem;
-  letter-spacing: 0.15rem;
-  margin-bottom: 0.75rem;
-  padding: 0.7rem 2.34375% 0.4rem 2.34375%;
-  text-transform: uppercase;
-}
 
-/* TODO: separate out colour from style on Heading--support, as have multiple variations */
-.Heading--supportwo {
-  background-color: var(sage_dark);
-  background-color: #576d80;
-  color: white;
-  margin-bottom: 0 !important;
-}
 
-.Heading--temp {
-  background-color: var(sage_darker);
-  background-color: #677a8b;
-}
-
-.Heading--bluenotso {
-  background-color: #323254;
-  color: white;
-}
-
-h1  {
-  font-size: 2rem;
-  margin: 0 0 0.3rem;
-}
-
-h2  {
-  font-size: 1.75rem;
-  margin: 0 0 0.3rem;
-}
-
-h3  {
-  font-size: 1.5rem;
-  margin: 0 0 0.3rem;
-}
-
-h4  {
-  font-size: 1rem;
-  margin: 0 0 0.3rem;
-}
-
-/* h5 & h6 unspecified */
-/*
-h5  {
-  font-size: 1rem;
-  margin: 0 0 0.3rem;
-}
-h6  {
-  font-size: 1rem;
-  margin: 0 0 0.3rem;
-}
-*/
