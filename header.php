@@ -34,7 +34,7 @@
     </a>
     <div class="Header-address">
       <a class="LinkLight" href="#location" title="Link to Location information at bottom of page">
-        1 Abbey Street, Faversham, <span class="u-hideSmall">Kent </span>ME13&nbsp;7BE<span class="u-hideMedium"> England</span>
+        1 Abbey Street, Faversham, <span class="u-isHiddenVisuallySmall">Kent </span>ME13&nbsp;7BE<span class="u-isHiddenVisuallyMedium"> England</span>
       </a>
     </div>
     <a class="Header-tel LinkOpacity" href="tel:+441795535515" title="Creek Creative telephone number 01795 535 515">

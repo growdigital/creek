@@ -18,12 +18,25 @@
 
 .Supporters-list > * {
   display: inline-block;
+  line-height: 1.5;
+  padding: 0 0.2rem;
 }
 
-.Supporters-list > *::after {
-  content: " | ";
+.Supporters-list > *:first-child {
+  display: block;
+  margin-bottom: 0.2rem;
+  padding: 0;
 }
 
-.Supporters-list > *:last-child::after {
-  content: "";
+@media screen and (min-width: 30em) {
+  .Supporters-list > *:first-child {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 24em) {
+  .Supporters-border::after {
+    content: " | ";
+    padding: 0 0.5rem;
+  }
 }

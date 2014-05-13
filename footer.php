@@ -65,20 +65,20 @@
       </li>
       <li>
         <a href="http://www.swale.gov.uk/">
-          <i class="Logos Logos--swale"></i>
-          <span class="u-isHiddenVisually">Swale Borough Council</span>
+          <i class="u-isHiddenVisuallyMedium Logos Logos--swale"></i>
+          <span class="u-isHiddenVisuallyLarge Supporters-border">Swale&nbsp;Borough&nbsp;Council</span>
         </a>
       </li>
       <li>
         <a href="http://www.kent.gov.uk/">
-          <i class="Logos Logos--kcc"></i>
-          <span class="u-isHiddenVisually">Kent County Council</span>
+          <i class="u-isHiddenVisuallyMedium  Logos Logos--kcc"></i>
+          <span class="u-isHiddenVisuallyLarge">Kent County Council</span>
         </a>
       </li>
       <li>
         <a href="http://nfasp.org.uk/">
-          <i class="Logos Logos--nfasp"></i>
-          <span class="u-isHiddenVisually">The National Federation of Artist Studio Providers</span>
+          <i class="u-isHiddenVisuallyMedium Logos Logos--nfasp"></i>
+          <span class="u-isHiddenVisuallyLarge ">The National Federation of Artist Studio Providers</span>
         </a>
       </li>
     </ol>
