@@ -8,54 +8,54 @@
    */
 
   /* Brand colors */
-  var-blue:     #22224c;
-  var-hilite:   #0389ff;
-  var-orange:   #cb4b16;
+  --blue:     #22224c;
+  --hilite:   #0389ff;
+  --orange:   #cb4b16;
 
 
-  var-bluetint: #323254;
+  --bluetint: #323254;
 
-  /* var-slate_80: #31495f; */
-  var-slate_73: #455d72;
-  var-slate_69: #53687c;
-  var-slate_d: #677a8b;
+  /*--slate_80: #31495f; */
+  --slate_73: #455d72;
+  --slate_69: #53687c;
+  --slate_d: #677a8b;
 
-  var-slate_bg:  #798a99;
+  --slate_bg:  #798a99;
 
-  var-slate_mid: #576d80;
+  --slate_mid: #576d80;
 
-  var-sage_30:  #bfc4a4;
-  var-sage_21:  #d1d8bf;
+  --sage_30:  #bfc4a4;
+  --sage_21:  #d1d8bf;
 
-  var-link_lightest: #b2e0ff;
+  --link_lightest: #b2e0ff;
 
   /* TODO: sort out sensible names */
-  var-sage_dark: #acb194;
-  var-sage_darker: #979a81;
-  var-sage_darkerstill: #8f937b;
+  --sage_dark: #acb194;
+  --sage_darker: #979a81;
+  --sage_darkerstill: #8f937b;
 
-  var-background: white;
+  --background: #fff;
 
   /* Warm greys */
-  var-k94:          #141619;
-  var-k80:          #434547;
-  var-grey_text:    #4c5259;
-  var-grey_support: #b4babf;
-  var-grey_wash:    #f3f5f5;
-  var-k61:          #737c86;
-  var-k50:          #8f97a0;
-  var-k34:          #b5bbc1;
+  --k94:          #141619;
+  --k80:          #434547;
+  --grey_text:    #4c5259;
+  --grey_support: #b4babf;
+  --grey_wash:    #f3f5f5;
+  --k61:          #737c86;
+  --k50:          #8f97a0;
+  --k34:          #b5bbc1;
 
 
   /* Additional colors */
-  var-link:    var(hilite);
-  var-visited: purple;
+  --link:    var(--hilite);
+  --visited: purple;
 
   /**
    * Type
    */
-  var-head: MuseoSans-300;
-  var-body: MuseoSans-500;
+  --head: MuseoSans-300;
+  --body: MuseoSans-500;
 
 
   /**
@@ -63,20 +63,20 @@
    * /
 
   /* Base */
-  var-base_background:     var(background);
-  var-base_color:          var(grey_text);
-  var-base_fontfamily:     var(body);
-  var-base_fontsize:       16px;
-  var-base_lineheight:     1.4;
-  var-base_linkcolor:      var(link);
-  var-base_linkcolorhover: var(link);
+  --base_background:     white;
+  --base_color:          var(--grey_text);
+  --base_fontfamily:     var(--body);
+  --base_fontsize:       16px;
+  --base_lineheight:     1.4;
+  --base_linkcolor:      var(--link);
+  --base_linkcolorhover: var(--link);
 
   /**
    * Breakpoints, use rework-breakpoints
    */
 
-  /* var-small:   20em;  320px */
-  /* var-medium:  36em;  576px */
-  /* var-large:   62em;  992px */
-  /* var-x-large: 77em; 1232px */
+  /*--small:   20em;  320px */
+  /*--medium:  36em;  576px */
+  /*--large:   62em;  992px */
+  /*--x-large: 77em; 1232px */
 }

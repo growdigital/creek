@@ -26,11 +26,11 @@ img, embed, object, video {
 
 /* Apply base variables */
 html {
-  background-color: var(base_background);
-  color:            var(base_color);
-  font-family:      var(base_fontfamily);
-  font-size:        var(base_fontsize);
-  line-height:      var(base_lineheight);
+  background-color: var(--base_background);
+  color:            var(--base_color);
+  font-family:      var(--base_fontfamily);
+  font-size:        var(--base_fontsize);
+  line-height:      var(--base_lineheight);
 }
 
 body {
@@ -38,14 +38,14 @@ body {
 }
 
 a {
-  color: var(base_linkcolor);
+  color: var(--base_linkcolor);
   text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: var(base_linkcolorhover);
+  color: var(--base_linkcolorhover);
   text-decoration: underline;
 }
 

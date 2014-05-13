@@ -8,7 +8,7 @@
 
 .LinkLight,
 .LinkLight:hover  {
-  color: var(slate_73);
+  color: var(--slate_73);
 }
 
 .LinkOpacity:hover {
@@ -17,5 +17,5 @@
 
 .LinkLightest,
 .LinkLightest:hover {
-  color: var(link_lightest);
+  color: var(--link_lightest);
 }

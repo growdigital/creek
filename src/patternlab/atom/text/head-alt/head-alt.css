@@ -7,9 +7,9 @@
  */
 
 .HeadAlt {
-  background-color: var(grey_wash);
-  color: var(grey_support);
-  font-family: var(head);
+  background-color: var(--grey_wash);
+  color: var(--grey_support);
+  font-family: var(--head);
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 300;
@@ -24,17 +24,17 @@
 }
 
 .HeadAlt--slate {
-  background-color: var(slate_mid);
+  background-color: var(--slate_mid);
   color: white;
 }
 
 .HeadAlt--slated {
-  background-color: var(slate_d);
+  background-color: var(--slate_d);
   color: white;
 }
 
 .HeadAlt--blued {
-  background-color: var(bluetint);
+  background-color: var(--bluetint);
   color: white;
 }
 
@@ -43,5 +43,5 @@
 }
 
 .HeadAlt--h a {
-  color: var(slate_73) !important;
+  color: var(--slate_73) !important;
 }

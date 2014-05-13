@@ -7,7 +7,7 @@
  */
 
 .Footer {
-  background-color: var(blue);
+  background-color: var(--blue);
   color: white;
   padding-bottom: 2rem;
 }
@@ -19,7 +19,7 @@
 }
 
 .Footer-location {
-  background-color: var(slate_bg);
+  background-color: var(--slate_bg);
 }
 
 .Footer-contact {
@@ -49,6 +49,6 @@
 }
 
 .Footer a {
-  color: var(link_lightest);
+  color: var(--link_lightest);
 }
 

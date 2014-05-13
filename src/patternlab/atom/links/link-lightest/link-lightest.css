@@ -8,5 +8,5 @@
 
 .LinkLightest,
 .LinkLightest:hover {
-  color: var(link_lightest);
+  color: var(--link_lightest);
 }

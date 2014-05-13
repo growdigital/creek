@@ -41,15 +41,14 @@ var gulp = require('gulp'),
       'src/patternlab/**/**/**/*.js'
     ],
     bowerjs: [
-      'src/bower_components/jquery/dist/jquery.min.js',
+      'src/bower_components/jquery/dist/assets/jquery.min.js',
       'src/bower_components/modernizr/modernizr.js'
     ],
     svg: [
-      // Optimise logotype & favicon manually
-      'src/patternlab/atoms/images/icon/icon.svg',
-      'src/patternlab/atoms/images/logos/logos.svg',
-      'src/patternlab/atoms/images/logotype/logotype.svg',
-      'src/assets/img/svg/icon-phone.svg'
+      // Optimise favicon manually
+      'src/patternlab/**/**/*.svg',
+      'src/patternlab/**/**/**/*.svg',
+      'src/assets/img/svg/*.svg'
     ],
     bitmap: [
       'src/assets/img/bitmap/24bit/*',
@@ -66,10 +65,10 @@ function handleError(type, e) {
 // CSS task
 gulp.task('css', function() {
   var stream = gulp.src(paths.css)
-    .pipe(myth())
-    .on('error', function(e){ handleError('Run Myth processing',e);})
     .pipe(concat("styles.css"))
     .on('error', function(e){ handleError('Concat CSS files',e);})
+    .pipe(myth())
+    .on('error', function(e){ handleError('Run Myth processing',e);})
     .pipe(pixrem())
     .on('error', function(e){ handleError('Pixel fallback for rems',e);})
     .pipe(minifyCSS())

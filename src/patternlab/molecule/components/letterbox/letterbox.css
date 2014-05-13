@@ -7,7 +7,7 @@
  */
 
 .Letterbox  p {
-  color: var(k80);
+  color: var(--k80);
   font-size: 0.9em;
   margin-bottom: 1rem;
 }

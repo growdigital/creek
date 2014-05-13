@@ -63,9 +63,24 @@
           <span class="u-isHiddenVisually">Arts Council England</span>
         </a>
       </li>
-      <li><a href="http://www.swale.gov.uk/">Swale Borough Council</a></li>
-      <li><a href="">Kent County Council</a></li>
-      <li><a href="http://nfasp.org.uk/">The National Federation of Artist Studio Providers</a></li>
+      <li>
+        <a href="http://www.swale.gov.uk/">
+          <i class="Logos Logos--swale"></i>
+          <span class="u-isHiddenVisually">Swale Borough Council</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.kent.gov.uk/">
+          <i class="Logos Logos--kcc"></i>
+          <span class="u-isHiddenVisually">Kent County Council</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://nfasp.org.uk/">
+          <i class="Logos Logos--nfasp"></i>
+          <span class="u-isHiddenVisually">The National Federation of Artist Studio Providers</span>
+        </a>
+      </li>
     </ol>
   </section>
 </footer>

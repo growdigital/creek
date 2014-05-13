@@ -11,12 +11,12 @@
 }
 
 .ArticleThumb-desc {
-  color: var(k61);
+  color: var(--k61);
   font-size: 0.9375rem;
 }
 
 .ArticleThumb-date {
-  color: var(k61);
+  color: var(--k61);
   font-family: MuseoSans-300;
   font-size: 0.8125rem;
   font-style: italic;
@@ -24,7 +24,7 @@
 }
 
 .ArticleThumb-img {
-  border: 1px solid var(k34);
+  border: 1px solid var(--k34);
 }
 
 .ArticleThumb-img:hover {
