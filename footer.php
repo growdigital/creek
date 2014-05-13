@@ -29,9 +29,9 @@
   <section class="Footer-contact">
     <ol class="Footer-smallprint">
       <li>Creek Creative &copy; 2013-<?php echo(Date("y")); ?></li>
-      <li><a href="mailto:info@creek-creative.org">info@creek-creative.org</a></li>
+      <li class="Footer-smallprint--border"><a href="mailto:info@creek-creative.org">info@creek-creative.org</a></li>
       <li><a href="tel:+441795535515">01795 535 515</a></li>
-      <li>Registered&nbsp;Community&nbsp;Interest&nbsp;Company&nbsp;No.&nbsp;6702090</li>
+      <li>Registered&nbsp;Community Interest&nbsp;Company&nbsp;No.&nbsp;6702090</li>
     </ol>
     <ol class="Social u-textCenter">
       <li>

@@ -35,17 +35,18 @@
   text-align: center;
 }
 
+.Footer-smallprint > *:first-child {
+  display: block;
+}
+
 .Footer-smallprint > * {
   display: inline-block;
   font-size: 0.8rem;
 }
 
-.Footer-smallprint > *::after {
+.Footer-smallprint--border::after {
   content: " | ";
-}
-
-.Footer-smallprint > *:last-child::after {
-  content: "";
+  padding: 0 0.5rem;
 }
 
 .Footer a {
