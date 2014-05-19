@@ -167,12 +167,11 @@
     <?php while(has_sub_field('section')): ?>
       <article class="Letterbox" class="<?php the_sub_field('section_promoted'); ?>"> <!-- TODO: if true, then class = is-promoted -->
         <h1 class="Heading Heading--less"><?php the_sub_field('section_title'); ?></h1>
-        <img class="Letterbox-image u-nbfc" src="<?php
+        <img class="Letterbox-image" src="<?php
           $image = get_sub_field('section_image');
           $size = $image['sizes'];
           echo $size['medium'] . '"' . ' alt="' . $image['alt'];  ?>"/>
-        <? // var_dump($image); ?>
-        <div class="u-nbfc"><?php the_sub_field('section_copy'); ?></div>
+        <div><?php the_sub_field('section_copy'); ?></div>
       </article>
     <?php endwhile; ?>
 
