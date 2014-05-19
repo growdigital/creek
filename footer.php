@@ -75,13 +75,8 @@
           <span class="u-isHiddenVisuallyLarge">Kent County Council</span>
         </a>
       </li>
-      <li>
-        <a href="http://nfasp.org.uk/">
-          <i class="u-isHiddenVisuallyMedium Logos Logos--nfasp"></i>
-          <span class="u-isHiddenVisuallyLarge ">The National Federation of Artist Studio Providers</span>
-        </a>
-      </li>
     </ol>
+    <h3 class="HeadAlt HeadAlt--slim HeadAlt--blued u-textCenter"><a href="http://nfasp.org.uk/" title="Link to NFASP website">Creek Creative is a member of <acronym title="The National Federation of Artist Studio Providers">NFASP</acronym></a></h3>
   </section>
 </footer>
 

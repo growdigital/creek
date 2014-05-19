@@ -165,12 +165,15 @@
     <ul class="Letterbox-list">
 
     <?php while(has_sub_field('section')): ?>
-      <article class="Letterbox" class="<?php the_sub_field('section_promoted'); ?>"> <!-- TODO: if true, then class = is-promoted -->
-        <h1 class="Heading Heading--less"><?php the_sub_field('section_title'); ?></h1>
-        <img class="Letterbox-image" src="<?php
-          $image = get_sub_field('section_image');
-          $size = $image['sizes'];
-          echo $size['medium'] . '"' . ' alt="' . $image['alt'];  ?>"/>
+      <article class="Letterbox" class="<?php the_sub_field('section_promoted'); ?>">
+      <!-- TODO: if true, then class = is-promoted -->
+        <h1 class="Heading Heading--less"><a href="<?php echo the_sub_field('section_link'); ?>"><?php the_sub_field('section_title'); ?></a></h1>
+        <a href="<?php echo the_sub_field('section_link'); ?>">
+          <img class="Letterbox-image" src="<?php
+            $image = get_sub_field('section_image');
+            $size = $image['sizes'];
+            echo $size['medium'] . '"' . ' alt="' . $image['alt'];  ?>">
+          </a>
         <div><?php the_sub_field('section_copy'); ?></div>
       </article>
     <?php endwhile; ?>
