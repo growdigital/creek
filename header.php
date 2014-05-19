@@ -49,7 +49,7 @@
       <p>Open:<br> Tue–Sun, 10am–4pm</p>
       <p>Office only:<br> Mon–Fri, 9am–6pm</p>
     </div>
-    <p><a href="#NavToo">Company info</a></p>
+    <p><a class="Nav-too" href="#NavToo">Company info</a></p>
   </nav>
 
 </header>
