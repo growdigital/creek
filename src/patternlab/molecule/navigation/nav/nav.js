@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   // Link to bottom nav, hides main menu
   $morelink.click(function() {
-    $wrap.toggleClass('active');
+    $wrap.removeClass('active');
   });
 
 });
