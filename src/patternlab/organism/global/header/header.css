@@ -10,14 +10,13 @@
   align-items: stretch;
   border-top: 5px solid var(--orange);
   background-color: var(--bluedeep);
-  display: table;
   padding: 0.6875rem 4% 0.6875rem 2.34375%;
   width: 100%;
 }
 
 .Header-logo {
-  display: table-cell;
-  width: 80%;
+  display: block;
+  max-width: 450px;
 }
 
 .Header-contact {
@@ -70,10 +69,23 @@
   }
 }
 
-
+@media screen and (min-width: 41.25em) {
+  .Header-address {
+    font-size: 1.1rem;
+    padding: 0.4rem 0;
+    text-align: left;
+    vertical-align: middle;
+  }
+}
 
 .Header-tel {
   display: table-cell;
   vertical-align: middle;
   width: 36px;
+}
+
+@media screen and (min-width: 41.25em) {
+  .Header-tel {
+    display: none;
+  }
 }

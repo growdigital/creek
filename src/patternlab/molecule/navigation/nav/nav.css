@@ -56,13 +56,18 @@
   text-transform: none;
 }
 
+@media screen and (min-width: 41.25em) {
+  .Nav-open {
+    display: none;
+  }
+}
+
 .Nav a:hover {
   background-color: var(--sage_navhov);
   color: var(--grey_text);
 }
 
 @media screen and (min-width: 41.25em) {
-
   .js .Nav {
     max-width: none;
     position: static;
@@ -76,16 +81,23 @@
   .Nav ul {
     margin: 0;
     border: 0;
+    padding-left: 2.34375%;
   }
 
   .Nav  li {
     display: inline-block;
-    margin: 0 0.25em;
+    font-size: 0.9375rem;
   }
-
   .Nav li a {
     border: 0;
   }
-
+  .Nav li:first-child a {
+    padding-left: 0;
+  }
 }
 
+@media screen and (min-width: 62em) {
+    .Nav  li {
+    font-size: 1rem;
+  }
+}
