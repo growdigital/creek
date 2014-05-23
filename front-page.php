@@ -158,7 +158,7 @@
 
 <section class="Letterbox-wrap">
 
-  <h2 class="HeadAlt">What we offer</h2>
+  <h2 class="HeadAlt HeadAlt--buff">What we offer</h2>
 
   <?php if(get_field('section')): ?>
 

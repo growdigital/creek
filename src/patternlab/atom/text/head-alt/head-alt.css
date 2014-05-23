@@ -38,6 +38,11 @@
   color: white;
 }
 
+.HeadAlt--buff {
+  background-color: var(--buff);
+  color: white;
+}
+
 .HeadAlt--h {
   background-color: transparent;
 }

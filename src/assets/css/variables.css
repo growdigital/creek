@@ -9,7 +9,7 @@
 
   /* Brand colors */
   --bluedeep:       #22224c;
-  --orange:         #aab059;
+  --orange:         #c96834;
 
   /* Brand tints */
   --bluedeep_tint:  #323254;
@@ -21,6 +21,8 @@
 
   --sage_nav:       #d1d8bf;
   --sage_navhov:    #bfc4a4;
+
+  --buff: #b9aa8f;
 
   /* Warm greys */
   --grey_wash:      #f3f5f5;
