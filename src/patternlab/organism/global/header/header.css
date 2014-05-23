@@ -14,8 +14,28 @@
   width: 100%;
 }
 
+.Header-brandAddress {
+  display: none;
+}
+
+@media screen and (min-width: 46em) {
+  .Header-brandAddress {
+    color: var(--slate_bg);
+    display: block;
+    float: left;
+    margin: 0.5rem 0 0 7%;
+    font-size: 0.8rem;
+    width: 180px;
+  }
+  .Header-brandAddress a:link,
+  .Header-brandAddress a:visited {
+    color: var(--slate_bg);
+  }
+}
+
 .Header-logo {
   display: block;
+  float: left;
   max-width: 450px;
 }
 
@@ -25,6 +45,12 @@
   font-size: 0.8rem;
   padding: 0.3rem 2.34375%;
   width: 100%;
+}
+
+@media screen and (min-width: 46em) {
+  .Header-contact {
+    display: none;
+  }
 }
 
 .Header-menu {

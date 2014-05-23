@@ -86,18 +86,25 @@
 
   .Nav  li {
     display: inline-block;
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
   }
-  .Nav li a {
+
+  .Nav a {
     border: 0;
+    padding: 0.8rem 0.4rem;
   }
+
   .Nav li:first-child a {
     padding-left: 0;
   }
 }
 
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 50em) {
     .Nav  li {
     font-size: 1rem;
+  }
+
+  .Nav a {
+    padding: 0.8rem 0.7rem;
   }
 }

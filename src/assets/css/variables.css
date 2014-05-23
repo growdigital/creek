@@ -26,10 +26,10 @@
 
   /* Warm greys */
   --grey_wash:      #f3f5f5;
-  --grey_text:      #4c5259;
-  --grey_support:   #b4babf;
   --grey_desc:      #737c86;
   --grey_border:    #b5bbc1;
+  --grey_support:   #b4babf;
+  --grey_text:      #4c5259;
 
   /* Links */
   --link:           #0389ff;
