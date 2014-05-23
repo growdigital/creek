@@ -7,7 +7,7 @@
  */
 
 .NavToo {
-  background-color: var(--sage_21);
+  background-color: var(--sage_nav);
   padding: 0.5rem 0;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .NavToo .menu > * a {
-  color: var(--slate_73);
+  color: var(--slate_link);
   display: block;
   font-family: MuseoSans-300;
   letter-spacing: 0.2rem;
@@ -35,6 +35,6 @@
 
 .NavToo .menu > * a:hover,
 .NavToo .menu > * a:active {
-  background-color: var(--slate_73);
+  background-color: var(--slate_link);
   color: white;
 }

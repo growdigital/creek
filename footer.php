@@ -55,7 +55,7 @@
   </section>
 
   <section class="Supporters">
-    <h3 class="HeadAlt HeadAlt--slim HeadAlt--blued u-textCenter">Supported by</h3>
+    <h3 class="HeadAlt HeadAlt--slim HeadAlt--creek u-textCenter">Supported by</h3>
     <ol class="Supporters-list Footer-margin">
       <li>
         <a href="http://www.artscouncil.org.uk/funding/">
@@ -65,18 +65,18 @@
       </li>
       <li>
         <a href="http://www.swale.gov.uk/">
-          <i class="u-isHiddenVisuallyMedium Logos Logos--swale"></i>
+          <i class="u-isHiddenVisuallySmall u-isHiddenVisuallyMedium Logos Logos--swale"></i>
           <span class="u-isHiddenVisuallyLarge Supporters-border">Swale&nbsp;Borough&nbsp;Council</span>
         </a>
       </li>
       <li>
         <a href="http://www.kent.gov.uk/">
-          <i class="u-isHiddenVisuallyMedium  Logos Logos--kcc"></i>
+          <i class="u-isHiddenVisuallySmall u-isHiddenVisuallyMedium Logos Logos--kcc"></i>
           <span class="u-isHiddenVisuallyLarge">Kent County Council</span>
         </a>
       </li>
     </ol>
-    <h3 class="HeadAlt HeadAlt--slim HeadAlt--blued u-textCenter"><a href="http://nfasp.org.uk/" title="Link to NFASP website">Creek Creative is a member of <acronym title="The National Federation of Artist Studio Providers">NFASP</acronym></a></h3>
+    <h3 class="HeadAlt HeadAlt--slim HeadAlt--creek u-textCenter"><a href="http://nfasp.org.uk/" title="Link to NFASP website">Creek Creative is a member of <acronym title="The National Federation of Artist Studio Providers">NFASP</acronym></a></h3>
   </section>
 </footer>
 

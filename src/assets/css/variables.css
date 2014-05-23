@@ -8,54 +8,38 @@
    */
 
   /* Brand colors */
-  --blue:     #22224c;
-  --hilite:   #0389ff;
-  --orange:   #cb4b16;
+  --bluedeep:       #22224c;
+  --orange:         #aab059;
 
+  /* Brand tints */
+  --bluedeep_tint:  #323254;
 
-  --bluetint: #323254;
+  --slate_link:     #455d72;
+  --slate_head:     #576d80;
+  --slate_headlite: #677a8b;
+  --slate_bg:       #798a99;
 
-  /*--slate_80: #31495f; */
-  --slate_73: #455d72;
-  --slate_69: #53687c;
-  --slate_d: #677a8b;
-
-  --slate_bg:  #798a99;
-
-  --slate_mid: #576d80;
-
-  --sage_30:  #bfc4a4;
-  --sage_21:  #d1d8bf;
-
-  --link_lightest: #b2e0ff;
-
-  /* TODO: sort out sensible names */
-  --sage_dark: #acb194;
-  --sage_darker: #979a81;
-  --sage_darkerstill: #8f937b;
-
-  --background: #fff;
+  --sage_nav:       #d1d8bf;
+  --sage_navhov:    #bfc4a4;
 
   /* Warm greys */
-  --k94:          #141619;
-  --k80:          #434547;
-  --grey_text:    #4c5259;
-  --grey_support: #b4babf;
-  --grey_wash:    #f3f5f5;
-  --k61:          #737c86;
-  --k50:          #8f97a0;
-  --k34:          #b5bbc1;
+  --grey_wash:      #f3f5f5;
+  --grey_text:      #4c5259;
+  --grey_support:   #b4babf;
+  --grey_desc:      #737c86;
+  --grey_border:    #b5bbc1;
 
-
-  /* Additional colors */
-  --link:    var(--hilite);
-  --visited: purple;
+  /* Links */
+  --link:           #0389ff;
+  --link_light:     #b2e0ff;
+  --visited:        purple;
 
   /**
    * Type
    */
-  --head: MuseoSans-300;
+  --head: MuseoSans-700;
   --body: MuseoSans-500;
+  --font_light: MuseoSans-300;
 
 
   /**
@@ -76,7 +60,9 @@
    */
 
   /*--small:   20em;  320px */
-  /*--medium:  36em;  576px */
+  /*--medium:  38em;  608px */
+
   /*--large:   62em;  992px */
   /*--x-large: 77em; 1232px */
+
 }

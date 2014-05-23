@@ -33,7 +33,7 @@
   }
 }
 
-@media screen and (max-width: 32em) {
+@media screen and (min-width: 21.3em) and (max-width: 32em) {
   .Supporters-border::after {
     content: " |";
     padding: 0 0.5rem;

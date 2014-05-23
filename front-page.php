@@ -169,10 +169,10 @@
       <!-- TODO: if true, then class = is-promoted -->
         <h1 class="Heading Heading--less"><a href="<?php echo the_sub_field('section_link'); ?>"><?php the_sub_field('section_title'); ?></a></h1>
         <a href="<?php echo the_sub_field('section_link'); ?>">
-          <img class="Letterbox-image" src="<?php
+          <img class="Letterbox-image LinkOpacity" src="<?php
             $image = get_sub_field('section_image');
             $size = $image['sizes'];
-            echo $size['medium'] . '"' . ' alt="' . $image['alt'];  ?>">
+            echo $size['large'] . '"' . ' alt="' . $image['alt'];  ?>">
           </a>
         <div><?php the_sub_field('section_copy'); ?></div>
       </article>

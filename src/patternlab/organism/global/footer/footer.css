@@ -7,7 +7,7 @@
  */
 
 .Footer {
-  background-color: var(--blue);
+  background-color: var(--bluedeep);
   color: white;
   padding-bottom: 2rem;
 }
@@ -50,6 +50,6 @@
 }
 
 .Footer a {
-  color: var(--link_lightest);
+  color: var(--link_light);
 }
 
