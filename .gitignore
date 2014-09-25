@@ -17,3 +17,7 @@ museo
 
 # Ignore temp folder
 tmp
+
+# Editor gubbins
+*.sublime-project
+*.sublime-workspace
