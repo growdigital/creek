@@ -143,4 +143,4 @@ gulp.task('watch', function () {
 
 // Default task
 // temp disable:  'minimage',
-gulp.task('default', ['css', 'uglification', 'svgo', 'svg2png', 'watch', 'livereload']);
+gulp.task('default', ['css', 'uglification', /* 'svgo', 'svg2png',*/ 'watch', 'livereload']);
