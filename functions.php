@@ -25,4 +25,9 @@
   // Originally from Simple Image Sizes plugin
   add_image_size( 'a4_thumbnail', '74', '105', false );
 
+  // Add Soil relative URLs
+  add_theme_support('soil-relative-urls');
+
+
+
 ?>

@@ -81,7 +81,9 @@
   .Nav ul {
     margin: 0;
     border: 0;
+    left: 0.6875rem;
     padding-left: 2.34375%;
+    position: relative;
   }
 
   .Nav  li {
@@ -94,9 +96,7 @@
     padding: 0.8rem 0.4rem;
   }
 
-  .Nav li:first-child a {
-    padding-left: 0;
-  }
+
 }
 
 @media screen and (min-width: 50em) {
