@@ -23,5 +23,8 @@
 .Heading--less {
   font-size: 1.3rem;
   line-height: 1;
+}
 
+.Heading--minor {
+  font-size: 1rem;
 }

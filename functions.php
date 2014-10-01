@@ -24,5 +24,7 @@
   // For A4 posters at different resolutions
   // Originally from Simple Image Sizes plugin
   add_image_size( 'a4_thumbnail', '74', '105', false );
+  add_image_size( 'a4_medium', '148', '210', false );
+  add_image_size( 'a4_large', '297', '420', false );
 
 ?>

@@ -18,6 +18,21 @@
   padding: 1rem 0;
 }
 
+@media screen and (min-width: 30em) {
+  .Footer-margin {
+    text-align: center;
+  }
+
+  .Footer-margin > * {
+    list-style-type: none;
+    margin-left: 0;
+  }
+
+  .Footer-margin li {
+    margin-bottom: 0.5em;
+  }
+}
+
 .Footer-location {
   background-color: var(--slate_bg);
 }

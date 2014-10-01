@@ -6,7 +6,7 @@
 
   <section class="Footer-location" id="location">
     <h1 class="HeadAlt HeadAlt--slim HeadAlt--slate u-textCenter">Location</h1>
-      <h2 class="HeadAlt HeadAlt--slim HeadAlt--h u-textCenter"><a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en" title="Link to Creek Creative on Google Maps">Map: 1 Abbey Street ME13&nbsp;7BE</a></h2>
+      <h2 class="HeadAlt HeadAlt--slim HeadAlt--h u-textCenter"><a href="https://maps.google.co.uk/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=6632365635905548926&q=Creek+Creative+Studios&iwloc=A&gl=GB&hl=en" title="Link to Creek Creative on Google Maps">Map: 1 Abbey Street<span class="u-isHiddenVisuallyMedium">, Faversham</span> ME13&nbsp;7BE</a></h2>
       <h2 class="HeadAlt HeadAlt--slim HeadAlt--slated u-textCenter">Railway station</h2>
       <div class="Footer-margin">
         <ul>

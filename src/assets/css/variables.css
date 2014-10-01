@@ -61,10 +61,11 @@
    * Breakpoints, use rework-breakpoints
    */
 
-  /*--small:   20em;  320px */
-  /*--medium:  38em;  608px */
+  /*--small:     20em;  320px */
+  /*--small-med: 30em   480px;
+  /*--medium:    38em;  608px */
 
-  /*--large:   62em;  992px */
-  /*--x-large: 77em; 1232px */
+  /*--large:     62em;  992px */
+  /*--x-large:   77em; 1232px */
 
 }

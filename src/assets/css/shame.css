@@ -1,2 +1,8 @@
 /* Shame. Put shameful CSS in here. Refactor later. */
 /* http://csswizardry.com/2013/04/shame-css/ */
+
+@media screen and (min-width: 38em) {
+  .test > * {
+    float: left;
+  }
+}
