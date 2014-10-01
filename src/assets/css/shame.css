@@ -2,7 +2,23 @@
 /* http://csswizardry.com/2013/04/shame-css/ */
 
 @media screen and (min-width: 38em) {
-  .test > * {
-    float: left;
+  .test {
+    display: flex;
+    flex-wrap: wrap;
   }
+
+  .test > * {
+    flex: 1;
+  }
+
+  .noflex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.noflex > * {
+  flex: 1;
 }
+
+}
+

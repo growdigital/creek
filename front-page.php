@@ -16,9 +16,15 @@
     <div>
       <h2 class="HeadAlt">Current exhibition</h2>
       <article class="ArticleThumb Media Media--golden">
-        <?php $current_thumb = wp_get_attachment_image_src(get_field('current_image'), 'a4_medium'); ?>
+        <?php
+          $current_thumb = wp_get_attachment_image_src(get_field('current_image'), 'a4_medium');
+          $current_url = wp_get_attachment_url(get_field('current_image'));
+        ?>
+
         <div class="Media-img Media-img--golden">
-          <img class="ArticleThumb-img" src="<?php echo $current_thumb[0]; ?>" alt="<?php the_field('current_title'); ?>">
+          <a href="<?php echo $current_url; ?>">
+            <img class="ArticleThumb-img" src="<?php echo $current_thumb[0]; ?>" alt="<?php the_field('current_title'); ?>">
+          </a>
         </div>
         <div class="Media-body Media-body--golden">
           <h1 class="Heading Heading--less"><?php the_field('current_title'); ?></h1>
@@ -38,9 +44,14 @@
     <div>
       <h2 class="HeadAlt">Next exhibition</h2>
       <article class="ArticleThumb Media Media--golden">
-        <?php $next_thumb = wp_get_attachment_image_src(get_field('next_image'), 'a4_medium'); ?>
+        <?php
+          $next_thumb = wp_get_attachment_image_src(get_field('next_image'), 'a4_medium');
+          $next_url = wp_get_attachment_url(get_field('next_image'));
+        ?>
         <div class="Media-img Media-img--golden">
-          <img class="ArticleThumb-img" src="<?php echo $next_thumb[0]; ?>" alt="<?php the_field('next_title'); ?>">
+          <a href="<?php echo $next_url; ?>">
+            <img class="ArticleThumb-img" src="<?php echo $next_thumb[0]; ?>" alt="<?php the_field('next_title'); ?>">
+          </a>
         </div>
         <div class="Media-body Media-body--golden">
           <h1 class="Heading Heading--less"><?php the_field('next_title'); ?></h1>
@@ -62,14 +73,18 @@
 
 <section class="courses">
   <h2 class="HeadAlt">Courses</h2>
-  <?php
-    if( have_rows('courses') ): ?>
-
+  <div class="noflex">
+  <?php if( have_rows('courses') ): ?>
     <? while( have_rows('courses') ): the_row(); ?>
     <article class="ArticleThumb Media Media--golden">
-      <?php $course_thumb = wp_get_attachment_image_src(get_sub_field('course_image'), 'a4_medium'); ?>
+      <?php
+        $course_thumb = wp_get_attachment_image_src(get_sub_field('course_image'), 'a4_medium');
+        $course_url = wp_get_attachment_url(get_sub_field('course_image'));
+      ?>
       <div class="Media-img Media-img--golden">
-        <img class="ArticleThumb-img" src="<?php echo $course_thumb[0]; ?>" alt="">
+        <a href="<?php echo $course_url; ?>">
+          <img class="ArticleThumb-img" src="<?php echo $course_thumb[0]; ?>" alt="">
+        </a>
       </div>
       <div class="Media-body Media-body--golden">
         <h1 class="Heading Heading--less"><?php the_sub_field('course_title'); ?></h1>
@@ -77,10 +92,7 @@
       </div>
     </article>
     <?php endwhile; ?>
-
-
-  <p><?php the_sub_field('course_title'); ?></p>
-          <?php endif ?>
+  <?php endif ?>
 
 </section>
 
