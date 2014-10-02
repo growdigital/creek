@@ -10,6 +10,8 @@
  */
 
 .Nav-wrap {
+  background-color: white;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
   margin: 0 auto;
   max-width: 80em;
   min-width: 18em;

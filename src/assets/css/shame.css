@@ -2,23 +2,33 @@
 /* http://csswizardry.com/2013/04/shame-css/ */
 
 @media screen and (min-width: 38em) {
-  .test {
+
+  .u-flexDisplay {
     display: flex;
+  }
+
+  .u-flexWrap {
     flex-wrap: wrap;
   }
 
-  .test > * {
+  .u-flex{
     flex: 1;
   }
 
-  .noflex {
+  .Flextastic {
     display: flex;
     flex-wrap: wrap;
   }
 
-.noflex > * {
-  flex: 1;
-}
+  .Flextastic > * {
+    flex: 1;
+  }
+
+  /* Makes sure courses thumbnails smaller than exhibition thumbnails
+     Refactor */
+  .courses .ArticleThumb {
+    max-width: 275px
+  }
 
 }
 

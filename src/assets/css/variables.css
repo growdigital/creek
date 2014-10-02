@@ -49,7 +49,7 @@
    * /
 
   /* Base */
-  --base_background:     white;
+  --base_background:     #dbdbdb;
   --base_color:          var(--grey_text);
   --base_fontfamily:     var(--body);
   --base_fontsize:       16px;

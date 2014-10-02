@@ -11,9 +11,9 @@
 
   <h1 class="u-isHiddenVisually">Exhibitions</h1>
 
-  <div class="test">
+  <div class="u-flexDisplay u-flexWrap">
 
-    <div>
+    <div class="u-flex">
       <h2 class="HeadAlt">Current exhibition</h2>
       <article class="ArticleThumb Media Media--golden">
         <?php
@@ -41,7 +41,7 @@
       </article>
     </div>
 
-    <div>
+    <div class="u-flex">
       <h2 class="HeadAlt">Next exhibition</h2>
       <article class="ArticleThumb Media Media--golden">
         <?php
@@ -73,10 +73,10 @@
 
 <section class="courses">
   <h2 class="HeadAlt">Courses</h2>
-  <div class="noflex">
+  <div class="u-flexDisplay u-flexWrap">
   <?php if( have_rows('courses') ): ?>
     <? while( have_rows('courses') ): the_row(); ?>
-    <article class="ArticleThumb Media Media--golden">
+    <article class="ArticleThumb Media Media--golden u-flex">
       <?php
         $course_thumb = wp_get_attachment_image_src(get_sub_field('course_image'), 'a4_medium');
         $course_url = wp_get_attachment_url(get_sub_field('course_image'));
