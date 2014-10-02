@@ -10,6 +10,8 @@
  */
 
 .Nav-wrap {
+  margin: 0 auto;
+  max-width: 80em;
   min-width: 18em;
   position: relative;
   transition: all 0.3s ease-out;
