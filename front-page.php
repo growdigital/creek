@@ -11,9 +11,9 @@
 
   <h1 class="u-isHiddenVisually">Exhibitions</h1>
 
-  <div class="u-flexDisplay u-flexWrap">
+  <div class="Flextastic">
 
-    <div class="u-flex">
+    <div>
       <h2 class="HeadAlt">Current exhibition</h2>
       <article class="ArticleThumb Media Media--golden">
         <?php
@@ -41,7 +41,7 @@
       </article>
     </div>
 
-    <div class="u-flex">
+    <div>
       <h2 class="HeadAlt">Next exhibition</h2>
       <article class="ArticleThumb Media Media--golden">
         <?php
@@ -73,7 +73,7 @@
 
 <section class="courses">
   <h2 class="HeadAlt">Courses</h2>
-  <div class="u-flexDisplay u-flexWrap">
+  <div class="Flextastic">
   <?php if( have_rows('courses') ): ?>
     <? while( have_rows('courses') ): the_row(); ?>
     <article class="ArticleThumb Media Media--golden u-flex">

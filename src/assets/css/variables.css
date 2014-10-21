@@ -26,9 +26,10 @@
 
   /* Warm greys */
   --grey_wash:      #f3f5f5;
-  --grey_desc:      #737c86;
+  --grey_bg:        #dbdbdb;
   --grey_border:    #b5bbc1;
   --grey_support:   #b4babf;
+  --grey_desc:      #737c86;
   --grey_text:      #4c5259;
 
   /* Links */
@@ -49,7 +50,7 @@
    * /
 
   /* Base */
-  --base_background:     #dbdbdb;
+  --base_background:     var(--grey_bg);
   --base_color:          var(--grey_text);
   --base_fontfamily:     var(--body);
   --base_fontsize:       16px;

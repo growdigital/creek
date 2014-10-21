@@ -1,4 +1,4 @@
-<?php remove_filter ('the_content', 'wpautop'); // TODO: temp disable auto br & p ?>
+<?php // remove_filter ('the_content', 'wpautop'); // TODO: temp disable auto br & p ?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
@@ -13,7 +13,6 @@
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/dist/assets/img/favicon.png">
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/jquery.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/modernizr.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/main.js"></script>
   <?php wp_head(); ?>
 </head>
@@ -29,6 +28,14 @@
     <div class="Header-brandAddress">
       <p><a href="#location" "Link to address & map details">1 Abbey Street<br>Faversham<br>Kent ME13 7BE</a></p>
       <p>Tel. <a href="tel:+441795535515" title="Creek Creative phone number">01795 535 515</a></p>
+    </div>
+    <div class="Header-times">
+      <dl>
+        <dt>Open:</dt>
+          <dd>Tue–Sun, 10am–4pm</dd>
+        <dt>Office only:</dt>
+          <dd>Mon–Fri, 9am–6pm</dd>
+      </dl>
     </div>
   </div>
   <div class="Header-contact">
