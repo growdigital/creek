@@ -11,6 +11,17 @@
     );
   }
 
+  // Add page name to body class
+  // http://wpprogrammer.com/snippets/add-post-page-name-to-body-class/
+  add_filter( 'body_class', 'post_name_body_class' );
+  function post_name_body_class( $classes ) {
+    if( is_singular() ) {
+      global $post;
+      array_push( $classes, "{$post->post_type}-{$post->post_name}" );
+    }
+    return $classes;
+  }
+
   // Add post thumbnails
   add_theme_support('post-thumbnails', array('post'));
 

@@ -97,7 +97,7 @@
 </section>
 
 <section class="latest" style="margin-bottom: 20px;">
-  <h2 class="HeadAlt HeadAlt--buff">Latest</h2>
+  <h2 class="HeadAlt HeadAlt--buff_lite">Latest</h2>
   <article class="Letterbox Letterbox-list">
     <h1 class="Heading Heading--less"><?php the_title(); ?></h1>
     <div><?php the_content(); ?></div>
@@ -111,7 +111,7 @@
 
 <section class="Letterbox-wrap">
 
-  <h2 class="HeadAlt HeadAlt--buff">What we offer</h2>
+  <h2 class="HeadAlt HeadAlt--buff_lite">What we offer</h2>
 
   <?php if(get_field('section')): ?>
 

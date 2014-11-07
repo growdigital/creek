@@ -8,11 +8,22 @@
    */
 
   /* Brand colors */
-  --bluedeep:       #22224c;
-  --orange:         #c96834;
+  --blue:        #161a3d;
+  --blue_lite:   #5c6075;
+  --buff:        #9c6e33;
+  --buff_lite:   #a38e6a;
+  --green:       #828131;
+  --green_lite:  #adac5f;
+  --orange:      #994011;
+  --orange_lite: #c96834;
+  --purple:      #642f69;
+  --purple_lite: #9d6da1;
+  --slate:       #4b6161;
+  --slate_lite:  #899c9c;
+
 
   /* Brand tints */
-  --bluedeep_tint:  #323254;
+  --blue_tint:  #323254;
 
   --slate_link:     #455d72;
   --slate_head:     #576d80;
@@ -22,7 +33,6 @@
   --sage_nav:       #d1d8bf;
   --sage_navhov:    #bfc4a4;
 
-  --buff: #b9aa8f;
 
   /* Warm greys */
   --grey_wash:      #f3f5f5;

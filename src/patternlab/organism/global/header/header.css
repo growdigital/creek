@@ -8,11 +8,16 @@
 
 .Header-brand {
   align-items: stretch;
-  border-top: 5px solid var(--orange);
-  background-color: var(--bluedeep);
+  border-top: 5px solid var(--buff);
+  background-color: var(--blue);
   padding: 0.6875rem 4% 0.6875rem 2.34375%;
   width: 100%;
 }
+
+.page-studios .Header-brand     { border-color: var(--slate); }
+.page-exhibitions .Header-brand { border-color: var(--purple); }
+.page-cafe .Header-brand        { border-color: var(--green); }
+.page-courses .Header-brand     { border-color: var(--orange); }
 
 .Header-brandAddress {
   display: none;

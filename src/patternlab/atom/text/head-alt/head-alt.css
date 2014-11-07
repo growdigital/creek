@@ -34,12 +34,12 @@
 }
 
 .HeadAlt--creek {
-  background-color: var(--bluedeep_tint);
+  background-color: var(--blue_tint);
   color: white;
 }
 
-.HeadAlt--buff {
-  background-color: var(--buff);
+.HeadAlt--buff_lite {
+  background-color: var(--buff_lite);
   color: white;
 }
 

@@ -16,7 +16,7 @@
   <script src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/main.js"></script>
   <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class( $class ); ?>>
 
 <div class="Nav-wrap">
 

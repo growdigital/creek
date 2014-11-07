@@ -24,7 +24,7 @@
 }
 
 .Nav {
-  background: var(--grey_desc);
+  background: var(--blue_tint);
   clear: both;
   overflow: hidden;
 }
@@ -67,8 +67,28 @@
 }
 
 .Nav a:hover {
-  background-color: var(--sage_navhov);
-  color: var(--grey_text);
+  background-color: var(--blue);
+  /*color: var(--grey_text);*/
+}
+
+.Nav .menu-item-36 a:hover{
+    background-color: var(--buff_lite);
+}
+.Nav .menu-item-37 a:hover,
+.Nav .current-menu-item.menu-item-37 a {
+    background-color: var(--slate);
+}
+.Nav .menu-item-38 a:hover,
+.Nav .current-menu-item.menu-item-38 a {
+    background-color: var(--purple);
+}
+.Nav .menu-item-39 a:hover,
+.Nav .current-menu-item.menu-item-39 a {
+    background-color: var(--green);
+}
+.Nav .menu-item-40 a:hover,
+.Nav .current-menu-item.menu-item-40 a {
+    background-color: var(--orange);
 }
 
 @media screen and (min-width: 41.25em) {
