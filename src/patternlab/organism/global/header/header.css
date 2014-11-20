@@ -7,10 +7,10 @@
  */
 
 .Header-brand {
-  align-items: stretch;
   border-top: 5px solid var(--buff);
   background-color: var(--blue);
   padding: 0.6875rem 4% 0.6875rem 2.34375%;
+  text-align: center;
   width: 100%;
 }
 
@@ -21,13 +21,13 @@
 
 .Header-brandAddress {
   display: none;
+  text-align: left;
 }
 
 @media screen and (min-width: 46em) {
   .Header-brandAddress {
     color: var(--slate_bg);
-    display: block;
-    float: left;
+    display: inline-block;
     margin: 0.5rem 0 0 7%;
     font-size: 0.8rem;
     width: 180px;
@@ -39,8 +39,7 @@
 }
 
 .Header-logo {
-  display: block;
-  float: left;
+  display: inline-block;
   max-width: 450px;
 }
 
@@ -118,5 +117,22 @@
 @media screen and (min-width: 41.25em) {
   .Header-tel {
     display: none;
+  }
+}
+
+.Header-times {
+  color: var(--grey_border);
+  display: none;
+  margin-top: 0.5em;
+  text-align: left;
+}
+
+.Header-times dd {
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 57em) {
+  .Header-times {
+    display: inline-block;
   }
 }

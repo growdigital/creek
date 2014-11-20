@@ -8,7 +8,6 @@
 
 .NavToo {
   background-color: var(--sage_nav);
-  padding: 0.5rem 0;
 }
 
 .NavToo .menu {
@@ -28,7 +27,7 @@
   font-family: MuseoSans-300;
   letter-spacing: 0.2rem;
   line-height: 1;
-  padding: 0.5rem 0.8rem 0.3rem;
+  padding: 0.9rem 0.8rem 0.7rem;
   text-decoration: none;
   text-transform: uppercase;
 }

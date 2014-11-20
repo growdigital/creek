@@ -38,9 +38,10 @@
 }
 
 .Nav ul {
+  border-top: 1px solid color(black tint(55%));
   margin: 0;
   padding: 0;
-  border-top: 1px solid color(black tint(55%));
+  text-align: center;
 }
 
 .Nav a,

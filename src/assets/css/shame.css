@@ -8,22 +8,7 @@
   padding: 1.3em 2% 3em;
 }
 
-.Header-times {
-  color: var(--grey_border);
-  display: none;
-  margin-top: 0.5em;
-}
 
-.Header-times dd {
-  margin-bottom: 0.5em;
-}
-
-@media screen and (min-width: 57em) {
-  .Header-times {
-    display: block;
-    float: left;
-  }
-}
 
 /* Flex stuff */
 
