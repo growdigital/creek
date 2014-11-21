@@ -42,7 +42,7 @@ var gulp = require('gulp'),
     ],
     bowerjs: [
       'src/bower_components/jquery/dist/assets/jquery.min.js',
-      'src/bower_components/modernizr/modernizr.js'
+      'src/bower_components/svgeezy/svgeezy.min.js.js'
     ],
     svg: [
       // Optimise favicon manually
