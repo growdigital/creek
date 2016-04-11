@@ -26,7 +26,7 @@
       <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/logotype.svg" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>">
     </a>
     <div class="Header-brandAddress">
-      <p><a href="#location" "Link to address & map details">1 Abbey Street<br>Faversham<br>Kent ME13 7BE</a></p>
+      <p><a href="#location" "Link to address &amp; map details">1 Abbey Street<br>Faversham<br>Kent ME13 7BE</a></p>
       <p>Tel. <a href="tel:+441795535515" title="Creek Creative phone number">01795 535 515</a></p>
     </div>
     <div class="Header-times">
