@@ -75,7 +75,7 @@
   <h2 class="HeadAlt">Courses</h2>
   <div class="Flextastic">
   <?php if( have_rows('courses') ): ?>
-    <? while( have_rows('courses') ): the_row(); ?>
+    <?php while( have_rows('courses') ): the_row(); ?>
     <article class="ArticleThumb Media Media--golden u-flex">
       <?php
         $course_thumb = wp_get_attachment_image_src(get_sub_field('course_image'), 'a4_medium');
